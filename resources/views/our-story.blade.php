@@ -9,21 +9,82 @@
 @section('content')
 <!-- Hero Section -->
 <section class="our-story-hero-section">
+    <div class="hero-animated-background">
+        <div class="hero-floating-shape hero-shape-1"></div>
+        <div class="hero-floating-shape hero-shape-2"></div>
+        <div class="hero-floating-shape hero-shape-3"></div>
+        <div class="hero-floating-shape hero-shape-4"></div>
+    </div>
     <div class="our-story-hero-overlay"></div>
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-12 text-center">
-                <h1 class="our-story-hero-title">Our Story</h1>
-                <p class="our-story-hero-subtitle">Illuminating Paths to Progress 
-                    {{-- One of our key aspirations for diversifying into renewable energy was to be a catalyst for positive change in the world. --}}
-                </p>
-                <div class="our-story-hero-cta">
-                    <a href="#ceo-message" class="btn our-story-learn-btn">Learn more</a>
-                    <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="our-story-cta-arrow" alt="Arrow">
+            <div class="col-lg-8 mx-auto">
+                <div class="hero-content-wrapper text-center">
+                    <div class="hero-badge">
+                        <i class="fas fa-seedling me-2"></i>Pioneering Clean Energy
+                    </div>
+                    <h1 class="our-story-hero-title">Our Story</h1>
+                    <p class="our-story-hero-subtitle">Illuminating Paths to Progress</p>
+                    <p class="our-story-hero-description">
+                        One of our key aspirations for diversifying into renewable energy was to be a catalyst for positive change in the world. We believe in creating a sustainable future through innovative clean energy solutions that empower communities and transform lives.
+                    </p>
+                    
+                    <!-- Key Highlights -->
+                    <div class="hero-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <div class="highlight-number" data-count="7">0</div>
+                                <div class="highlight-label">Countries</div>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <div class="highlight-number" data-count="315">0</div>
+                                <div class="highlight-label">Thousand+ Students</div>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <div class="highlight-number" data-count="2022">0</div>
+                                <div class="highlight-label">Green Since</div>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <div class="highlight-number" data-count="5">0</div>
+                                <div class="highlight-label">Industries</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="our-story-hero-cta">
+                        <a href="#ceo-message" class="btn our-story-learn-btn">
+                            <i class="fas fa-arrow-down me-2"></i>Discover Our Journey
+                        </a>
+                        <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="our-story-cta-arrow" alt="Arrow">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    {{-- <div class="hero-scroll-indicator">
+        <div class="scroll-mouse">
+            <div class="scroll-wheel"></div>
+        </div>
+        <span class="scroll-text">Scroll to explore</span>
+    </div> --}}
 </section>
 
 <!-- CEO's Message Section -->
@@ -31,17 +92,50 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
+                <div class="section-badge">
+                    <i class="fas fa-quote-left me-2"></i>Leadership
+                </div>
                 <h2 class="ceo-message-title">CEO's Message</h2>
                 <div class="ceo-message-content">
                     <p>Beacon Energy Limited (BEL) is a venture of The Beaconhouse Group, focusing on quality and customer needs. We aspire to diversify into renewable energy, recognizing the adverse impact of humans on the planet.</p>
                     <p>Solar energy is environmentally friendly, inexpensive, and accessible to disadvantaged people. Our goal is to provide affordable clean energy for a cleaner and more equal future.</p>
                     <p>By embedding ESG principles into our strategy and leveraging our global network to drive impactful green energy innovations, we have successfully achieved green and zero-waste factories since 2022, making significant strides toward carbon neutrality.</p>
                 </div>
+                <div class="ceo-signature">
+                    <div class="signature-line"></div>
+                    <p class="signature-text">Leading the Future of Energy</p>
+                </div>
             </div>
             <div class="col-lg-6">
                 <div class="ceo-image-wrapper">
-                    <img src="{{ asset('assets/images/ceo_image_with_bg.png') }}" alt="BEL Logo" class="img-fluid">
-                    
+                    <div class="ceo-image-glow"></div>
+                    <img src="{{ asset('assets/images/ceo_image_with_bg.png') }}" alt="CEO" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mission & Vision Section -->
+<section class="mission-vision-section">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="mission-vision-card">
+                    <div class="card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="card-title">Our Mission</h3>
+                    <p class="card-content">To empower communities and industries with innovative renewable energy solutions that drive sustainable growth, reduce environmental impact, and create a cleaner, more equitable future for all.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="mission-vision-card">
+                    <div class="card-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="card-title">Our Vision</h3>
+                    <p class="card-content">To become a global leader in clean energy transformation, setting new standards for sustainability, innovation, and social responsibility while making renewable energy accessible to everyone.</p>
                 </div>
             </div>
         </div>
@@ -179,5 +273,70 @@
         </div>
     </div>
 </section>
+
+@push('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Animated Counter for Highlights
+    const counters = document.querySelectorAll('.highlight-number');
+    const animateCounter = (counter) => {
+        const target = parseInt(counter.getAttribute('data-count'));
+        const duration = 2000;
+        const increment = target / (duration / 16);
+        let current = 0;
+        
+        const updateCounter = () => {
+            current += increment;
+            if (current < target) {
+                if (target >= 1000) {
+                    counter.textContent = Math.floor(current) + 'K';
+                } else {
+                    counter.textContent = Math.floor(current);
+                }
+                requestAnimationFrame(updateCounter);
+            } else {
+                if (target >= 1000) {
+                    counter.textContent = target + 'K';
+                } else {
+                    counter.textContent = target;
+                }
+            }
+        };
+        updateCounter();
+    };
+
+    // Intersection Observer for counters
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    counters.forEach(counter => observer.observe(counter));
+
+    // Smooth scroll for CTA button
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+</script>
+@endpush
 @endsection
 

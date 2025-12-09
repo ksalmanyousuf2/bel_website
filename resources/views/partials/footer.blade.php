@@ -51,8 +51,8 @@
                 <p class="text-muted small mb-0">©2025 Beacon Energy (Pvt) Limited. All right reserved</p>
             </div>
             <div class="col-md-6 text-md-end">
-                <a href="#" class="text-decoration-none text-muted small me-3">Privacy Policy</a>
-                <a href="#" class="text-decoration-none text-muted small">Terms of Service</a>
+                <a href="{{ route('pages.show', 'privacy-policy') }}" class="text-decoration-none text-muted small me-3">Privacy Policy</a>
+                <a href="{{ route('pages.show', 'terms-of-service') }}" class="text-decoration-none text-muted small">Terms of Service</a>
             </div>
         </div>
     </div>

@@ -47,25 +47,25 @@
                 $projectType = $project->type ? strtolower(trim($project->type)) : 'both';
             @endphp
             <div class="project-card {{ $index === 0 ? 'active' : '' }}" data-category="{{ $projectType }}" @if($loop->first) style="background-color: var(--primary-blue); color: white;" @endif>
-                <a href="{{ route('projects.show', $project->id) }}" class="text-decoration-none">
-                    @if($project->images->count() > 0)
-                    <div class="project-image-wrapper">
-                        <img src="{{ asset('storage/' . $project->images->first()->image_path) }}" 
-                             alt="{{ $project->name }}" 
-                             class="project-image">
-                    </div>
+                
+                @if($project->images->count() > 0)
+                <div class="project-image-wrapper">
+                    <img src="{{ asset('storage/' . $project->images->first()->image_path) }}" 
+                            alt="{{ $project->name }}" 
+                            class="project-image">
+                </div>
+                @endif
+                <div class="project-card-body">
+                    <h3 class="project-name" @if($loop->first) style="color: white;" @endif>{{ $project->name }}</h3>
+                    @if($project->capacity)
+                    <p class="project-capacity" @if($loop->first) style="color: white;" @endif>Capacity: {{ $project->capacity }}</p>
                     @endif
-                    <div class="project-card-body">
-                        <h3 class="project-name" @if($loop->first) style="color: white;" @endif>{{ $project->name }}</h3>
-                        @if($project->capacity)
-                        <p class="project-capacity" @if($loop->first) style="color: white;" @endif>Capacity: {{ $project->capacity }}</p>
-                        @endif
-                        <p class="project-location" @if($loop->first) style="color: white;" @endif>
-                            <i class="fas fa-map-marker-alt"></i>
-                            {{ $project->location }}
-                        </p>
-                    </div>
-                </a>
+                    <p class="project-location" @if($loop->first) style="color: white;" @endif>
+                        <i class="fas fa-map-marker-alt"></i>
+                        {{ $project->location }}
+                    </p>
+                </div>
+                
             </div>
             @empty
             <div class="projects-empty">
