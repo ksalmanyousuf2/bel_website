@@ -1,0 +1,391 @@
+/* ============================================
+   ABOUT US PAGE SPECIFIC STYLES
+   ============================================ */
+
+/* About Hero Section - Background Images */
+/* Note: Background images are set inline in the Blade template using Laravel asset() helper */
+
+/* About Hero Carousel Controls */
+.about-hero-section .carousel-controls-wrapper {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    z-index: 10;
+    display: flex;
+    gap: 10px;
+}
+
+.about-hero-section .carousel-control-prev,
+.about-hero-section .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    opacity: 0.8;
+    transition: all 0.3s;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.about-hero-section .carousel-control-prev:hover,
+.about-hero-section .carousel-control-next:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.about-hero-section .carousel-control-prev-icon,
+.about-hero-section .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* About Hero Content Animations */
+.about-hero-content {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.about-hero-section .carousel-item.active .about-hero-content {
+    animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.about-hero-section .carousel-item.active .about-hero-content h1 {
+    animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.about-hero-section .carousel-item.active .about-hero-content .subtitle {
+    animation: fadeInUp 1s ease-out 0.7s both;
+}
+
+.about-hero-section .carousel-item.active .about-hero-content .btn {
+    animation: fadeInUp 1s ease-out 0.9s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section Styles */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Stats Section */
+.stats-section {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Timeline Section */
+.timeline-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+/* Achievements Carousel Navigation */
+.achievements-carousel-nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    justify-content: flex-start;
+}
+
+.achievements-nav-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    opacity: 1;
+}
+
+.achievements-nav-btn:hover {
+    background: white;
+    color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.achievements-nav-btn i {
+    font-size: 1rem;
+}
+
+.achievements-nav-btn.carousel-control-prev,
+.achievements-nav-btn.carousel-control-next {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+}
+
+.achievements-nav-btn .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Sustainable Future Section */
+.sustainable-future-section {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.sustainable-future-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.sustainable-future-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.sustainable-future-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sustainable-future-overlay {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    margin-left: auto;
+    /* background: var(--primary-blue); */
+    padding: 81px 110px;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.sustainable-future-content {
+    color: white;
+}
+
+.sustainable-future-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+    line-height: 1.2;
+}
+
+.sustainable-future-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2.5rem;
+}
+
+.sustainable-future-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sustainable-learn-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 30px;
+    font-weight: 500;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.sustainable-learn-btn:hover {
+    background: white;
+    color: var(--primary-blue);
+}
+
+.sustainable-arrow-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.sustainable-arrow-circle:hover {
+    background: white;
+}
+
+.sustainable-arrow-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.sustainable-arrow-circle:hover .sustainable-arrow-icon {
+    filter: brightness(0) invert(0);
+}
+
+/* Global Partners Section */
+.global-partners-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.partner-card {
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
+    border: 1px solid #e0e0e0;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.partner-logo {
+    max-width: 150px;
+    max-height: 100px;
+    object-fit: contain;
+    margin: 0 auto 20px;
+}
+
+.partner-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+.partner-description {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.system-flow-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-hero-section .carousel-controls-wrapper {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .about-hero-section .carousel-control-prev,
+    .about-hero-section .carousel-control-next {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .achievements-carousel-nav {
+        margin-bottom: 20px;
+    }
+    
+    .achievements-nav-btn {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .sustainable-future-wrapper {
+        min-height: 500px;
+    }
+    
+    .sustainable-future-overlay {
+        width: 100%;
+        clip-path: none;
+        padding: 60px 40px;
+        min-height: 500px;
+    }
+    
+    .sustainable-future-content h2 {
+        font-size: 2rem;
+    }
+    
+    .sustainable-future-content p {
+        font-size: 1rem;
+    }
+}
+

@@ -1,0 +1,784 @@
+/* ============================================
+   GLOBAL SHARED COMPONENTS CSS
+   ============================================ */
+
+/* ============================================
+   ACHIEVEMENT CARD COMPONENT
+   ============================================ */
+.achievement-card {
+    color: white;
+    border-radius: 16px;
+    padding: 0;
+    height: 100%;
+    transition: transform 0.3s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.achievement-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.achievement-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.achievement-text {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+}
+
+.achievement-text p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin: 0;
+    color: black;
+}
+
+/* ============================================
+   ABOUT HERO SECTION COMPONENT
+   ============================================ */
+.about-hero-section {
+    padding: 0 !important;
+    color: white;
+    position: relative;
+    margin-top: 0 !important;
+    margin-bottom: 0;
+}
+
+.about-hero-section .carousel {
+    margin: 0;
+    background-color: var(--primary-blue);
+    position: relative;
+}
+
+.about-hero-section .carousel-inner {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    background-color: var(--primary-blue);
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.about-hero-section .carousel-fade .carousel-item {
+    opacity: 0;
+    transition-property: opacity;
+    transform: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.about-hero-section .carousel-fade .carousel-item.active,
+.about-hero-section .carousel-fade .carousel-item-next.carousel-item-start,
+.about-hero-section .carousel-fade .carousel-item-prev.carousel-item-end {
+    z-index: 1;
+    opacity: 1;
+    position: absolute;
+}
+
+.about-hero-section .carousel-fade .active.carousel-item-start,
+.about-hero-section .carousel-fade .active.carousel-item-end {
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0s 1.2s;
+}
+
+.about-hero-section .carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: opacity 1.2s ease-in-out;
+}
+
+.about-hero-section .carousel-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+    z-index: 1;
+}
+
+.about-hero-section .carousel-item .container {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+.about-hero-content {
+    color: white;
+}
+
+.about-hero-content h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.about-hero-content .subtitle {
+    font-size: 1.25rem;
+    color: white;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   GENERAL BUTTON COMPONENTS
+   ============================================ */
+.hero-cta-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-learn-btn {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border: none;
+    padding: 12px 30px;
+    font-weight: 500;
+    border-radius: 28px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.hero-learn-btn:hover {
+    background: white;
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero-cta-arrow {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+
+.hero-explore-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.hero-explore-btn button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+}
+
+.hero-explore-btn button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.hero-explore-btn button i {
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+}
+
+.hero-explore-btn span {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+@media (max-width: 768px) {
+    .achievement-image {
+        height: 200px;
+    }
+    
+    .achievement-text {
+        padding: 15px;
+    }
+    
+    .achievement-text p {
+        font-size: 0.8rem;
+    }
+    
+    .about-hero-section .carousel-inner {
+        min-height: 80vh;
+    }
+    
+    .about-hero-section .carousel-fade .carousel-item {
+        min-height: 80vh;
+    }
+    
+    .about-hero-section .carousel-item .container {
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+    
+    .about-hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .about-hero-content .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-learn-btn {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+    
+    .hero-cta-arrow {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .hero-explore-btn button {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .hero-explore-btn span {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .about-hero-content .subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-explore-btn button {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .hero-explore-btn button i {
+        font-size: 1rem;
+    }
+    
+    .hero-explore-btn span {
+        font-size: 0.75rem;
+    }
+}
+
+/* ============================================
+   CHALLENGE CARD COMPONENT
+   ============================================ */
+.challenge-card {
+    /* background-color: var(--primary-blue); */
+    color: white;
+    border-radius: 12px;
+    padding: 30px 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    height: 237px;
+}
+
+.challenge-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.challenge-card-icon {
+    /* width: 60px;
+    height: 60px; */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    /* border-radius: 12px; */
+}
+
+.challenge-card-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.challenge-card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* filter: brightness(0) invert(1); */
+}
+
+.challenge-card-title {
+    font-size: 14px;
+    font-weight: 600;
+    /* color: white; */
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.challenge-card-description {
+    font-size: 10px;
+    /* color: rgba(255, 255, 255, 0.9); */
+    line-height: 1.6;
+    margin: 0;
+    flex: 1;
+}
+
+/* ============================================
+   KEY METRIC COMPONENT
+   ============================================ */
+.key-metric-section {
+    padding: 80px 0;
+    background-color: white;
+    position: relative;
+}
+
+.key-metric-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.key-metric-content-wrapper {
+    position: relative;
+    height: 300px;
+}
+
+.key-metric-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.key-metric-number {
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.key-metric-label {
+    font-size: 1.25rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.key-metric-chart {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    /* gap: 20px; */
+    height: 300px;
+}
+
+.key-metric-bar {
+    flex: 1;
+    background-color: var(--primary-blue);
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 10px;
+    color: white;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+    position: relative;
+    border: 1px solid white;
+}
+
+.key-metric-bar:hover {
+    transform: scaleY(1.05);
+}
+
+.key-metric-bar-label {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.key-metric-bar-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* ============================================
+   PROVIDING SOLUTIONS COMPONENT
+   ============================================ */
+.providing-solutions-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.providing-solutions-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.providing-solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.company-logo-card {
+    background-color: white;
+    /* border: 1px solid #e0e0e0; */
+    border-radius: 12px;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+    cursor: pointer;
+}
+
+.company-logo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-blue);
+}
+
+.company-logo-card img {
+    max-width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+    /* filter: grayscale(100%); */
+    transition: filter 0.3s ease;
+}
+
+.company-logo-card:hover img {
+    filter: grayscale(0%);
+}
+
+.company-logo-card .company-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    text-align: center;
+}
+
+/* ============================================
+   APPLICATIONS CAROUSEL COMPONENT
+   ============================================ */
+.applications-section {
+    padding: 80px 0;
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+.applications-section .section-title {
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.applications-section .section-description {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.applications-carousel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.applications-carousel-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.applications-nav-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    opacity: 1;
+    padding: 0;
+}
+
+.applications-nav-btn:hover {
+    background: white;
+    color: var(--primary-blue);
+    border-color: white;
+}
+
+.applications-carousel-content {
+    flex: 1;
+}
+
+.applications-nav-btn i {
+    font-size: 1rem;
+}
+
+.applications-nav-btn.carousel-control-prev,
+.applications-nav-btn.carousel-control-next {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+}
+
+.applications-nav-btn .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.application-card {
+    background-color: white;
+    color: #333;
+    border-radius: 12px;
+    border: 1px solid var(--primary-blue);
+    padding: 0;
+    height: 100%;
+    transition: transform 0.3s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.application-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.application-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.application-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.application-content {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.application-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.application-description {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+    flex: 1;
+}
+
+/* ============================================
+   RESPONSIVE STYLES FOR NEW COMPONENTS
+   ============================================ */
+@media (max-width: 768px) {
+    .challenge-card {
+        padding: 25px 20px;
+    }
+    
+    .challenge-card-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .challenge-card-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .challenge-card-title {
+        font-size: 1.1rem;
+    }
+    
+    .challenge-card-description {
+        font-size: 0.9rem;
+    }
+    
+    .key-metric-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .key-metric-content-wrapper {
+        height: 250px;
+    }
+    
+    .key-metric-number {
+        font-size: 4rem;
+    }
+    
+    .key-metric-label {
+        font-size: 1.1rem;
+    }
+    
+    .key-metric-chart {
+        height: 250px;
+        width: 100%;
+    }
+    
+    .providing-solutions-title {
+        font-size: 2rem;
+    }
+    
+    .providing-solutions-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+    }
+    
+    .company-logo-card {
+        min-height: 120px;
+        padding: 20px 15px;
+    }
+    
+    .applications-carousel-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .applications-carousel-nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .applications-nav-btn {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .application-image {
+        height: 200px;
+    }
+    
+    .application-content {
+        padding: 20px;
+    }
+    
+    .application-title {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .key-metric-content-wrapper {
+        height: 200px;
+    }
+    
+    .key-metric-number {
+        font-size: 3rem;
+    }
+    
+    .key-metric-chart {
+        height: 200px;
+        gap: 10px;
+    }
+    
+    .key-metric-bar {
+        padding: 10px 5px;
+    }
+    
+    .key-metric-bar-value {
+        font-size: 1.2rem;
+    }
+    
+    .providing-solutions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .company-logo-card {
+        min-height: 100px;
+        padding: 15px 10px;
+    }
+}
+

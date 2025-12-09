@@ -1,0 +1,171 @@
+/* ============================================
+   NAVBAR STYLES
+   ============================================ */
+
+/* Transparent Navbar Styles */
+.navbar-transparent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: transparent !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.navbar-transparent.scrolled {
+    background-color: rgba(26, 54, 93, 0.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Add padding to body to account for fixed navbar */
+body {
+    padding-top: 0;
+}
+
+/* Ensure first section on pages has proper spacing */
+main > section:first-child:not(#home):not(.about-hero-section),
+main > div:first-child > section:first-child:not(.about-hero-section) {
+    padding-top: 100px;
+}
+
+/* Home page hero section should start at top */
+#home {
+    padding-top: 0 !important;
+}
+
+/* About Us hero section should start at top */
+.about-hero-section {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.about-hero-section .carousel-inner {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.navbar-transparent .navbar-nav .nav-link {
+    color: white !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    margin-left: 5px;
+}
+
+.navbar-transparent .navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Ensure dropdown menus are visible */
+.navbar-transparent .dropdown-menu {
+    background-color: white !important;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 0.5rem;
+}
+
+.navbar-transparent .dropdown-item {
+    color: #333 !important;
+}
+
+.navbar-transparent .dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: var(--primary-blue) !important;
+}
+
+/* Mobile menu background when open */
+@media (max-width: 991px) {
+    .navbar-transparent .navbar-collapse {
+        background-color: rgba(26, 54, 93, 0.95);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+    }
+    
+    .navbar-transparent.scrolled .navbar-collapse {
+        background-color: var(--primary-blue);
+    }
+}
+
+/* ============================================
+   NAVBAR VARIANT 2 - BLACK LINKS
+   ============================================ */
+.navbar-transparent.navbar-black-links {
+    background: white !important;
+}
+
+.navbar-transparent.navbar-black-links.scrolled {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-transparent.navbar-black-links .navbar-nav .nav-link {
+    color: #000 !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    margin-left: 5px;
+}
+
+.navbar-transparent.navbar-black-links .navbar-nav .nav-link:hover {
+    color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.navbar-transparent.navbar-black-links .navbar-brand img {
+    filter: none; /* Remove white filter for black navbar */
+}
+
+/* Get Connected Button - Variant 2 */
+.navbar-transparent.navbar-black-links .btn-outline-primary-cta {
+    background-color: #00399E !important;
+    border-color: #00399E !important;
+    color: white !important;
+    border-radius: 28px;
+    padding: 10px 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar-transparent.navbar-black-links .btn-outline-primary-cta:hover {
+    background-color: #002d7a !important;
+    border-color: #002d7a !important;
+    color: white !important;
+}
+
+.navbar-transparent.navbar-black-links .btn-outline-primary-cta .btn-icon-default {
+    display: none !important;
+}
+
+.navbar-transparent.navbar-black-links .btn-outline-primary-cta .btn-icon-variant {
+    display: inline-block !important;
+    width: 20px;
+    height: 20px;
+    margin-left: 4px;
+}
+
+/* Default navbar button icon visibility */
+.navbar-transparent:not(.navbar-black-links) .btn-outline-primary-cta .btn-icon-default {
+    display: inline-block !important;
+}
+
+.navbar-transparent:not(.navbar-black-links) .btn-outline-primary-cta .btn-icon-variant {
+    display: none !important;
+}
+
+/* Mobile menu background when open - Variant 2 */
+@media (max-width: 991px) {
+    .navbar-transparent.navbar-black-links .navbar-collapse {
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+    }
+    
+    .navbar-transparent.navbar-black-links.scrolled .navbar-collapse {
+        background-color: white;
+    }
+}
+

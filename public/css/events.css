@@ -1,0 +1,322 @@
+/* ============================================
+   EVENTS PAGE STYLES
+   ============================================ */
+
+/* Hero Section */
+.events-hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../assets/images/events_bg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    margin-top: 0;
+}
+
+.events-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+    z-index: 1;
+}
+
+.events-hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.events-hero-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    line-height: 1.1;
+}
+
+.events-hero-subtitle {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+}
+
+.events-hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.events-learn-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 28px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.events-learn-btn:hover {
+    background-color: white;
+    color: var(--primary-blue);
+    border-color: white;
+}
+
+.events-cta-arrow {
+    width: 40px;
+    height: 40px;
+}
+
+/* Events Content Section */
+.events-section {
+    background-color: #ffffff;
+    padding: 100px 0;
+}
+
+.events-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.events-subtitle {
+    font-size: 1.25rem;
+    color: #666;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+/* Event Card */
+.event-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.event-image-wrapper {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+}
+
+.event-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover .event-image {
+    transform: scale(1.05);
+}
+
+.event-card-body {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-date {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.event-date i {
+    color: var(--primary-blue);
+}
+
+.event-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    flex: 1;
+}
+
+.event-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.event-social-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.event-social-link:hover {
+    color: #002d7a;
+    text-decoration: underline;
+}
+
+.event-social-link i {
+    font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .events-hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .events-hero-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .events-title {
+        font-size: 2.5rem;
+    }
+    
+    .events-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .event-image-wrapper {
+        height: 240px;
+    }
+    
+    .event-card-body {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .events-hero-section {
+        min-height: 100vh;
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+    
+    .events-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .events-hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .events-section {
+        padding: 60px 0;
+    }
+    
+    .events-title {
+        font-size: 2rem;
+    }
+    
+    .events-subtitle {
+        font-size: 1rem;
+    }
+    
+    .event-image-wrapper {
+        height: 220px;
+    }
+    
+    .event-card-body {
+        padding: 1.25rem;
+    }
+    
+    .event-title {
+        font-size: 1.25rem;
+    }
+    
+    .event-description {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .events-hero-section {
+        min-height: 100vh;
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+    
+    .events-hero-title {
+        font-size: 2rem;
+    }
+    
+    .events-hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .events-learn-btn {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+    
+    .events-cta-arrow {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .events-section {
+        padding: 40px 0;
+    }
+    
+    .events-title {
+        font-size: 1.75rem;
+    }
+    
+    .events-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .event-image-wrapper {
+        height: 200px;
+    }
+    
+    .event-card-body {
+        padding: 1rem;
+    }
+    
+    .event-title {
+        font-size: 1.1rem;
+    }
+    
+    .event-description {
+        font-size: 0.9rem;
+    }
+    
+    .event-social-link {
+        font-size: 0.9rem;
+    }
+}
+

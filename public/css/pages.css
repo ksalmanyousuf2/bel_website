@@ -1,0 +1,299 @@
+/* ============================================
+   DYNAMIC PAGES STYLES
+   ============================================ */
+
+/* Hero Section with Image */
+.page-hero-section {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    margin-top: 0;
+}
+
+.page-hero-section[style*="background-image"] {
+    background-image: var(--hero-bg-image);
+}
+
+.page-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+    z-index: 1;
+}
+
+.page-hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Hero Section without Image */
+.page-hero-no-image {
+    background-color: var(--primary-blue);
+    min-height: 40vh;
+}
+
+.page-hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+}
+
+.page-hero-no-image .page-hero-title {
+    text-shadow: none;
+}
+
+/* Page Content Section */
+.page-content-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.page-content {
+    background-color: #ffffff;
+    padding: 0;
+    line-height: 1.8;
+    color: #333;
+}
+
+.page-content h1,
+.page-content h2,
+.page-content h3,
+.page-content h4,
+.page-content h5,
+.page-content h6 {
+    color: var(--primary-blue);
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.page-content h1 {
+    font-size: 2.5rem;
+}
+
+.page-content h2 {
+    font-size: 2rem;
+}
+
+.page-content h3 {
+    font-size: 1.75rem;
+}
+
+.page-content h4 {
+    font-size: 1.5rem;
+}
+
+.page-content h5 {
+    font-size: 1.25rem;
+}
+
+.page-content h6 {
+    font-size: 1.1rem;
+}
+
+.page-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.page-content ul,
+.page-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.page-content li {
+    margin-bottom: 0.75rem;
+    line-height: 1.8;
+}
+
+.page-content ul {
+    list-style-type: disc;
+}
+
+.page-content ol {
+    list-style-type: decimal;
+}
+
+.page-content blockquote {
+    border-left: 4px solid var(--primary-blue);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.page-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+.page-content table th,
+.page-content table td {
+    border: 1px solid #dee2e6;
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+.page-content table th {
+    background-color: var(--primary-blue);
+    color: white;
+    font-weight: 600;
+}
+
+.page-content table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.page-content a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.page-content a:hover {
+    color: #002d7a;
+    text-decoration: underline;
+}
+
+.page-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-content code {
+    background-color: #f4f4f4;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    color: #e83e8c;
+}
+
+.page-content pre {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+.page-content pre code {
+    background-color: transparent;
+    padding: 0;
+    color: #333;
+}
+
+.page-content hr {
+    border: none;
+    border-top: 2px solid #dee2e6;
+    margin: 2rem 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .page-hero-title {
+        font-size: 3rem;
+    }
+    
+    .page-content h1 {
+        font-size: 2rem;
+    }
+    
+    .page-content h2 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero-section {
+        min-height: 50vh;
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+    
+    .page-hero-no-image {
+        min-height: 30vh;
+    }
+    
+    .page-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .page-content-section {
+        padding: 60px 0;
+    }
+    
+    .page-content {
+        padding: 0;
+    }
+    
+    .page-content h1 {
+        font-size: 1.75rem;
+    }
+    
+    .page-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .page-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-hero-section {
+        min-height: 40vh;
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+    
+    .page-hero-no-image {
+        min-height: 25vh;
+    }
+    
+    .page-hero-title {
+        font-size: 2rem;
+    }
+    
+    .page-content-section {
+        padding: 40px 0;
+    }
+    
+    .page-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .page-content h2 {
+        font-size: 1.25rem;
+    }
+    
+    .page-content p {
+        font-size: 0.95rem;
+    }
+    
+    .page-content ul,
+    .page-content ol {
+        padding-left: 1.5rem;
+    }
+}
+

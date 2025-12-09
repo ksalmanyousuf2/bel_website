@@ -1,0 +1,302 @@
+/* ============================================
+   SUPPORT PAGE STYLES
+   ============================================ */
+
+/* Hero Section */
+.support-hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../assets/images/noc (1) 1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    margin-top: 0;
+}
+
+.support-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+    z-index: 1;
+}
+
+.support-hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.support-hero-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    line-height: 1.1;
+}
+
+.support-hero-subtitle {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+}
+
+.support-hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.support-learn-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 28px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.support-learn-btn:hover {
+    background-color: white;
+    color: var(--primary-blue);
+    border-color: white;
+}
+
+.support-cta-arrow {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+
+/* Services Section */
+.support-services-section {
+    background-color: white;
+    padding: 80px 0;
+}
+
+.services-timeline-wrapper {
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.service-row {
+    /* border-bottom: 1px solid #e9ecef; */
+    position: relative;
+    min-height: 400px;
+}
+
+/* Add spacing around the timeline line */
+.service-row .col-lg-6 {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* For columns without order classes (default left-right layout) */
+.service-row .col-lg-6:not(.order-lg-1):not(.order-lg-2):first-child {
+    padding-right: 50px;
+    padding-left: 15px;
+}
+
+.service-row .col-lg-6:not(.order-lg-1):not(.order-lg-2):last-child {
+    padding-left: 50px;
+    padding-right: 15px;
+}
+
+/* For columns with order-lg-1 (appears first visually, but is second in DOM) */
+.service-row .col-lg-6.order-lg-1 {
+    padding-right: 50px;
+    padding-left: 15px;
+}
+
+/* For columns with order-lg-2 (appears second visually, but is first in DOM) */
+.service-row .col-lg-6.order-lg-2 {
+    padding-left: 50px;
+    padding-right: 15px;
+}
+
+.service-row:last-child {
+    border-bottom: none;
+}
+
+/* Continuous Timeline Line */
+.service-timeline-line-continuous {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: var(--primary-blue);
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.service-timeline-dot {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    background-color: var(--primary-blue);
+    border-radius: 50%;
+    border: 1px solid var(--primary-blue);
+    box-shadow: 0 0 0 3px var(--primary-blue);
+    z-index: 2;
+    color: var(--primary-blue);
+}
+
+.service-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.service-description {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.service-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.service-contact-btn {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.service-contact-btn:hover {
+    background-color: #002d7a;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 57, 158, 0.3);
+}
+
+.service-contact-btn i {
+    font-size: 1.1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .support-hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .support-hero-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .service-title {
+        font-size: 2rem;
+    }
+    
+    .service-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .support-hero-section {
+        min-height: 100vh;
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+    
+    .support-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .support-hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .support-services-section {
+        padding: 60px 0;
+    }
+    
+    .service-row {
+        margin-bottom: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    
+    .service-title {
+        font-size: 1.75rem;
+    }
+    
+    .service-description {
+        font-size: 0.95rem;
+    }
+    
+    .service-contact-btn {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    /* Hide timeline on mobile */
+    .service-timeline-line-continuous,
+    .service-timeline-dot {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .support-hero-section {
+        min-height: 100vh;
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+    
+    .support-hero-title {
+        font-size: 2rem;
+    }
+    
+    .support-hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .support-learn-btn {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+    
+    .support-cta-arrow {
+        width: 35px;
+        height: 35px;
+    }
+}
+
