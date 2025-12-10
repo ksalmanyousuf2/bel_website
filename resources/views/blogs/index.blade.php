@@ -9,15 +9,72 @@
 @section('content')
 <!-- Hero Section -->
 <section class="blogs-hero-section">
+    <div class="blogs-hero-animated-background">
+        <div class="blogs-hero-floating-shape blogs-hero-shape-1"></div>
+        <div class="blogs-hero-floating-shape blogs-hero-shape-2"></div>
+        <div class="blogs-hero-floating-shape blogs-hero-shape-3"></div>
+        <div class="blogs-hero-floating-shape blogs-hero-shape-4"></div>
+    </div>
     <div class="blogs-hero-overlay"></div>
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-12 text-center">
-                <h1 class="blogs-hero-title">From the Blogs</h1>
-                <p class="blogs-hero-subtitle">Exploring Clean Energy Insights</p>
-                <div class="blogs-hero-cta">
-                    <a href="#blogs-content" class="btn blogs-learn-btn">Learn more</a>
-                    <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="blogs-cta-arrow" alt="Arrow">
+            <div class="col-lg-10 mx-auto">
+                <div class="blogs-hero-content-wrapper text-center">
+                    <div class="blogs-hero-badge">
+                        <i class="fas fa-blog me-2"></i>Latest Insights
+                    </div>
+                    <h1 class="blogs-hero-title">From the Blogs</h1>
+                    <p class="blogs-hero-subtitle">Exploring Clean Energy Insights</p>
+                    <p class="blogs-hero-description">
+                        Stay informed with our latest articles, industry updates, and expert insights on renewable energy, solar technology, sustainability practices, and the future of clean energy. Discover valuable knowledge to power your journey towards a greener tomorrow.
+                    </p>
+                    
+                    <!-- Blog Statistics -->
+                    <div class="blogs-hero-stats">
+                        <div class="blogs-stat-item">
+                            <div class="blogs-stat-icon">
+                                <i class="fas fa-newspaper"></i>
+                            </div>
+                            <div class="blogs-stat-content">
+                                <div class="blogs-stat-number" data-count="{{ $blogs->total() }}">0</div>
+                                <div class="blogs-stat-label">Total Articles</div>
+                            </div>
+                        </div>
+                        <div class="blogs-stat-item">
+                            <div class="blogs-stat-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="blogs-stat-content">
+                                <div class="blogs-stat-number" data-count="{{ $recentPosts->count() }}">0</div>
+                                <div class="blogs-stat-label">Recent Posts</div>
+                            </div>
+                        </div>
+                        <div class="blogs-stat-item">
+                            <div class="blogs-stat-icon">
+                                <i class="fas fa-archive"></i>
+                            </div>
+                            <div class="blogs-stat-content">
+                                <div class="blogs-stat-number" data-count="{{ $archives->count() }}">0</div>
+                                <div class="blogs-stat-label">Archives</div>
+                            </div>
+                        </div>
+                        <div class="blogs-stat-item">
+                            <div class="blogs-stat-icon">
+                                <i class="fas fa-book-reader"></i>
+                            </div>
+                            <div class="blogs-stat-content">
+                                <div class="blogs-stat-number" data-count="5">0</div>
+                                <div class="blogs-stat-label">Min Read</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blogs-hero-cta">
+                        <a href="#blogs-content" class="btn blogs-learn-btn">
+                            <i class="fas fa-arrow-down me-2"></i>Read Articles
+                        </a>
+                        <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="blogs-cta-arrow" alt="Arrow">
+                    </div>
                 </div>
             </div>
         </div>
@@ -120,6 +177,57 @@
 @push('scripts')
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    // Animated Counter for Statistics
+    const counters = document.querySelectorAll('.blogs-stat-number');
+    const animateCounter = (counter) => {
+        const target = parseInt(counter.getAttribute('data-count')) || 0;
+        const duration = 2000;
+        const increment = target / (duration / 16);
+        let current = 0;
+        
+        const updateCounter = () => {
+            current += increment;
+            if (current < target) {
+                counter.textContent = Math.floor(current);
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = target;
+            }
+        };
+        updateCounter();
+    };
+
+    // Intersection Observer for counters
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    counters.forEach(counter => observer.observe(counter));
+
+    // Smooth scroll for CTA button
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+    
     const loadMoreBtn = document.getElementById('loadMoreBtn');
     const blogsContainer = document.querySelector('.col-lg-8');
     

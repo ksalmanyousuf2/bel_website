@@ -9,15 +9,72 @@
 @section('content')
 <!-- Hero Section -->
 <section class="careers-hero-section">
+    <div class="careers-hero-animated-background">
+        <div class="careers-hero-floating-shape careers-hero-shape-1"></div>
+        <div class="careers-hero-floating-shape careers-hero-shape-2"></div>
+        <div class="careers-hero-floating-shape careers-hero-shape-3"></div>
+        <div class="careers-hero-floating-shape careers-hero-shape-4"></div>
+    </div>
     <div class="careers-hero-overlay"></div>
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-12 text-center">
-                <h1 class="careers-hero-title">Join Our Team</h1>
-                <p class="careers-hero-subtitle">Build Your Career with Beacon Energy</p>
-                <div class="careers-hero-cta">
-                    <a href="#careers-content" class="btn careers-learn-btn">View Openings</a>
-                    <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="careers-cta-arrow" alt="Arrow">
+            <div class="col-lg-10 mx-auto">
+                <div class="careers-hero-content-wrapper text-center">
+                    <div class="careers-hero-badge">
+                        <i class="fas fa-briefcase me-2"></i>Career Opportunities
+                    </div>
+                    <h1 class="careers-hero-title">Join Our Team</h1>
+                    <p class="careers-hero-subtitle">Build Your Career with Beacon Energy</p>
+                    <p class="careers-hero-description">
+                        Join a dynamic team dedicated to transforming the energy landscape. At Beacon Energy, we offer exciting career opportunities in renewable energy, engineering, sales, operations, and more. Grow your career while making a positive impact on the environment and communities.
+                    </p>
+                    
+                    <!-- Career Statistics -->
+                    <div class="careers-hero-stats">
+                        <div class="careers-stat-item">
+                            <div class="careers-stat-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="careers-stat-content">
+                                <div class="careers-stat-number" data-count="{{ $jobs->total() }}">0</div>
+                                <div class="careers-stat-label">Open Positions</div>
+                            </div>
+                        </div>
+                        <div class="careers-stat-item">
+                            <div class="careers-stat-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="careers-stat-content">
+                                <div class="careers-stat-number" data-count="{{ $departments->count() }}">0</div>
+                                <div class="careers-stat-label">Departments</div>
+                            </div>
+                        </div>
+                        <div class="careers-stat-item">
+                            <div class="careers-stat-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="careers-stat-content">
+                                <div class="careers-stat-number" data-count="{{ $locations->count() }}">0</div>
+                                <div class="careers-stat-label">Locations</div>
+                            </div>
+                        </div>
+                        <div class="careers-stat-item">
+                            <div class="careers-stat-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="careers-stat-content">
+                                <div class="careers-stat-number" data-count="4">0</div>
+                                <div class="careers-stat-label">Job Types</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="careers-hero-cta">
+                        <a href="#careers-content" class="btn careers-learn-btn">
+                            <i class="fas fa-arrow-down me-2"></i>View Openings
+                        </a>
+                        <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="careers-cta-arrow" alt="Arrow">
+                    </div>
                 </div>
             </div>
         </div>
@@ -130,5 +187,62 @@
         @endif
     </div>
 </section>
+
+@push('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Animated Counter for Statistics
+    const counters = document.querySelectorAll('.careers-stat-number');
+    const animateCounter = (counter) => {
+        const target = parseInt(counter.getAttribute('data-count')) || 0;
+        const duration = 2000;
+        const increment = target / (duration / 16);
+        let current = 0;
+        
+        const updateCounter = () => {
+            current += increment;
+            if (current < target) {
+                counter.textContent = Math.floor(current);
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = target;
+            }
+        };
+        updateCounter();
+    };
+
+    // Intersection Observer for counters
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    counters.forEach(counter => observer.observe(counter));
+
+    // Smooth scroll for CTA button
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+</script>
+@endpush
 @endsection
 
