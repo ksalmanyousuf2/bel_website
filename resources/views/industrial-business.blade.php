@@ -162,9 +162,10 @@
 
 <!-- Applications Section -->
 <section class="applications-section">
-    <div class="container-fluid">
+    <div class="container-fluid" style="padding-right: 0px !important;">
         <h2 class="section-title">Applications</h2>
         <p class="section-description">Our solutions deliver optimal Return on Investment (ROI) and significantly reduce energy bills for our customers.</p>
+        <hr class="my-4">
         <div class="applications-carousel-wrapper">
             <div class="applications-carousel-nav">
                 <button class="applications-nav-btn carousel-control-prev" type="button" aria-label="Previous application">
@@ -264,6 +265,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var maxIndex = 0;
     var currentIndex = 0;
     var resizeTimeout = null;
+    var autoPlayInterval = null;
+    var autoPlayDelay = 4000; // 4 seconds between slides
 
     function updateTrack() {
         track.style.transform = 'translateX(-' + (currentIndex * cardFullWidth) + 'px)';
@@ -280,22 +283,62 @@ document.addEventListener('DOMContentLoaded', function() {
         var gapValue = parseFloat(computedStyles.gap || computedStyles.columnGap || '0') || 0;
         var cardWidth = cards[0].getBoundingClientRect().width;
         cardFullWidth = cardWidth + gapValue;
-        var visibleCount = slider.offsetWidth / cardFullWidth;
-        maxIndex = Math.max(0, cards.length - Math.ceil(visibleCount));
+        
+        // Calculate max index to allow scrolling one card at a time
+        // Allow scrolling until the last card is visible
+        var visibleCount = Math.floor(slider.offsetWidth / cardFullWidth);
+        maxIndex = Math.max(0, cards.length - visibleCount);
+        
+        // Ensure currentIndex doesn't exceed maxIndex
         if (currentIndex > maxIndex) {
             currentIndex = maxIndex;
         }
         updateTrack();
     }
 
+    function moveNext() {
+        if (currentIndex < maxIndex) {
+            currentIndex += 1;
+        } else {
+            // Loop back to the beginning
+            currentIndex = 0;
+        }
+        updateTrack();
+    }
+
+    function startAutoPlay() {
+        stopAutoPlay(); // Clear any existing interval
+        autoPlayInterval = setInterval(moveNext, autoPlayDelay);
+    }
+
+    function stopAutoPlay() {
+        if (autoPlayInterval) {
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = null;
+        }
+    }
+
+    function resetAutoPlay() {
+        stopAutoPlay();
+        startAutoPlay();
+    }
+
     recalc();
+    startAutoPlay(); // Start auto-play
+
+    // Pause on hover
+    if (slider) {
+        slider.addEventListener('mouseenter', stopAutoPlay);
+        slider.addEventListener('mouseleave', startAutoPlay);
+    }
 
     if (prevBtn) {
         prevBtn.addEventListener('click', function(e) {
             e.preventDefault();
             if (currentIndex > 0) {
-                currentIndex -= 1;
+                currentIndex -= 1; // Move back one card
                 updateTrack();
+                resetAutoPlay(); // Reset auto-play timer
             }
         });
     }
@@ -304,15 +347,19 @@ document.addEventListener('DOMContentLoaded', function() {
         nextBtn.addEventListener('click', function(e) {
             e.preventDefault();
             if (currentIndex < maxIndex) {
-                currentIndex += 1;
+                currentIndex += 1; // Move forward one card
                 updateTrack();
+                resetAutoPlay(); // Reset auto-play timer
             }
         });
     }
 
     window.addEventListener('resize', function() {
         clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(recalc, 150);
+        resizeTimeout = setTimeout(function() {
+            recalc();
+            resetAutoPlay(); // Restart auto-play after resize
+        }, 150);
     });
 });
 </script>

@@ -171,7 +171,7 @@
    APPLICATIONS SLIDER OVERRIDES
    ============================================ */
 .applications-carousel-wrapper {
-    gap: 32px;
+    gap: 250px;
     align-items: stretch;
 }
 
@@ -192,9 +192,17 @@
     will-change: transform;
 }
 
+.applications-slider-track {
+    align-items: stretch;
+}
+
 .applications-slider-track .application-card {
-    flex: 0 0 calc((100% - (var(--app-card-gap) * 3)) / 3.5);
-    max-width: calc((100% - (var(--app-card-gap) * 3)) / 3.5);
+    flex: 0 0 calc((100% - (var(--app-card-gap) * 2)) / 2.8);
+    max-width: calc((100% - (var(--app-card-gap) * 2)) / 2.8);
+    min-width: 380px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .applications-nav-btn.disabled {
@@ -202,10 +210,30 @@
     cursor: not-allowed;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
     .applications-slider-track .application-card {
         flex: 0 0 calc((100% - (var(--app-card-gap) * 2)) / 2.5);
         max-width: calc((100% - (var(--app-card-gap) * 2)) / 2.5);
+        min-width: 360px;
+        min-height: 480px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .applications-slider-track .application-card {
+        flex: 0 0 calc((100% - (var(--app-card-gap) * 1)) / 2);
+        max-width: calc((100% - (var(--app-card-gap) * 1)) / 2);
+        min-width: 340px;
+        min-height: 480px;
+    }
+}
+
+@media (max-width: 992px) {
+    .applications-slider-track .application-card {
+        flex: 0 0 calc((100% - (var(--app-card-gap) * 1)) / 1.8);
+        max-width: calc((100% - (var(--app-card-gap) * 1)) / 1.8);
+        min-width: 320px;
+        min-height: 460px;
     }
 }
 
@@ -215,8 +243,10 @@
     }
 
     .applications-slider-track .application-card {
-        flex: 0 0 calc((100% - (var(--app-card-gap) * 1)) / 1.5);
-        max-width: calc((100% - (var(--app-card-gap) * 1)) / 1.5);
+        flex: 0 0 calc((100% - (var(--app-card-gap) * 1)) / 1.4);
+        max-width: calc((100% - (var(--app-card-gap) * 1)) / 1.4);
+        min-width: 280px;
+        min-height: 440px;
     }
 }
 
@@ -235,8 +265,10 @@
     }
 
     .applications-slider-track .application-card {
-        flex: 0 0 85%;
-        max-width: 85%;
+        flex: 0 0 90%;
+        max-width: 90%;
+        min-width: unset;
+        min-height: 420px;
     }
 }
 

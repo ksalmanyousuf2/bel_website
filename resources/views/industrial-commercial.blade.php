@@ -30,7 +30,7 @@
             <div class="col-12">
                 <div class="industrial-hero-content" style="margin-top: 200px;">
                     <span class="hero-badge">[BUSINESS]</span>
-                    <h1 class="hero-title">COMMERCIAL</h1>
+                    <h1 class="hero-title">INDUSTRIAL</h1>
                     <p class="hero-subtitle">POWERING INDUSTRIES WITH RENOWNED SOLAR SOLUTIONS</p>
                     <div class="hero-image-wrapper-overlay mt-4">
                         <img src="{{ asset('assets/images/business-commercial.png') }}" alt="Solar Farm" class="img-fluid rounded-3">
@@ -184,100 +184,77 @@
 
 <!-- Applications Section -->
 <section class="applications-section">
-    <div class="container">
+    <div class="container-fluid" style="padding-right: 0px !important;">
         <h2 class="section-title">Applications</h2>
         <p class="section-description">Our solutions deliver optimal Return on Investment (ROI) and significantly reduce energy bills for our customers.</p>
-        
+        <hr class="my-4">
         <div class="applications-carousel-wrapper">
-            <!-- Carousel Navigation - Left Side -->
             <div class="applications-carousel-nav">
-                <button class="applications-nav-btn carousel-control-prev" type="button" data-bs-target="#applicationsCarousel" data-bs-slide="prev">
+                <button class="applications-nav-btn carousel-control-prev" type="button" aria-label="Previous application">
                     <i class="fas fa-arrow-left"></i>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="applications-nav-btn carousel-control-next" type="button" data-bs-target="#applicationsCarousel" data-bs-slide="next">
+                <button class="applications-nav-btn carousel-control-next" type="button" aria-label="Next application">
                     <i class="fas fa-arrow-right"></i>
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-            
-            <!-- Carousel Content - Right Side -->
+
             <div class="applications-carousel-content">
-                <div id="applicationsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="false">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row g-4">
-                                <div class="col-md-4">
-                                    <div class="application-card">
-                                        <div class="application-image">
-                                            <img src="{{ asset('assets/images/hero_section_image.png') }}" alt="Textile" class="img-fluid">
-                                        </div>
-                                        <div class="application-content">
-                                            <h3 class="application-title">Textile</h3>
-                                            <p class="application-description">Beacon Energy has a robust Monitoring & support app that gives customers complete visibility over their solar system. Available on all mobile and desktop platforms, the app allows the user to see all current and historical data about energy production, utilization, export, and overall saving.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="application-card">
-                                        <div class="application-image">
-                                            <img src="{{ asset('assets/images/hero_section_image.png') }}" alt="Beverages" class="img-fluid">
-                                        </div>
-                                        <div class="application-content">
-                                            <h3 class="application-title">Beverages</h3>
-                                            <p class="application-description">Beacon Energy has a robust Monitoring & support app that gives customers complete visibility over their solar system. Available on all mobile and desktop platforms, the app allows the user to see all current and historical data about energy production, utilization, export, and overall saving.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="application-card">
-                                        <div class="application-image">
-                                            <img src="{{ asset('assets/images/hero_section_image.png') }}" alt="Cold Storage" class="img-fluid">
-                                        </div>
-                                        <div class="application-content">
-                                            <h3 class="application-title">Cold Storage</h3>
-                                            <p class="application-description">Beacon Energy has a robust Monitoring & support app that gives customers complete visibility over their solar system. Available on all mobile and desktop platforms, the app allows the user to see all current and historical data about energy production, utilization, export, and overall saving.</p>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="applications-slider">
+                    <div class="applications-slider-track">
+                        <div class="application-card">
+                            <div class="application-image">
+                                <img src="{{ asset('assets/images/hero_section_image.png') }}" alt="Textile" class="img-fluid">
+                            </div>
+                            <div class="application-content">
+                                <h3 class="application-title">Textile</h3>
+                                <p class="application-description">Beacon Energy has a robust Monitoring & support app that gives customers complete visibility over their solar system. Available on all mobile and desktop platforms, the app allows the user to see all current and historical data about energy production, utilization, export, and overall saving.</p>
                             </div>
                         </div>
-                        <!-- Second slide for carousel rotation -->
-                        <div class="carousel-item">
-                            <div class="row g-4">
-                                <div class="col-md-4">
-                                    <div class="application-card">
-                                        <div class="application-image">
-                                            <img src="{{ asset('assets/images/hero_section_image.png') }}" alt="Manufacturing" class="img-fluid">
-                                        </div>
-                                        <div class="application-content">
-                                            <h3 class="application-title">Manufacturing</h3>
-                                            <p class="application-description">Beacon Energy provides comprehensive solar solutions for manufacturing facilities, helping reduce operational costs and carbon footprint.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="application-card">
-                                        <div class="application-image">
-                                            <img src="{{ asset('assets/images/hero_section_image.png') }}" alt="Warehouses" class="img-fluid">
-                                        </div>
-                                        <div class="application-content">
-                                            <h3 class="application-title">Warehouses</h3>
-                                            <p class="application-description">Large-scale solar installations for warehouses provide significant energy savings and support sustainable logistics operations.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="application-card">
-                                        <div class="application-image">
-                                            <img src="{{ asset('assets/images/hero_section_image.png') }}" alt="Retail" class="img-fluid">
-                                        </div>
-                                        <div class="application-content">
-                                            <h3 class="application-title">Retail</h3>
-                                            <p class="application-description">Retail chains benefit from our solar solutions with reduced electricity costs and enhanced brand reputation for sustainability.</p>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="application-card">
+                            <div class="application-image">
+                                <img src="{{ asset('assets/images/hero_section_image.png') }}" alt="Beverages" class="img-fluid">
+                            </div>
+                            <div class="application-content">
+                                <h3 class="application-title">Beverages</h3>
+                                <p class="application-description">Beacon Energy has a robust Monitoring & support app that gives customers complete visibility over their solar system. Available on all mobile and desktop platforms, the app allows the user to see all current and historical data about energy production, utilization, export, and overall saving.</p>
+                            </div>
+                        </div>
+                        <div class="application-card">
+                            <div class="application-image">
+                                <img src="{{ asset('assets/images/hero_section_image.png') }}" alt="Cold Storage" class="img-fluid">
+                            </div>
+                            <div class="application-content">
+                                <h3 class="application-title">Cold Storage</h3>
+                                <p class="application-description">Beacon Energy has a robust Monitoring & support app that gives customers complete visibility over their solar system. Available on all mobile and desktop platforms, the app allows the user to see all current and historical data about energy production, utilization, export, and overall saving.</p>
+                            </div>
+                        </div>
+                        <div class="application-card">
+                            <div class="application-image">
+                                <img src="{{ asset('assets/images/hero_section_image.png') }}" alt="Manufacturing" class="img-fluid">
+                            </div>
+                            <div class="application-content">
+                                <h3 class="application-title">Manufacturing</h3>
+                                <p class="application-description">Beacon Energy provides comprehensive solar solutions for manufacturing facilities, helping reduce operational costs and carbon footprint.</p>
+                            </div>
+                        </div>
+                        <div class="application-card">
+                            <div class="application-image">
+                                <img src="{{ asset('assets/images/hero_section_image.png') }}" alt="Warehouses" class="img-fluid">
+                            </div>
+                            <div class="application-content">
+                                <h3 class="application-title">Warehouses</h3>
+                                <p class="application-description">Large-scale solar installations for warehouses provide significant energy savings and support sustainable logistics operations.</p>
+                            </div>
+                        </div>
+                        <div class="application-card">
+                            <div class="application-image">
+                                <img src="{{ asset('assets/images/hero_section_image.png') }}" alt="Retail" class="img-fluid">
+                            </div>
+                            <div class="application-content">
+                                <h3 class="application-title">Retail</h3>
+                                <p class="application-description">Retail chains benefit from our solar solutions with reduced electricity costs and enhanced brand reputation for sustainability.</p>
                             </div>
                         </div>
                     </div>
@@ -290,36 +267,122 @@
 
 @push('scripts')
 <script>
-    document.querySelector('.navbar-transparent').classList.add('navbar-black-links');
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize applications carousel
-    var applicationsCarousel = document.getElementById('applicationsCarousel');
-    if (applicationsCarousel) {
-        var carousel = new bootstrap.Carousel(applicationsCarousel, {
-            interval: 5000,
-            ride: 'carousel',
-            pause: false,
-            wrap: true
-        });
-        
-        // Ensure navigation buttons work
-        var prevBtn = document.querySelector('.applications-nav-btn.carousel-control-prev');
-        var nextBtn = document.querySelector('.applications-nav-btn.carousel-control-next');
-        
+    var transparentNavbar = document.querySelector('.navbar-transparent');
+    if (transparentNavbar) {
+        transparentNavbar.classList.add('navbar-black-links');
+    }
+
+    var slider = document.querySelector('.applications-slider');
+    var track = slider ? slider.querySelector('.applications-slider-track') : null;
+    var cards = track ? Array.from(track.children) : [];
+    var prevBtn = document.querySelector('.applications-nav-btn.carousel-control-prev');
+    var nextBtn = document.querySelector('.applications-nav-btn.carousel-control-next');
+
+    if (!slider || !track || cards.length === 0) {
+        return;
+    }
+
+    var cardFullWidth = 0;
+    var maxIndex = 0;
+    var currentIndex = 0;
+    var resizeTimeout = null;
+    var autoPlayInterval = null;
+    var autoPlayDelay = 4000; // 4 seconds between slides
+
+    function updateTrack() {
+        track.style.transform = 'translateX(-' + (currentIndex * cardFullWidth) + 'px)';
         if (prevBtn) {
-            prevBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                carousel.prev();
-            });
+            prevBtn.classList.toggle('disabled', currentIndex === 0);
         }
-        
         if (nextBtn) {
-            nextBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                carousel.next();
-            });
+            nextBtn.classList.toggle('disabled', currentIndex >= maxIndex);
         }
     }
+
+    function recalc() {
+        var computedStyles = getComputedStyle(track);
+        var gapValue = parseFloat(computedStyles.gap || computedStyles.columnGap || '0') || 0;
+        var cardWidth = cards[0].getBoundingClientRect().width;
+        cardFullWidth = cardWidth + gapValue;
+        
+        // Calculate max index to allow scrolling one card at a time
+        // Allow scrolling until the last card is visible
+        var visibleCount = Math.floor(slider.offsetWidth / cardFullWidth);
+        maxIndex = Math.max(0, cards.length - visibleCount);
+        
+        // Ensure currentIndex doesn't exceed maxIndex
+        if (currentIndex > maxIndex) {
+            currentIndex = maxIndex;
+        }
+        updateTrack();
+    }
+
+    function moveNext() {
+        if (currentIndex < maxIndex) {
+            currentIndex += 1;
+        } else {
+            // Loop back to the beginning
+            currentIndex = 0;
+        }
+        updateTrack();
+    }
+
+    function startAutoPlay() {
+        stopAutoPlay(); // Clear any existing interval
+        autoPlayInterval = setInterval(moveNext, autoPlayDelay);
+    }
+
+    function stopAutoPlay() {
+        if (autoPlayInterval) {
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = null;
+        }
+    }
+
+    function resetAutoPlay() {
+        stopAutoPlay();
+        startAutoPlay();
+    }
+
+    recalc();
+    startAutoPlay(); // Start auto-play
+
+    // Pause on hover
+    if (slider) {
+        slider.addEventListener('mouseenter', stopAutoPlay);
+        slider.addEventListener('mouseleave', startAutoPlay);
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (currentIndex > 0) {
+                currentIndex -= 1; // Move back one card
+                updateTrack();
+                resetAutoPlay(); // Reset auto-play timer
+            }
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (currentIndex < maxIndex) {
+                currentIndex += 1; // Move forward one card
+                updateTrack();
+                resetAutoPlay(); // Reset auto-play timer
+            }
+        });
+    }
+
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(function() {
+            recalc();
+            resetAutoPlay(); // Restart auto-play after resize
+        }, 150);
+    });
 });
 </script>
 @endpush

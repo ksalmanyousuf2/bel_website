@@ -330,9 +330,9 @@
         </section>
     </div>
     <div class="col-lg-4 col-md-8 col-sm-4 col-xs-4">
-        <section class="py-5 cta-section-item" style="background-color: var(--primary-blue); border-radius: 26px 0 0 26px;">
+        <section class="py-5 cta-section-item" style="background-color: var(--primary-blue); border-radius: 26px 0 0 26px; ">
             <div class="container h-100 d-flex align-items-center">
-                <div class="card bg-primary text-white w-100">
+                <div class="card bg-primary text-white w-100" style="border-color: var(--primary-blue) !important;">
                     <div class="card-body p-4">
                         <h3 class="fw-bold mb-3">Let's Power the Planet- Sustainably</h3>
                         <p>Discover the sustainable technologies we use to drive the global transition to renewable energy.</p>

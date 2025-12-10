@@ -26,8 +26,8 @@
                                         <li><a class="dropdown-item" href="#">Grid-Tied Solar Solution</a></li>
                                     </ul>
                                 </li> --}}
-                                <li><a class="dropdown-item" href="{{ route('industrial-business') }}#solutions">Industrial</a></li>
-                                <li><a class="dropdown-item" href="{{ route('commercial-business') }}#solutions">Commercial</a></li>
+                                <li><a class="dropdown-item" href="{{ route('industrial-business') }}#solutions">Commercial</a></li>
+                                <li><a class="dropdown-item" href="{{ route('commercial-business') }}#solutions">Industrial</a></li>
                                 <li><a class="dropdown-item" href="{{ route('about-us') }}#solutions">Cleaning Services</a></li>
                             </ul>
                         </li>
