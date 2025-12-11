@@ -30,7 +30,7 @@
                     </p>
                     
                     <!-- Support Statistics -->
-                    <div class="support-hero-stats">
+                    {{-- <div class="support-hero-stats">
                         <div class="support-stat-item">
                             <div class="support-stat-icon">
                                 <i class="fas fa-clock"></i>
@@ -67,7 +67,7 @@
                                 <div class="support-stat-label">Days/Year</div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     
                     <div class="support-hero-cta">
                         <a href="#services" class="btn support-learn-btn">

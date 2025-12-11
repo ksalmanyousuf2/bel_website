@@ -254,6 +254,7 @@
     .applications-carousel-wrapper {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 
     .applications-carousel-nav {
@@ -269,6 +270,447 @@
         max-width: 90%;
         min-width: unset;
         min-height: 420px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE STYLES FOR LARGE SCREENS (1600px+)
+   ============================================ */
+
+/* Screens 1600px and above */
+@media (min-width: 1600px) {
+    /* General Section Spacing */
+    section.py-5 {
+        padding-top: 6rem !important;
+        padding-bottom: 6rem !important;
+    }
+    
+    /* Hero Section */
+    .industrial-hero-section {
+        padding: 140px 0 80px;
+        min-height: 600px;
+    }
+    
+    .industrial-hero-content {
+        margin-top: 60px !important;
+    }
+    
+    .hero-badge {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+    
+    .hero-title {
+        font-size: 6rem;
+        margin-bottom: 25px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5rem;
+        line-height: 1.7;
+    }
+    
+    .hero-image-wrapper-overlay {
+        margin-top: 3rem !important;
+    }
+    
+    .hero-image-wrapper-overlay img {
+        max-height: 600px;
+        object-fit: cover;
+    }
+    
+    /* Challenges Section */
+    .challenges-section {
+        padding: 100px 0;
+    }
+    
+    .challenges-section .section-title {
+        font-size: 3rem;
+    }
+    
+    .challenges-section .section-description {
+        font-size: 1.2rem;
+        line-height: 1.7;
+    }
+    
+    .challenge-card {
+        padding: 35px !important;
+        min-height: 320px;
+    }
+    
+    .challenge-card-icon {
+        margin-bottom: 20px;
+    }
+    
+    .challenge-card-icon img {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    
+    .challenge-card-title {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    
+    .challenge-card-description {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+    
+    /* Key Metric Section */
+    .key-metric-content-wrapper {
+        height: 400px !important;
+    }
+    
+    .key-metric-number {
+        font-size: 6rem;
+    }
+    
+    .key-metric-label {
+        font-size: 1.5rem;
+    }
+    
+    .key-metric-bar {
+        min-width: 120px;
+    }
+    
+    .key-metric-bar-label {
+        font-size: 1.1rem;
+    }
+    
+    .key-metric-bar-value {
+        font-size: 1.8rem;
+    }
+    
+    /* Providing Solutions Section */
+    .providing-solutions-section {
+        padding: 100px 0;
+    }
+    
+    .providing-solutions-title {
+        font-size: 3rem;
+        margin-bottom: 50px;
+    }
+    
+    .providing-solutions-grid {
+        gap: 30px;
+    }
+    
+    .company-logo-card {
+        padding: 30px;
+        min-height: 180px;
+    }
+    
+    /* Applications Section */
+    .applications-section {
+        padding: 100px 0;
+    }
+    
+    .applications-section .section-title {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .applications-section .section-description {
+        font-size: 1.3rem;
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+    
+    .applications-carousel-wrapper {
+        gap: 300px;
+    }
+    
+    .applications-slider-track .application-card {
+        flex: 0 0 calc((100% - (var(--app-card-gap) * 2)) / 3);
+        max-width: calc((100% - (var(--app-card-gap) * 2)) / 3);
+        min-width: 420px;
+        min-height: 550px;
+    }
+    
+    .application-image {
+        height: 300px;
+    }
+    
+    .application-content {
+        padding: 35px;
+    }
+    
+    .application-title {
+        font-size: 1.7rem;
+        margin-bottom: 18px;
+    }
+    
+    .application-description {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+}
+
+/* Screens 1800px and above */
+@media (min-width: 1800px) {
+    /* Container max-width adjustment */
+    .container {
+        max-width: 1600px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
+    /* General Section Spacing */
+    section.py-5 {
+        padding-top: 7rem !important;
+        padding-bottom: 7rem !important;
+    }
+    
+    /* Hero Section */
+    .industrial-hero-section {
+        padding: 160px 0 100px;
+        min-height: 700px;
+    }
+    
+    .hero-title {
+        font-size: 7rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.6rem;
+    }
+    
+    .hero-image-wrapper-overlay img {
+        max-height: 700px;
+    }
+    
+    /* Challenges Section */
+    .challenges-section {
+        padding: 120px 0;
+    }
+    
+    .challenges-section .section-title {
+        font-size: 3.5rem;
+    }
+    
+    .challenges-section .section-description {
+        font-size: 1.3rem;
+    }
+    
+    .challenge-card {
+        padding: 40px !important;
+        min-height: 360px;
+    }
+    
+    .challenge-card-title {
+        font-size: 1.4rem;
+    }
+    
+    .challenge-card-description {
+        font-size: 1.1rem;
+    }
+    
+    /* Key Metric Section */
+    .key-metric-content-wrapper {
+        height: 450px !important;
+    }
+    
+    .key-metric-number {
+        font-size: 7rem;
+    }
+    
+    .key-metric-label {
+        font-size: 1.7rem;
+    }
+    
+    /* Applications Section */
+    .applications-section .section-title {
+        font-size: 4rem;
+    }
+    
+    .applications-section .section-description {
+        font-size: 1.4rem;
+    }
+    
+    .applications-slider-track .application-card {
+        min-width: 450px;
+        min-height: 600px;
+    }
+    
+    .application-image {
+        height: 350px;
+    }
+    
+    .application-content {
+        padding: 40px;
+    }
+    
+    .application-title {
+        font-size: 1.8rem;
+    }
+    
+    .application-description {
+        font-size: 1.1rem;
+    }
+}
+
+/* Screens 2000px and above */
+@media (min-width: 2000px) {
+    .container {
+        max-width: 1800px;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    
+    /* General Section Spacing */
+    section.py-5 {
+        padding-top: 8rem !important;
+        padding-bottom: 8rem !important;
+    }
+    
+    /* Hero Section */
+    .industrial-hero-section {
+        padding: 180px 0 120px;
+        min-height: 800px;
+    }
+    
+    .hero-title {
+        font-size: 8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.75rem;
+    }
+    
+    .hero-image-wrapper-overlay img {
+        max-height: 800px;
+    }
+    
+    /* Challenges Section */
+    .challenges-section {
+        padding: 140px 0;
+    }
+    
+    .challenges-section .section-title {
+        font-size: 4rem;
+    }
+    
+    .challenge-card {
+        padding: 45px !important;
+        min-height: 400px;
+    }
+    
+    /* Key Metric Section */
+    .key-metric-content-wrapper {
+        height: 500px !important;
+    }
+    
+    .key-metric-number {
+        font-size: 8rem;
+    }
+    
+    .key-metric-label {
+        font-size: 1.9rem;
+    }
+    
+    /* Applications Section */
+    .applications-section .section-title {
+        font-size: 4.5rem;
+    }
+    
+    .applications-section .section-description {
+        font-size: 1.5rem;
+    }
+    
+    .applications-slider-track .application-card {
+        min-width: 480px;
+        min-height: 650px;
+    }
+    
+    .application-image {
+        height: 400px;
+    }
+    
+    .application-title {
+        font-size: 2rem;
+    }
+}
+
+/* Screens 2400px and above (Ultra-wide) */
+@media (min-width: 2400px) {
+    .container {
+        max-width: 2000px;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    
+    /* General Section Spacing */
+    section.py-5 {
+        padding-top: 9rem !important;
+        padding-bottom: 9rem !important;
+    }
+    
+    /* Hero Section */
+    .industrial-hero-section {
+        padding: 200px 0 140px;
+        min-height: 900px;
+    }
+    
+    .hero-title {
+        font-size: 9rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 2rem;
+    }
+    
+    .hero-image-wrapper-overlay img {
+        max-height: 900px;
+    }
+    
+    /* Challenges Section */
+    .challenges-section {
+        padding: 160px 0;
+    }
+    
+    .challenges-section .section-title {
+        font-size: 4.5rem;
+    }
+    
+    .challenge-card {
+        padding: 50px !important;
+        min-height: 440px;
+    }
+    
+    /* Key Metric Section */
+    .key-metric-content-wrapper {
+        height: 550px !important;
+    }
+    
+    .key-metric-number {
+        font-size: 9rem;
+    }
+    
+    .key-metric-label {
+        font-size: 2.1rem;
+    }
+    
+    /* Applications Section */
+    .applications-section .section-title {
+        font-size: 5rem;
+    }
+    
+    .applications-section .section-description {
+        font-size: 1.6rem;
+    }
+    
+    .applications-slider-track .application-card {
+        min-width: 520px;
+        min-height: 700px;
+    }
+    
+    .application-image {
+        height: 450px;
+    }
+    
+    .application-title {
+        font-size: 2.2rem;
     }
 }
 

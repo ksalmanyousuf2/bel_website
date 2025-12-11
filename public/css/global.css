@@ -327,7 +327,7 @@
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
-    height: 237px;
+    /* height: 237px; */
 }
 
 .challenge-card:hover {
@@ -338,7 +338,7 @@
 .challenge-card-icon {
     /* width: 60px;
     height: 60px; */
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     display: flex;
     align-items: center;
     /* justify-content: center; */
@@ -359,7 +359,7 @@
 }
 
 .challenge-card-title {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 600;
     /* color: white; */
     margin-bottom: 15px;
@@ -367,7 +367,7 @@
 }
 
 .challenge-card-description {
-    font-size: 10px;
+    font-size: 14px;
     /* color: rgba(255, 255, 255, 0.9); */
     line-height: 1.6;
     margin: 0;

@@ -37,6 +37,18 @@
         <input type="file" class="form-control" id="image" name="image" accept="image/*">
     </div>
     <div class="mb-3">
+        <label for="youtube_video_link" class="form-label">YouTube Video Link</label>
+        <input type="url" class="form-control" id="youtube_video_link" name="youtube_video_link" value="{{ old('youtube_video_link', $testimonial->youtube_video_link) }}" placeholder="https://www.youtube.com/watch?v=... or https://youtu.be/...">
+        <small class="form-text text-muted">Enter the full YouTube video URL. The video will be shown when clicking on the testimonial.</small>
+        @if($testimonial->youtube_video_link)
+        <div class="mt-2">
+            <a href="{{ $testimonial->youtube_video_link }}" target="_blank" class="btn btn-sm btn-outline-primary">
+                <i class="fab fa-youtube me-1"></i> View Video
+            </a>
+        </div>
+        @endif
+    </div>
+    <div class="mb-3">
         <label for="rating" class="form-label">Rating (1-5)</label>
         <input type="number" class="form-control" id="rating" name="rating" value="{{ old('rating', $testimonial->rating) }}" min="1" max="5">
     </div>

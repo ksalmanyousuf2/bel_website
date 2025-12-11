@@ -366,10 +366,24 @@
 /* ============================================
    INDUSTRIAL & COMMERCIAL SECTION
    ============================================ */
+.industrial-commercial-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.industrial-commercial-content-wrapper {
+    padding: 40px 0;
+}
+
+.industrial-commercial-content-wrapper .container {
+    padding-left: 15px;
+    padding-right: 50px;
+}
+
 .industrial-commercial-card {
     position: relative;
     border: none;
-    border-radius: 28px;
+    border-radius: 28px 0 0 28px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(15, 35, 67, 0.35);
     transition: transform 0.3s ease;
@@ -378,6 +392,9 @@
     background-repeat: no-repeat;
     height: 460px;
     width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 0;
 }
 
 .industrial-commercial-card::after {
@@ -642,6 +659,17 @@
     
     .industrial-commercial-card {
         height: 380px;
+        border-radius: 28px; /* Full border-radius on mobile */
+        margin-right: 15px; /* Add margin on mobile for spacing */
+    }
+    
+    .industrial-commercial-content-wrapper {
+        padding: 30px 15px;
+    }
+    
+    .industrial-commercial-content-wrapper .container {
+        padding-left: 15px;
+        padding-right: 15px;
     }
     
     .industrial-overlay-carousel {
@@ -731,6 +759,12 @@
     
     .industrial-commercial-card {
         height: 320px;
+        border-radius: 28px; /* Full border-radius on mobile */
+        margin-right: 15px; /* Add margin on mobile for spacing */
+    }
+    
+    .industrial-commercial-content-wrapper {
+        padding: 20px 15px;
     }
     
     .industrial-overlay-carousel {
@@ -891,11 +925,11 @@
     .mobile-app-image {
         margin-top: -228px;
         height: 381px;
-        left: 75px;
+        left: 136px;
     }
     
     .connect-icon {
-        left: 352px;
+        left: 422px;
         margin-top: -6px;
         width: 248px;
     }
@@ -904,17 +938,17 @@
 @media (min-width: 1501px) and (max-width: 1600px) {
     .mobile-app-image {
         height: 381px;
-        left: 75px;
+        left: 244px;
     }
     
     .connect-icon {
-        left: 352px;
+        left: 526px;
         margin-top: -6px;
         width: 248px;
     }
 }
 
-@media (min-width: 1701px) and (max-width: 2700px) {
+@media (min-width: 1701px) and (max-width: 1800px) {
     .mobile-app-image {
         left: 300px;
         height: 383px;
@@ -922,5 +956,478 @@
 
     .connect-icon {
         left: 594px;
+    }
+}
+
+@media (min-width: 1801px) and (max-width: 1930px) {
+    .mobile-app-image {
+        height: 570px !important;
+        margin-top: -348px !important;
+        left: 276px !important;
+    }
+    .connect-icon {
+        left: 695px !important;
+        margin-top: 0px !important;
+    }
+}
+/* ============================================
+   RESPONSIVE STYLES FOR LARGE SCREENS (1600px+)
+   ============================================ */
+
+/* Screens 1600px and above */
+@media (min-width: 1600px) and (min-width: 1700px) {
+    /* General Section Spacing */
+    section.py-5 {
+        padding-top: 6rem !important;
+        padding-bottom: 6rem !important;
+    }
+    
+    /* Hero Section */
+    .hero-top-section {
+        padding: 100px 0 80px;
+        padding-top: 220px;
+    }
+    
+    .hero-top-section .display-3 {
+        font-size: 4.5rem;
+        line-height: 1.1;
+    }
+    
+    .hero-top-section .lead {
+        font-size: 1.5rem;
+        line-height: 1.6;
+    }
+    
+    .hero-image-wrapper img {
+        max-height: 700px;
+    }
+    
+    .hero-stats-overlay {
+        bottom: 60px;
+        left: 60px;
+        right: 60px;
+    }
+    
+    .hero-stats-container {
+        gap: 60px;
+    }
+    
+    .hero-stat-item .stat-number {
+        font-size: 3rem;
+    }
+    
+    .hero-stat-item .stat-label {
+        font-size: 1.1rem;
+    }
+    
+    /* Section Titles */
+    .display-5 {
+        font-size: 3.5rem;
+    }
+    
+    h2.display-5 {
+        font-size: 3.5rem;
+        line-height: 1.2;
+    }
+    
+    h4 {
+        font-size: 1.75rem;
+    }
+    
+    /* Solutions Section */
+    #solutions .row.mb-5 {
+        margin-bottom: 4rem !important;
+    }
+    
+    .solution-card img {
+        height: 450px;
+    }
+    
+    .solution-card-overlay {
+        padding: 40px 35px 35px;
+    }
+    
+    .solution-card-overlay h5 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .solution-card-overlay p {
+        font-size: 1.05rem;
+        margin-bottom: 25px;
+        line-height: 1.7;
+    }
+    
+    /* Industrial & Commercial Section */
+    .industrial-commercial-card {
+        height: 520px;
+        border-radius: 28px 0 0 28px; /* Keep right edge flush on large screens */
+    }
+    
+    .industrial-commercial-content-wrapper {
+        padding: 60px 0;
+    }
+    
+    .industrial-overlay-card h5 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .industrial-overlay-card p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+    
+    /* Projects Section */
+    #projects .row.mb-4 {
+        margin-bottom: 3rem !important;
+    }
+    
+    .project-header-table td:nth-child(2),
+    .projects-list-table td:nth-child(2) {
+        padding-left: 4rem;
+    }
+    
+    .project-header-table td:nth-child(3),
+    .projects-list-table td:nth-child(3) {
+        padding-left: 4rem;
+    }
+    
+    .project-header-table h5 {
+        font-size: 1.4rem;
+    }
+    
+    .project-featured-image {
+        height: 400px;
+    }
+    
+    .featured-project .col-md-8 .project-featured-image,
+    .featured-project .col-md-4 .project-featured-image {
+        height: 350px;
+    }
+    
+    Connect App Section
+    .mobile-app-image {
+        max-width: 100%;
+        height: 521px;
+        margin-top: -314px;
+        left: 222px;
+    }
+    .connect-icon {    
+        left: 610px;
+        margin-top: 10px;
+    }
+    
+    /* Blogs Section */
+    #blogs .d-flex.justify-content-between {
+        margin-bottom: 3rem !important;
+    }
+    
+    .blog-featured img {
+        height: 450px;
+    }
+    
+    /* CTA Section */
+    .cta-section-row {
+        margin: 0;
+    }
+    
+    .cta-section-item {
+        padding: 5rem 0 !important;
+    }
+    
+    .cta-section-item .display-4 {
+        font-size: 3.5rem;
+        line-height: 1.2;
+    }
+    
+    .cta-section-item h3 {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+    
+    .cta-section-item p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+}
+
+/* Screens 1800px and above */
+@media (min-width: 1800px) {
+    /* Container max-width adjustment */
+    .container {
+        max-width: 1600px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
+    /* General Section Spacing */
+    section.py-5 {
+        padding-top: 7rem !important;
+        padding-bottom: 7rem !important;
+    }
+    
+    /* Hero Section */
+    .hero-top-section {
+        padding: 120px 0 100px;
+        padding-top: 240px;
+    }
+    
+    .hero-top-section .display-3 {
+        font-size: 5rem;
+    }
+    
+    .hero-top-section .lead {
+        font-size: 1.6rem;
+    }
+    
+    .hero-image-wrapper img {
+        max-height: 800px;
+    }
+    
+    .hero-stats-overlay {
+        bottom: 80px;
+        left: 80px;
+        right: 80px;
+    }
+    
+    .hero-stats-container {
+        gap: 80px;
+    }
+    
+    .hero-stat-item .stat-number {
+        font-size: 3.5rem;
+    }
+    
+    .hero-stat-item .stat-label {
+        font-size: 1.15rem;
+    }
+    
+    /* Solutions Section */
+    .solution-card img {
+        height: 500px;
+    }
+    
+    .solution-card-overlay {
+        padding: 50px 40px 40px;
+    }
+    
+    .solution-card-overlay h5 {
+        font-size: 1.6rem;
+    }
+    
+    .solution-card-overlay p {
+        font-size: 1.1rem;
+    }
+    
+    /* Industrial & Commercial Section */
+    .industrial-commercial-card {
+        height: 580px;
+        border-radius: 28px 0 0 28px; /* Keep right edge flush on large screens */
+    }
+    
+    .industrial-commercial-content-wrapper {
+        padding: 80px 0;
+    }
+    
+    .industrial-overlay-card h5 {
+        font-size: 2rem;
+    }
+    
+    .industrial-overlay-card p {
+        font-size: 1.15rem;
+    }
+    
+    /* Projects Section */
+    .project-header-table td:nth-child(2),
+    .projects-list-table td:nth-child(2) {
+        padding-left: 5rem;
+    }
+    
+    .project-header-table td:nth-child(3),
+    .projects-list-table td:nth-child(3) {
+        padding-left: 5rem;
+    }
+    
+    .project-featured-image {
+        height: 450px;
+    }
+    
+    .featured-project .col-md-8 .project-featured-image,
+    .featured-project .col-md-4 .project-featured-image {
+        height: 400px;
+    }
+    
+    /* Blogs Section */
+    .blog-featured img {
+        height: 500px;
+    }
+    
+    /* CTA Section */
+    .cta-section-item .display-4 {
+        font-size: 4rem;
+    }
+    
+    .cta-section-item h3 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Screens 2000px and above */
+@media (min-width: 2000px) {
+    .container {
+        max-width: 1800px;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    
+    /* General Section Spacing */
+    section.py-5 {
+        padding-top: 8rem !important;
+        padding-bottom: 8rem !important;
+    }
+    
+    /* Hero Section */
+    .hero-top-section .display-3 {
+        font-size: 5.5rem;
+    }
+    
+    .hero-top-section .lead {
+        font-size: 1.75rem;
+    }
+    
+    .hero-image-wrapper img {
+        max-height: 900px;
+    }
+    
+    .hero-stat-item .stat-number {
+        font-size: 4rem;
+    }
+    
+    .hero-stat-item .stat-label {
+        font-size: 1.2rem;
+    }
+    
+    /* Solutions Section */
+    .solution-card img {
+        height: 650px;
+    }
+    
+    /* Industrial & Commercial Section */
+    .industrial-commercial-card {
+        height: 640px;
+        border-radius: 28px 0 0 28px; /* Keep right edge flush on ultra-wide screens */
+    }
+    
+    .industrial-commercial-content-wrapper {
+        padding: 100px 0;
+    }
+    
+    /* Projects Section */
+    .project-featured-image {
+        height: 500px;
+    }
+    
+    .featured-project .col-md-8 .project-featured-image,
+    .featured-project .col-md-4 .project-featured-image {
+        height: 450px;
+    }
+    
+    /* Blogs Section */
+    .blog-featured img {
+        height: 550px;
+    }
+    
+    /* CTA Section */
+    .cta-section-item .display-4 {
+        font-size: 4.5rem;
+    }
+}
+
+/* Screens 2400px and above (Ultra-wide) */
+@media (min-width: 2400px) {
+    .container {
+        max-width: 2000px;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    
+    /* General Section Spacing */
+    section.py-5 {
+        padding-top: 9rem !important;
+        padding-bottom: 9rem !important;
+    }
+    
+    /* Hero Section */
+    .hero-top-section .display-3 {
+        font-size: 6rem;
+    }
+    
+    .hero-top-section .lead {
+        font-size: 1.9rem;
+    }
+    
+    .hero-image-wrapper img {
+        max-height: 1000px;
+    }
+    
+    .hero-stat-item .stat-number {
+        font-size: 4.5rem;
+    }
+    
+    .hero-stat-item .stat-label {
+        font-size: 1.3rem;
+    }
+    
+    /* Solutions Section */
+    .solution-card img {
+        height: 600px;
+    }
+    
+    /* Industrial & Commercial Section */
+    .industrial-commercial-card {
+        height: 700px;
+        border-radius: 28px 0 0 28px; /* Keep right edge flush on ultra-wide screens */
+    }
+    
+    .industrial-commercial-content-wrapper {
+        padding: 120px 0;
+    }
+    
+    /* Projects Section */
+    .project-featured-image {
+        height: 550px;
+    }
+    
+    .featured-project .col-md-8 .project-featured-image,
+    .featured-project .col-md-4 .project-featured-image {
+        height: 500px;
+    }
+    
+    /* Blogs Section */
+    .blog-featured img {
+        height: 600px;
+    }
+    
+    /* CTA Section */
+    .cta-section-item .display-4 {
+        font-size: 5rem;
+    }
+    
+    .cta-section-item h3 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1931px) and (max-width: 2570px) {
+    .mobile-app-image {
+        height: 600px;
+        margin-top: -357px;
+        left: 500px;
+    }
+
+    .connect-icon {
+        left: 955px;
+        margin-top: 54px;
     }
 }

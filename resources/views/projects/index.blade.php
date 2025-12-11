@@ -29,7 +29,7 @@
                         Discover our portfolio of cutting-edge renewable energy projects that are transforming communities and industries across Pakistan. From commercial installations to large-scale industrial solutions, we deliver sustainable energy systems that power progress.
                     </p>
                     
-                    <!-- Project Statistics -->
+                    {{-- <!-- Project Statistics -->
                     <div class="projects-hero-stats">
                         <div class="projects-stat-item">
                             <div class="projects-stat-icon">
@@ -67,7 +67,7 @@
                                 <div class="projects-stat-label">With Capacity</div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     
                     <div class="projects-hero-cta">
                         <a href="#projects-content" class="btn projects-learn-btn">
@@ -113,7 +113,7 @@
                 </div>
                 @endif
                 <div class="project-card-body">
-                    <h3 class="project-name" @if($loop->first) style="color: white;" @endif>{{ $project->name }}</h3>
+                    <p class="project-capacity" @if($loop->first) style="color: white;" @endif>{{ $project->name }}</p>
                     @if($project->capacity)
                     <p class="project-capacity" @if($loop->first) style="color: white;" @endif>Capacity: {{ $project->capacity }}</p>
                     @endif

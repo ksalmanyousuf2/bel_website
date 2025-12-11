@@ -106,12 +106,16 @@
 </section>
 
 <!-- Industrial & Commercial Section -->
-<section class="py-5 bg-primary text-white">
-    <div class="container">
-        <div class="row align-items-center">
+<section class="py-5 bg-primary text-white industrial-commercial-section">
+    <div class="container-fluid px-0">
+        <div class="row g-0 align-items-center">
             <div class="col-lg-6">
-                <h2 class="display-5 fw-bold mb-4">Industrial & Commercial Segments</h2>
-                <p>Our solutions deliver optimal Return on Investment (ROI) and significantly reduce energy bills for our customers.</p>
+                <div class="industrial-commercial-content-wrapper">
+                    <div class="container">
+                        <h2 class="display-5 fw-bold mb-4">Industrial & Commercial Segments</h2>
+                        <p>Our solutions deliver optimal Return on Investment (ROI) and significantly reduce energy bills for our customers.</p>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-6">
                 <div class="card text-dark industrial-commercial-card" id="industrialCardWrapper" style="background-image: url('{{ asset('assets/images/hero_section_image.png') }}');">
@@ -305,12 +309,22 @@
             </div>
             <div class="col-lg-6">
                 @forelse($blogs as $blog)
+                
+
                 <div class="mb-4 pb-3 border-bottom">
-                    <h5 class="fw-bold">{{ $blog->title }}</h5>
-                    @if($blog->excerpt)
-                    <div class="text-muted">{!! Str::limit(strip_tags($blog->excerpt), 100) !!}</div>
-                    @endif
-                    <a href="{{ route('blogs.show', $blog->slug) }}" class="text-decoration-none">Read More <i class="fas fa-arrow-right"></i></a>
+                    <div class="row">
+                        <div class="col-lg-9">
+                            @if($loop->first)<h5 @else <h6 @endif class="@if($loop->first) fw-bold @endif">{{ $blog->title }}
+                        </@if($loop->first)h5 @else h6 @endif>
+                            @if($blog->excerpt && $loop->first)
+                            <div class="text-muted">{!! Str::limit(strip_tags($blog->excerpt), 100) !!}</div>
+                            @endif
+                        </div>
+                        <div class="col-lg-3">
+                            <a href="{{ route('blogs.show', $blog->slug) }}" class="text-decoration-none">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
                 </div>
                 @empty
                 <p class="text-muted">No blog posts available at the moment.</p>
