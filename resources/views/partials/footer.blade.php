@@ -8,20 +8,30 @@
                 <h6 class="fw-bold mb-3">Quick Links</h6>
                 <ul class="list-unstyled">
                     <li><a href="{{ route('our-story') }}#about" class="text-decoration-none text-muted">Who are we</a></li>
-                    <li><a href="{{ route('projects.index') }}" class="text-decoration-none text-muted">Projects</a></li>
+                    <li><a href="{{ route('industrial-business') }}" class="text-decoration-none text-muted">Industrial</a></li>
+                    <li><a href="{{ route('commercial-business') }}" class="text-decoration-none text-muted">Commercial</a></li>
+                    <li><a href="{{ route('cleaning-services') }}" class="text-decoration-none text-muted">Cleaning Services</a></li>
+                    <li><a href="{{ route('reflex') }}" class="text-decoration-none text-muted">REFLEX™</a></li>
+                    <li><a href="#" class="text-decoration-none text-muted">Monitoring App</a></li>
+                    <li><a href="#" class="text-decoration-none text-muted">Referral App</a></li>
+
+                    {{-- <li><a href="{{ route('projects.index') }}" class="text-decoration-none text-muted">Projects</a></li>
                     <li><a href="{{ route('support') }}" class="text-decoration-none text-muted">Support</a></li>
                     <li><a href="#" class="text-decoration-none text-muted">Monitoring App</a></li>
                     <li><a href="{{ route('blogs.index') }}" class="text-decoration-none text-muted">Blogs</a></li>
                     <li><a href="{{ route('events.index') }}" class="text-decoration-none text-muted">Events</a></li>
-                    <li><a href="{{ route('careers.index') }}" class="text-decoration-none text-muted">Careers</a></li>
+                    <li><a href="{{ route('careers.index') }}" class="text-decoration-none text-muted">Careers</a></li> --}}
                 </ul>
             </div>
             <div class="col-lg-3 col-md-6">
-                <h6 class="fw-bold mb-3">Solutions</h6>
+                <h6 class="fw-bold mb-3">Resources</h6>
                 <ul class="list-unstyled">
-                    <li><a href="{{ route('industrial-business') }}#solutions" class="text-decoration-none text-muted">Industrial</a></li>
-                    <li><a href="{{ route('commercial-business') }}#solutions" class="text-decoration-none text-muted">Commercial</a></li>
-                    <li><a href="{{ route('about-us') }}#solutions" class="text-decoration-none text-muted">Cleaning Services</a></li>
+                    <li><a href="{{ route('support') }}#solutions" class="text-decoration-none text-muted">Support Center</a></li>
+                    <li><a href="{{ route('events.index') }}" class="text-decoration-none text-muted">Events</a></li>
+                    <li><a href="#case-studies" class="text-decoration-none text-muted">Case Studies</a></li>
+                    <li><a href="{{ route('faqs.index') }}" class="text-decoration-none text-muted">FAQs</a></li>
+                    <li><a href="{{ route('blogs.index') }}" class="text-decoration-none text-muted">Blogs</a></li>
+                    <li><a href="{{ route('careers.index') }}" class="text-decoration-none text-muted">Careers</a></li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-6">

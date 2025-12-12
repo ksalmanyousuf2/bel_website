@@ -51,9 +51,6 @@
                             <a class="nav-link" href="{{ route('support') }}">Support</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Monitoring App</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('blogs.index') }}">Blogs</a>
                         </li>
                         <li class="nav-item">
@@ -61,6 +58,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('careers.index') }}">Careers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">App</a>
                         </li>
                     </ul>
                     <div class="ms-3">
@@ -348,11 +348,54 @@ document.addEventListener('DOMContentLoaded', function() {
     const solutionsDropdownMenu = solutionsDropdown ? solutionsDropdown.nextElementSibling : null;
     
     if (solutionsDropdown && solutionsDropdownMenu) {
-        // Disable Bootstrap dropdown on mobile and use custom toggle
-        if (window.innerWidth < 992) {
-            // Remove Bootstrap dropdown data attributes on mobile
+        let hoverTimeout;
+        let isHovering = false;
+        
+        // Disable Bootstrap dropdown on desktop for hover functionality
+        if (window.innerWidth >= 992) {
             solutionsDropdown.removeAttribute('data-bs-toggle');
             solutionsDropdown.removeAttribute('data-bs-auto-close');
+        }
+        
+        // Desktop hover functionality
+        function showDropdown() {
+            clearTimeout(hoverTimeout);
+            if (window.innerWidth >= 992) {
+                solutionsDropdownMenu.classList.add('show');
+                solutionsDropdown.classList.add('show');
+                solutionsDropdown.setAttribute('aria-expanded', 'true');
+                isHovering = true;
+            }
+        }
+        
+        function hideDropdown() {
+            clearTimeout(hoverTimeout);
+            hoverTimeout = setTimeout(function() {
+                if (window.innerWidth >= 992 && !isHovering) {
+                    solutionsDropdownMenu.classList.remove('show');
+                    solutionsDropdown.classList.remove('show');
+                    solutionsDropdown.setAttribute('aria-expanded', 'false');
+                }
+            }, 150); // Small delay to allow moving between dropdown and menu
+        }
+        
+        // Hover events for desktop
+        if (window.innerWidth >= 992) {
+            solutionsDropdown.addEventListener('mouseenter', showDropdown);
+            solutionsDropdown.addEventListener('mouseleave', function() {
+                isHovering = false;
+                hideDropdown();
+            });
+            
+            solutionsDropdownMenu.addEventListener('mouseenter', function() {
+                isHovering = true;
+                clearTimeout(hoverTimeout);
+            });
+            
+            solutionsDropdownMenu.addEventListener('mouseleave', function() {
+                isHovering = false;
+                hideDropdown();
+            });
         }
         
         // Custom mobile dropdown toggle
@@ -424,8 +467,28 @@ document.addEventListener('DOMContentLoaded', function() {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(function() {
                 if (window.innerWidth >= 992) {
-                    // Re-enable Bootstrap dropdown on desktop
-                    solutionsDropdown.setAttribute('data-bs-toggle', 'dropdown');
+                    // Remove click toggle, enable hover
+                    solutionsDropdown.removeAttribute('data-bs-toggle');
+                    solutionsDropdown.removeAttribute('data-bs-auto-close');
+                    
+                    // Remove existing event listeners and re-add hover
+                    const newDropdown = document.getElementById('solutionsDropdown');
+                    const newMenu = newDropdown ? newDropdown.nextElementSibling : null;
+                    if (newDropdown && newMenu) {
+                        newDropdown.addEventListener('mouseenter', showDropdown);
+                        newDropdown.addEventListener('mouseleave', function() {
+                            isHovering = false;
+                            hideDropdown();
+                        });
+                        newMenu.addEventListener('mouseenter', function() {
+                            isHovering = true;
+                            clearTimeout(hoverTimeout);
+                        });
+                        newMenu.addEventListener('mouseleave', function() {
+                            isHovering = false;
+                            hideDropdown();
+                        });
+                    }
                 } else {
                     // Disable Bootstrap dropdown on mobile
                     solutionsDropdown.removeAttribute('data-bs-toggle');
