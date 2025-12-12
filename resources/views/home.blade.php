@@ -47,17 +47,12 @@
                     </div>
                     
                     <!-- Explore More Button -->
-                    <div class="hero-explore-btn">
-                        {{-- <button type="button">
-                            <i class="fas fa-arrow-up-right"></i>
-                        </button> --}}
+                    <a href="#solutions" class="hero-explore-btn" style="text-decoration: none; cursor: pointer;">
                         <div class="d-inline-flex align-items-center">
-                           
                             <img src="{{ asset('assets/icons/mouse-icon.svg') }}" class="img-fluid" style="width: 20px;height: 20px; margin-right: 5px; object-fit: fill !important;">
                             <span>Explore More</span>
                         </div>
-                        
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -262,7 +257,7 @@
 </section>
 
 <!-- Connect App Section -->
-<section class="py-5 bg-primary text-white">
+<section class="py-5 bg-primary text-white" style="margin-top: 3rem;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-4">
@@ -321,7 +316,7 @@
                             @endif
                         </div>
                         <div class="col-lg-3">
-                            <a href="{{ route('blogs.show', $blog->slug) }}" class="text-decoration-none">Read More <i class="fas fa-arrow-right"></i></a>
+                            <a href="{{ route('blogs.show', $blog->slug) }}" class="text-decoration-underline">Read More </a>
                         </div>
                     </div>
                     
@@ -344,9 +339,9 @@
         </section>
     </div>
     <div class="col-lg-4 col-md-8 col-sm-4 col-xs-4">
-        <section class="py-5 cta-section-item" style="background-color: var(--primary-blue); border-radius: 26px 0 0 26px; ">
+        <section class="py-5 cta-section-item" style="background-color: #00399E; border-radius: 26px 0 0 26px; ">
             <div class="container h-100 d-flex align-items-center">
-                <div class="card bg-primary text-white w-100" style="border-color: var(--primary-blue) !important;">
+                <div class="card bg-primary text-white w-100" style="border-color: #00399E !important;">
                     <div class="card-body p-4">
                         <h3 class="fw-bold mb-3">Let's Power the Planet- Sustainably</h3>
                         <p>Discover the sustainable technologies we use to drive the global transition to renewable energy.</p>
@@ -386,6 +381,22 @@ document.addEventListener('DOMContentLoaded', function () {
     carouselEl.addEventListener('slide.bs.carousel', function (event) {
         updateBackground(event.relatedTarget);
     });
+
+    // Smooth scroll for Explore More button
+    const exploreMoreBtn = document.querySelector('.hero-explore-btn');
+    if (exploreMoreBtn) {
+        exploreMoreBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    }
 });
 </script>
 @endpush

@@ -9,12 +9,12 @@
 @section('content')
 <!-- Hero Section -->
 <section class="careers-hero-section">
-    <div class="careers-hero-animated-background">
+    {{-- <div class="careers-hero-animated-background">
         <div class="careers-hero-floating-shape careers-hero-shape-1"></div>
         <div class="careers-hero-floating-shape careers-hero-shape-2"></div>
         <div class="careers-hero-floating-shape careers-hero-shape-3"></div>
         <div class="careers-hero-floating-shape careers-hero-shape-4"></div>
-    </div>
+    </div> --}}
     <div class="careers-hero-overlay"></div>
     <div class="container">
         <div class="row align-items-center">
@@ -29,7 +29,7 @@
                         Join a dynamic team dedicated to transforming the energy landscape. At Beacon Energy, we offer exciting career opportunities in renewable energy, engineering, sales, operations, and more. Grow your career while making a positive impact on the environment and communities.
                     </p>
                     
-                    <!-- Career Statistics -->
+                    {{-- <!-- Career Statistics -->
                     <div class="careers-hero-stats">
                         <div class="careers-stat-item">
                             <div class="careers-stat-icon">
@@ -67,7 +67,7 @@
                                 <div class="careers-stat-label">Job Types</div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     
                     <div class="careers-hero-cta">
                         <a href="#careers-content" class="btn careers-learn-btn">

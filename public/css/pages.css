@@ -37,7 +37,7 @@
 
 /* Hero Section without Image */
 .page-hero-no-image {
-    background-color: var(--primary-blue);
+    background-color: #00399E;
     min-height: 40vh;
 }
 
@@ -73,7 +73,7 @@
 .page-content h4,
 .page-content h5,
 .page-content h6 {
-    color: var(--primary-blue);
+    color: #00399E;
     font-weight: 700;
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -130,7 +130,7 @@
 }
 
 .page-content blockquote {
-    border-left: 4px solid var(--primary-blue);
+    border-left: 4px solid #00399E;
     padding-left: 1.5rem;
     margin: 2rem 0;
     font-style: italic;
@@ -152,7 +152,7 @@
 }
 
 .page-content table th {
-    background-color: var(--primary-blue);
+    background-color: #00399E;
     color: white;
     font-weight: 600;
 }
@@ -162,7 +162,7 @@
 }
 
 .page-content a {
-    color: var(--primary-blue);
+    color: #00399E;
     text-decoration: none;
     transition: color 0.3s ease;
 }

@@ -76,7 +76,7 @@
     }
     .navbar-nav .dropdown-item:hover {
         background-color: #f8f9fa;
-        color: var(--primary-blue);
+        color: #00399E;
     }
     .navbar-nav .dropend .dropdown-menu {
         left: 100%;

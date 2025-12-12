@@ -262,7 +262,7 @@
 
 .our-story-learn-btn:hover {
     background-color: white;
-    color: var(--primary-blue);
+    color: #00399E;
     border-color: white;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
@@ -333,7 +333,7 @@
 
 /* CEO's Message Section */
 .ceo-message-section {
-    background-color: var(--primary-blue);
+    background-color: #00399E;
     padding: 100px 0;
     padding-bottom: 0px;
     position: relative;
@@ -546,6 +546,212 @@
     box-shadow: 0 12px 35px rgba(26, 54, 93, 0.35);
 }
 
+/* ============================================
+   STATS SECTION (from About)
+   ============================================ */
+.stats-section {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #00399E;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* ============================================
+   TIMELINE / ACHIEVEMENTS SECTION (from About)
+   ============================================ */
+.timeline-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.achievements-carousel-nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    justify-content: flex-start;
+}
+
+.achievements-nav-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #00399E;
+    border: 2px solid #00399E;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    opacity: 1;
+}
+
+.achievements-nav-btn:hover {
+    background: white;
+    color: #00399E;
+    border-color: #00399E;
+}
+
+.achievements-nav-btn i {
+    font-size: 1rem;
+}
+
+.achievements-nav-btn.carousel-control-prev,
+.achievements-nav-btn.carousel-control-next {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+}
+
+.achievements-nav-btn .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ============================================
+   SUSTAINABLE FUTURE SECTION (from About)
+   ============================================ */
+.sustainable-future-section {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.sustainable-future-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.sustainable-future-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.sustainable-future-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sustainable-future-overlay {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    margin-left: auto;
+    padding: 81px 110px;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    /* clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%); */
+
+}
+
+.sustainable-future-content {
+    color: white;
+}
+
+.sustainable-future-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+    line-height: 1.2;
+}
+
+.sustainable-future-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2.5rem;
+}
+
+.sustainable-future-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sustainable-learn-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 30px;
+    font-weight: 500;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.sustainable-learn-btn:hover {
+    background: white;
+    color: #00399E;
+}
+
+.sustainable-arrow-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.sustainable-arrow-circle:hover {
+    background: white;
+}
+
+.sustainable-arrow-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.sustainable-arrow-circle:hover .sustainable-arrow-icon {
+    filter: brightness(0) invert(0);
+}
+
 .card-title {
     font-size: 1.75rem;
     font-weight: 700;
@@ -673,7 +879,7 @@
 .beaconhouse-group-header-content .beaconhouse-group-title {
     font-size: 3.5rem;
     font-weight: 700;
-    color: var(--primary-blue);
+    color: #00399E;
     margin: 0;
     line-height: 1.15;
     letter-spacing: -0.02em;
@@ -683,7 +889,7 @@
 .beaconhouse-group-divider {
     width: 80px;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-blue), rgba(0, 102, 204, 0.3));
+    background: linear-gradient(90deg, #00399E, rgba(0, 102, 204, 0.3));
     border-radius: 2px;
     margin-top: 10px;
 }
@@ -700,7 +906,7 @@
     top: 0;
     bottom: 0;
     width: 3px;
-    background: linear-gradient(180deg, var(--primary-blue), rgba(0, 102, 204, 0.3));
+    background: linear-gradient(180deg, #00399E, rgba(0, 102, 204, 0.3));
     border-radius: 2px;
 }
 
@@ -718,7 +924,7 @@
 }
 
 .beaconhouse-group-description strong {
-    color: var(--primary-blue);
+    color: #00399E;
     font-weight: 600;
     position: relative;
 }
@@ -740,7 +946,7 @@
     transform: translate(-50%, -50%);
     width: 12px;
     height: 12px;
-    background: var(--primary-blue);
+    background: #00399E;
     border-radius: 50%;
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 1), 0 0 0 6px rgba(0, 102, 204, 0.2);
 }
@@ -813,7 +1019,7 @@
 .beaconhouse-group-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--primary-blue);
+    color: #00399E;
     margin: 0;
     line-height: 1.2;
 }
@@ -839,7 +1045,7 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-blue), rgba(0, 102, 204, 0.5), var(--primary-blue));
+    background: linear-gradient(90deg, #00399E, rgba(0, 102, 204, 0.5), #00399E);
     background-size: 200% 100%;
     animation: shimmer 3s ease-in-out infinite;
 }
@@ -860,7 +1066,7 @@
 .category-title {
     font-size: 1.35rem;
     font-weight: 700;
-    color: var(--primary-blue);
+    color: #00399E;
     margin-bottom: 24px;
     text-align: left;
     letter-spacing: -0.01em;
@@ -875,7 +1081,7 @@
     left: 0;
     width: 50px;
     height: 3px;
-    background: linear-gradient(90deg, var(--primary-blue), rgba(0, 102, 204, 0.3));
+    background: linear-gradient(90deg, #00399E, rgba(0, 102, 204, 0.3));
     border-radius: 2px;
 }
 

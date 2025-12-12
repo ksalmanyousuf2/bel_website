@@ -24,7 +24,8 @@
                                             <div class="col-md-6 solutions-dropdown-column">
                                                 <h6 class="solutions-dropdown-heading">Business Segments</h6>
                                                 <ul class="solutions-dropdown-list">
-                                                    <li><a class="dropdown-item" href="{{ route('industrial-business') }}#solutions">Commercial & Industrial</a></li>
+                                                    <li><a class="dropdown-item" href="{{ route('industrial-business') }}#solutions">Commercial</a></li>
+                                                    <li><a class="dropdown-item" href="{{ route('commercial-business') }}#solutions">Industrial</a></li>
                                                     <li><a class="dropdown-item" href="#">Residential</a></li>
                                                 </ul>
                                             </div>
@@ -65,11 +66,14 @@
                     <div class="ms-3">
                         <a href="{{ route('contact') }}" class="btn btn-outline-primary flex-shrink-0 btn-outline-primary-cta text-white d-inline-flex align-items-center" style="border-radius: 28px; border-color:white !important; gap: 8px;">
                             Get connected
-                            <span class="btn-icon-wrapper">
-                                <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="btn-icon-default img-fluid" style="width: 20px;height: 20px;" alt="Arrow">
-                                <img src="{{ asset('assets/icons/slim-arrow-up.svg') }}" class="btn-icon-variant img-fluid" style="width: 20px;height: 20px; display: none;" alt="Arrow">
-                            </span>
                         </a>
+                        <span class="btn-icon-wrapper">
+                            <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="btn-icon-default img-fluid" style="width: 35px;height: 35px;     background: #00399E;
+    border: 1px solid #00399E;
+    border-radius: 16px;" alt="Arrow">
+                            <img src="{{ asset('assets/icons/slim-arrow-up.svg') }}" class="btn-icon-variant img-fluid" style="width: 35px;height: 35px; display: none;" alt="Arrow">
+                        </span>
+                        
                     </div>
                 </div>
             </div>
@@ -90,7 +94,7 @@
     }
     .navbar-nav .dropdown-item:hover {
         background-color: #f8f9fa;
-        color: var(--primary-blue);
+        color: #00399E;
     }
     .navbar-nav .dropend .dropdown-menu {
         left: 100%;
@@ -168,7 +172,7 @@
     .solutions-dropdown-list .dropdown-item:hover,
     .solutions-dropdown-list .dropdown-item:focus {
         background-color: #f0f7ff;
-        color: var(--primary-blue);
+        color: #00399E;
         transform: translateX(5px);
     }
     

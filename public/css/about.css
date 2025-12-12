@@ -82,7 +82,7 @@
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--primary-blue);
+    color: #00399E;
     margin-bottom: 20px;
 }
 
@@ -107,7 +107,7 @@
 .stat-number {
     font-size: 3.5rem;
     font-weight: 700;
-    color: var(--primary-blue);
+    color: #00399E;
     line-height: 1;
     margin-bottom: 10px;
 }
@@ -136,8 +136,8 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: var(--primary-blue);
-    border: 2px solid var(--primary-blue);
+    background: #00399E;
+    border: 2px solid #00399E;
     color: white;
     display: flex;
     align-items: center;
@@ -150,8 +150,8 @@
 
 .achievements-nav-btn:hover {
     background: white;
-    color: var(--primary-blue);
-    border-color: var(--primary-blue);
+    color: #00399E;
+    border-color: #00399E;
 }
 
 .achievements-nav-btn i {
@@ -218,7 +218,7 @@
     z-index: 2;
     width: 50%;
     margin-left: auto;
-    /* background: var(--primary-blue); */
+    /* background: #00399E; */
     padding: 81px 110px;
     min-height: 600px;
     display: flex;
@@ -265,7 +265,7 @@
 
 .sustainable-learn-btn:hover {
     background: white;
-    color: var(--primary-blue);
+    color: #00399E;
 }
 
 .sustainable-arrow-circle {
@@ -324,7 +324,7 @@
 .partner-name {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--primary-blue);
+    color: #00399E;
     margin-bottom: 10px;
 }
 

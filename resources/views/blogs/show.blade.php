@@ -101,7 +101,7 @@
     .blog-article-content h2,
     .blog-article-content h3,
     .blog-article-content h4 {
-        color: var(--primary-blue);
+        color: #00399E;
         margin-top: 2.5rem;
         margin-bottom: 1rem;
         font-weight: 700;
@@ -132,7 +132,7 @@
     }
     
     .blog-article-content blockquote {
-        border-left: 4px solid var(--primary-blue);
+        border-left: 4px solid #00399E;
         padding-left: 1.5rem;
         margin: 2rem 0;
         font-style: italic;
@@ -239,7 +239,7 @@
     .related-blog-title {
         font-size: 1.1rem;
         font-weight: 700;
-        color: var(--primary-blue);
+        color: #00399E;
         margin-bottom: 0.75rem;
         line-height: 1.4;
     }
@@ -281,7 +281,7 @@
 @if($blog->featured_image)
 <section class="blog-detail-hero" style="background-image: url('{{ asset('storage/' . $blog->featured_image) }}');">
 @else
-<section class="blog-detail-hero" style="background: linear-gradient(135deg, var(--primary-blue) 0%, #4299e1 100%);">
+<section class="blog-detail-hero" style="background: linear-gradient(135deg, #00399E 0%, #4299e1 100%);">
 @endif
     <div class="blog-detail-hero-overlay"></div>
     <div class="container">
@@ -326,7 +326,7 @@
                     @endif
                     
                     @if($blog->excerpt)
-                    <div class="blog-excerpt mb-4" style="font-size: 1.2rem; color: #666; font-style: italic; padding: 1.5rem; background: #f8f9fa; border-left: 4px solid var(--primary-blue); border-radius: 8px;">
+                    <div class="blog-excerpt mb-4" style="font-size: 1.2rem; color: #666; font-style: italic; padding: 1.5rem; background: #f8f9fa; border-left: 4px solid #00399E; border-radius: 8px;">
                         {!! $blog->excerpt !!}
                     </div>
                     @endif
@@ -335,7 +335,7 @@
                         {!! $blog->content !!}
                     </div>
                     
-                    <!-- Share Section -->
+                    {{-- <!-- Share Section -->
                     <div class="blog-share-section">
                         <div class="blog-share-title">Share this article</div>
                         <div class="blog-share-buttons">
@@ -352,7 +352,7 @@
                                 LinkedIn
                             </a>
                         </div>
-                    </div>
+                    </div> --}}
                 </article>
             </div>
             
@@ -368,7 +368,7 @@
                         @if($related->featured_image)
                         <img src="{{ asset('storage/' . $related->featured_image) }}" alt="{{ $related->title }}" class="related-blog-image">
                         @else
-                        <div class="related-blog-image" style="background: linear-gradient(135deg, var(--primary-blue) 0%, #4299e1 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                        <div class="related-blog-image" style="background: linear-gradient(135deg, #00399E 0%, #4299e1 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
                             <i class="fas fa-newspaper"></i>
                         </div>
                         @endif

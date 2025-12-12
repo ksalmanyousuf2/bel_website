@@ -65,7 +65,7 @@
 
 .about-hero-section .carousel {
     margin: 0;
-    background-color: var(--primary-blue);
+    background-color: #00399E;
     position: relative;
 }
 
@@ -73,7 +73,7 @@
     position: relative;
     overflow: hidden;
     min-height: 100vh;
-    background-color: var(--primary-blue);
+    background-color: #00399E;
     padding-top: 0 !important;
     margin-top: 0 !important;
 }
@@ -223,7 +223,7 @@
 }
 
 .hero-explore-btn button i {
-    color: var(--primary-blue);
+    color: #00399E;
     font-size: 1.2rem;
 }
 
@@ -318,7 +318,7 @@
    CHALLENGE CARD COMPONENT
    ============================================ */
 .challenge-card {
-    /* background-color: var(--primary-blue); */
+    /* background-color: #00399E; */
     color: white;
     border-radius: 12px;
     padding: 30px 25px;
@@ -406,7 +406,7 @@
 .key-metric-number {
     font-size: 5rem;
     font-weight: 700;
-    color: var(--primary-blue);
+    color: #00399E;
     line-height: 1;
     margin-bottom: 10px;
 }
@@ -427,7 +427,7 @@
 
 .key-metric-bar {
     flex: 1;
-    background-color: var(--primary-blue);
+    background-color: #00399E;
     border-radius: 8px 8px 0 0;
     display: flex;
     flex-direction: column;
@@ -466,7 +466,7 @@
 .providing-solutions-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--primary-blue);
+    color: #00399E;
     margin-bottom: 50px;
     text-align: center;
 }
@@ -493,7 +493,7 @@
 .company-logo-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-color: var(--primary-blue);
+    border-color: #00399E;
 }
 
 .company-logo-card img {
@@ -511,7 +511,7 @@
 .company-logo-card .company-name {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--primary-blue);
+    color: #00399E;
     text-align: center;
 }
 
@@ -520,7 +520,7 @@
    ============================================ */
 .applications-section {
     padding: 80px 0;
-    background-color: var(--primary-blue);
+    background-color: #00399E;
     color: white;
 }
 
@@ -548,6 +548,8 @@
     gap: 15px;
     /* align-items: center; */
     flex-shrink: 0;
+    margin-left:50px;
+    
 }
 
 .applications-nav-btn {
@@ -569,7 +571,7 @@
 
 .applications-nav-btn:hover {
     background: white;
-    color: var(--primary-blue);
+    color: #00399E;
     border-color: white;
 }
 
@@ -609,7 +611,7 @@
     background-color: white;
     color: #333;
     border-radius: 12px;
-    border: 1px solid var(--primary-blue);
+    border: 1px solid #00399E;
     padding: 0;
     height: 100%;
     min-height: 500px;
@@ -650,7 +652,7 @@
 .application-title {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--primary-blue);
+    color: #00399E;
     margin-bottom: 15px;
     flex-shrink: 0;
 }

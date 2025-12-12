@@ -9,12 +9,12 @@
 @section('content')
 <!-- Hero Section -->
 <section class="blogs-hero-section">
-    <div class="blogs-hero-animated-background">
+    {{-- <div class="blogs-hero-animated-background">
         <div class="blogs-hero-floating-shape blogs-hero-shape-1"></div>
         <div class="blogs-hero-floating-shape blogs-hero-shape-2"></div>
         <div class="blogs-hero-floating-shape blogs-hero-shape-3"></div>
         <div class="blogs-hero-floating-shape blogs-hero-shape-4"></div>
-    </div>
+    </div> --}}
     <div class="blogs-hero-overlay"></div>
     <div class="container">
         <div class="row align-items-center">
@@ -29,7 +29,7 @@
                         Stay informed with our latest articles, industry updates, and expert insights on renewable energy, solar technology, sustainability practices, and the future of clean energy. Discover valuable knowledge to power your journey towards a greener tomorrow.
                     </p>
                     
-                    <!-- Blog Statistics -->
+                    {{-- <!-- Blog Statistics -->
                     <div class="blogs-hero-stats">
                         <div class="blogs-stat-item">
                             <div class="blogs-stat-icon">
@@ -68,7 +68,7 @@
                             </div>
                         </div>
                     </div>
-                    
+                     --}}
                     <div class="blogs-hero-cta">
                         <a href="#blogs-content" class="btn blogs-learn-btn">
                             <i class="fas fa-arrow-down me-2"></i>Read Articles

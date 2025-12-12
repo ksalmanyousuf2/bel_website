@@ -262,7 +262,7 @@
 
 .careers-learn-btn:hover {
     background-color: white;
-    color: var(--primary-blue);
+    color: #00399E;
     border-color: white;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
@@ -326,7 +326,7 @@
 }
 
 .job-title a {
-    color: var(--primary-blue);
+    color: #00399E;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -383,7 +383,7 @@
 .job-location i,
 .job-department i,
 .job-salary i {
-    color: var(--primary-blue);
+    color: #00399E;
     width: 16px;
 }
 
@@ -438,7 +438,7 @@
 .job-detail-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--primary-blue);
+    color: #00399E;
     margin-bottom: 15px;
 }
 
@@ -457,7 +457,7 @@
 }
 
 .job-meta-item i {
-    color: var(--primary-blue);
+    color: #00399E;
 }
 
 .job-detail-content {
@@ -471,7 +471,7 @@
 .job-section h3 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--primary-blue);
+    color: #00399E;
     margin-bottom: 15px;
     padding-bottom: 10px;
     border-bottom: 2px solid #eee;
@@ -494,7 +494,7 @@
 }
 
 .info-item strong {
-    color: var(--primary-blue);
+    color: #00399E;
     margin-right: 10px;
 }
 
@@ -521,7 +521,7 @@
 .sidebar-card h4 {
     font-size: 1.3rem;
     font-weight: 600;
-    color: var(--primary-blue);
+    color: #00399E;
     margin-bottom: 20px;
     padding-bottom: 15px;
     border-bottom: 2px solid #eee;
@@ -545,7 +545,7 @@
 }
 
 .job-overview-list li strong {
-    color: var(--primary-blue);
+    color: #00399E;
 }
 
 .related-jobs-list {
@@ -564,7 +564,7 @@
 }
 
 .related-jobs-list li a {
-    color: var(--primary-blue);
+    color: #00399E;
     text-decoration: none;
     font-weight: 500;
     display: block;
@@ -597,7 +597,7 @@
 .application-form-card h2 {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--primary-blue);
+    color: #00399E;
     margin-bottom: 30px;
 }
 
@@ -617,7 +617,7 @@
 
 .application-form-card .form-control:focus,
 .application-form-card .form-select:focus {
-    border-color: var(--primary-blue);
+    border-color: #00399E;
     box-shadow: 0 0 0 0.2rem rgba(26, 54, 93, 0.25);
 }
 

@@ -36,7 +36,7 @@
                 <div class="d-inline-flex align-items-cente r">
                     <a href="{{ route('contact') }}" class="btn btn-outline-primary flex-shrink-0 selected-projects-btn" style="border-radius: 28px;">Get connected</a>
                     <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="img-fluid" 
-                    style="    width: 35px;height: 35px; border: 1px solid;border-color: var(--primary-blue) !important;border-radius: 17px; margin-left: 6px;">
+                    style="    width: 35px;height: 35px; border: 1px solid;border-color: #00399E !important;border-radius: 17px; margin-left: 6px;">
                 </div>
                 <div class="d-flex gap-3 mt-3" style="font-size: 20px; margin-left: 10px;">
                     <a href="#" class="text-dark"><i class="fab fa-instagram"></i></a>

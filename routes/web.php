@@ -24,6 +24,8 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\Admin\CareerController as AdminCareerController;
 use App\Http\Controllers\Admin\JobApplicationController;
+use App\Http\Controllers\CleaningServicesController;
+use App\Http\Controllers\ReflexController;
 use Illuminate\Support\Facades\Route;
 
 // Frontend Routes
@@ -42,6 +44,8 @@ Route::get('/commercial-business', [IndustrialCommercialController::class, 'inde
 Route::get('/industrial-business', [IndustrialCommercialController::class, 'indexIndustrial'])->name('industrial-business');
 
 Route::get('/support', [SupportController::class, 'index'])->name('support');
+Route::get('/cleaning-services', [CleaningServicesController::class, 'index'])->name('cleaning-services');
+Route::get('/reflex', [ReflexController::class, 'index'])->name('reflex');
 Route::get('/faqs', [FaqController::class, 'index'])->name('faqs.index');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');

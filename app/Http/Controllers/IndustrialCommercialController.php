@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Company;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
 class IndustrialCommercialController extends Controller
@@ -14,7 +15,13 @@ class IndustrialCommercialController extends Controller
             ->orderBy('type')
             ->get();
         
-        return view('industrial-commercial', compact('companies'));
+        $testimonials = Testimonial::where('is_active', true)
+            ->whereNotNull('image')
+            ->orderBy('order')
+            ->get();
+        
+            // dd($testimonials);
+        return view('industrial-commercial', compact('companies', 'testimonials'));
     }
     public function business()
     { 
@@ -23,7 +30,12 @@ class IndustrialCommercialController extends Controller
             ->orderBy('type')
             ->get();
         
-        return view('industrial-business', compact('companies'));
+        $testimonials = Testimonial::where('is_active', true)
+            ->whereNotNull('image')
+            ->orderBy('order')
+            ->get();
+        
+        return view('industrial-business', compact('companies', 'testimonials'));
     }
 
     public function indexIndustrial()
@@ -33,6 +45,11 @@ class IndustrialCommercialController extends Controller
             ->orderBy('type')
             ->get();
         
-        return view('industrial-business', compact('companies'));
+        $testimonials = Testimonial::where('is_active', true)
+            ->whereNotNull('image')
+            ->orderBy('order')
+            ->get();
+        
+        return view('industrial-business', compact('companies', 'testimonials'));
     }
 }

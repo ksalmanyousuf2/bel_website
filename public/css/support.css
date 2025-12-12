@@ -262,7 +262,7 @@
 
 .support-learn-btn:hover {
     background-color: white;
-    color: var(--primary-blue);
+    color: #00399E;
     border-color: white;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
@@ -336,7 +336,7 @@
     top: 0;
     bottom: 0;
     width: 3px;
-    background-color: var(--primary-blue);
+    background-color: #00399E;
     transform: translateX(-50%);
     z-index: 1;
 }
@@ -348,12 +348,12 @@
     transform: translate(-50%, -50%);
     width: 24px;
     height: 24px;
-    background-color: var(--primary-blue);
+    background-color: #00399E;
     border-radius: 50%;
-    border: 1px solid var(--primary-blue);
-    box-shadow: 0 0 0 3px var(--primary-blue);
+    border: 1px solid #00399E;
+    box-shadow: 0 0 0 3px #00399E;
     z-index: 2;
-    color: var(--primary-blue);
+    color: #00399E;
 }
 
 .service-image {
@@ -366,7 +366,7 @@
 .service-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--primary-blue);
+    color: #00399E;
     margin-bottom: 1.5rem;
     line-height: 1.2;
 }
@@ -385,7 +385,7 @@
 }
 
 .service-contact-btn {
-    background-color: var(--primary-blue);
+    background-color: #00399E;
     color: white;
     border: none;
     padding: 12px 24px;

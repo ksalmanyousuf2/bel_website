@@ -9,12 +9,12 @@
 @section('content')
 <!-- Hero Section -->
 <section class="projects-hero-section">
-    <div class="projects-hero-animated-background">
+    {{-- <div class="projects-hero-animated-background">
         <div class="projects-hero-floating-shape projects-hero-shape-1"></div>
         <div class="projects-hero-floating-shape projects-hero-shape-2"></div>
         <div class="projects-hero-floating-shape projects-hero-shape-3"></div>
         <div class="projects-hero-floating-shape projects-hero-shape-4"></div>
-    </div>
+    </div> --}}
     <div class="projects-hero-overlay"></div>
     <div class="container">
         <div class="row align-items-center">
@@ -103,7 +103,7 @@
             @php
                 $projectType = $project->type ? strtolower(trim($project->type)) : 'both';
             @endphp
-            <div class="project-card {{ $index === 0 ? 'active' : '' }}" data-category="{{ $projectType }}" @if($loop->first) style="background-color: var(--primary-blue); color: white;" @endif>
+            <div class="project-card {{ $index === 0 ? 'active' : '' }}" data-category="{{ $projectType }}" @if($loop->first) style="background-color: #00399E; color: white;" @endif>
                 
                 @if($project->images->count() > 0)
                 <div class="project-image-wrapper">

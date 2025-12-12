@@ -9,12 +9,12 @@
 @section('content')
 <!-- Hero Section -->
 <section class="support-hero-section">
-    <div class="support-hero-animated-background">
+    {{-- <div class="support-hero-animated-background">
         <div class="support-hero-floating-shape support-hero-shape-1"></div>
         <div class="support-hero-floating-shape support-hero-shape-2"></div>
         <div class="support-hero-floating-shape support-hero-shape-3"></div>
         <div class="support-hero-floating-shape support-hero-shape-4"></div>
-    </div>
+    </div> --}}
     <div class="support-hero-overlay"></div>
     <div class="container">
         <div class="row align-items-center">

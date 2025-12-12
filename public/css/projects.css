@@ -262,7 +262,7 @@
 
 .projects-learn-btn:hover {
     background-color: white;
-    color: var(--primary-blue);
+    color: #00399E;
     border-color: white;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
@@ -309,12 +309,12 @@
 }
 
 .projects-tab:hover {
-    color: var(--primary-blue);
+    color: #00399E;
 }
 
 .projects-tab.active {
-    color: var(--primary-blue);
-    border-bottom-color: var(--primary-blue);
+    color: #00399E;
+    border-bottom-color: #00399E;
 }
 
 /* Project Cards Grid */
@@ -340,12 +340,12 @@
 .project-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-    border-color: var(--primary-blue);
+    border-color: #00399E;
 }
 
 .project-card.active {
-    background-color: var(--primary-blue);
-    border-color: var(--primary-blue);
+    background-color: #00399E;
+    border-color: #00399E;
     color: white;
 }
 

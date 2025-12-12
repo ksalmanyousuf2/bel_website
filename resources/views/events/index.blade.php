@@ -9,12 +9,12 @@
 @section('content')
 <!-- Hero Section -->
 <section class="events-hero-section">
-    <div class="events-hero-animated-background">
+    {{-- <div class="events-hero-animated-background">
         <div class="events-hero-floating-shape events-hero-shape-1"></div>
         <div class="events-hero-floating-shape events-hero-shape-2"></div>
         <div class="events-hero-floating-shape events-hero-shape-3"></div>
         <div class="events-hero-floating-shape events-hero-shape-4"></div>
-    </div>
+    </div> --}}
     <div class="events-hero-overlay"></div>
     <div class="container">
         <div class="row align-items-center">
@@ -29,7 +29,7 @@
                         Be part of our exciting events, conferences, and community gatherings focused on renewable energy innovation, sustainability, and clean technology. Connect with industry leaders, learn from experts, and contribute to the clean energy revolution.
                     </p>
                     
-                    <!-- Event Statistics -->
+                    {{-- <!-- Event Statistics -->
                     <div class="events-hero-stats">
                         <div class="events-stat-item">
                             <div class="events-stat-icon">
@@ -67,7 +67,7 @@
                                 <div class="events-stat-label">Social Links</div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     
                     <div class="events-hero-cta">
                         <a href="#events-content" class="btn events-learn-btn">

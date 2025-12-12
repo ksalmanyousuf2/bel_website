@@ -130,6 +130,10 @@
                         <div class="key-metric-bar-label">Commercial</div>
                         <div class="key-metric-bar-value">120</div>
                     </div>
+                    <div class="key-metric-bar" style="height: 90%;">
+                        <div class="key-metric-bar-label">Commercial</div>
+                        <div class="key-metric-bar-value">120</div>
+                    </div>
                     <div class="key-metric-bar" style="height: 100%;">
                         <div class="key-metric-bar-label">Commercial</div>
                         <div class="key-metric-bar-value">120</div>
@@ -241,6 +245,50 @@
         </div>
     </div>
 </section>
+
+<!-- Testimonials Section -->
+@if(isset($testimonials) && $testimonials->count() > 0)
+<section class="testimonials-carousel-section">
+    <div class="container-fluid" style="padding-right: 0px !important;">
+        <h2 class="section-title" style="margin-bottom: 5rem !important; margin-left: 65px !important;">Clients <br> Testimonials</h2>
+
+        <div class="testimonials-carousel-wrapper">
+            <div class="testimonials-carousel-nav">
+                <button class="testimonials-nav-btn carousel-control-next" type="button" aria-label="Next testimonial">
+                    <i class="fas fa-arrow-right"></i>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                <button class="testimonials-nav-btn carousel-control-prev" type="button" aria-label="Previous testimonial">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+              
+            </div>
+
+            <div class="testimonials-carousel-content">
+                <div class="testimonials-slider">
+                    <div class="testimonials-slider-track">
+                        @foreach($testimonials as $testimonial)
+                        <div class="testimonial-carousel-card">
+                            <div class="testimonial-carousel-image-wrapper">
+                                <img src="{{ asset('storage/' . $testimonial->image) }}" alt="{{ $testimonial->name }}" class="testimonial-carousel-image">
+                                @if($testimonial->youtube_video_link)
+                                <button class="testimonial-play-button" onclick="openTestimonialVideo('{{ $testimonial->youtube_video_link }}')" type="button" aria-label="Play video">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                @endif
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@endif
+
+@include('partials.testimonial-video-modal')
 @endsection
 
 @push('scripts')
@@ -361,6 +409,111 @@ document.addEventListener('DOMContentLoaded', function() {
             resetAutoPlay(); // Restart auto-play after resize
         }, 150);
     });
+
+    // Testimonials Carousel
+    var testimonialsSlider = document.querySelector('.testimonials-slider');
+    var testimonialsTrack = testimonialsSlider ? testimonialsSlider.querySelector('.testimonials-slider-track') : null;
+    var testimonialCards = testimonialsTrack ? Array.from(testimonialsTrack.children) : [];
+    var testimonialsPrevBtn = document.querySelector('.testimonials-nav-btn.carousel-control-prev');
+    var testimonialsNextBtn = document.querySelector('.testimonials-nav-btn.carousel-control-next');
+
+    if (testimonialsSlider && testimonialsTrack && testimonialCards.length > 0) {
+        var testimonialCardFullWidth = 0;
+        var testimonialMaxIndex = 0;
+        var testimonialCurrentIndex = 0;
+        var testimonialResizeTimeout = null;
+        var testimonialAutoPlayInterval = null;
+        var testimonialAutoPlayDelay = 4000;
+
+        function updateTestimonialsTrack() {
+            testimonialsTrack.style.transform = 'translateX(-' + (testimonialCurrentIndex * testimonialCardFullWidth) + 'px)';
+            if (testimonialsPrevBtn) {
+                testimonialsPrevBtn.classList.toggle('disabled', testimonialCurrentIndex === 0);
+            }
+            if (testimonialsNextBtn) {
+                testimonialsNextBtn.classList.toggle('disabled', testimonialCurrentIndex >= testimonialMaxIndex);
+            }
+        }
+
+        function recalcTestimonials() {
+            var computedStyles = getComputedStyle(testimonialsTrack);
+            var gapValue = parseFloat(computedStyles.gap || computedStyles.columnGap || '0') || 0;
+            var cardWidth = testimonialCards[0].getBoundingClientRect().width;
+            testimonialCardFullWidth = cardWidth + gapValue;
+            
+            var visibleCount = Math.floor(testimonialsSlider.offsetWidth / testimonialCardFullWidth);
+            testimonialMaxIndex = Math.max(0, testimonialCards.length - visibleCount);
+            
+            if (testimonialCurrentIndex > testimonialMaxIndex) {
+                testimonialCurrentIndex = testimonialMaxIndex;
+            }
+            updateTestimonialsTrack();
+        }
+
+        function moveTestimonialsNext() {
+            if (testimonialCurrentIndex < testimonialMaxIndex) {
+                testimonialCurrentIndex += 1;
+            } else {
+                testimonialCurrentIndex = 0;
+            }
+            updateTestimonialsTrack();
+        }
+
+        function startTestimonialsAutoPlay() {
+            stopTestimonialsAutoPlay();
+            testimonialAutoPlayInterval = setInterval(moveTestimonialsNext, testimonialAutoPlayDelay);
+        }
+
+        function stopTestimonialsAutoPlay() {
+            if (testimonialAutoPlayInterval) {
+                clearInterval(testimonialAutoPlayInterval);
+                testimonialAutoPlayInterval = null;
+            }
+        }
+
+        function resetTestimonialsAutoPlay() {
+            stopTestimonialsAutoPlay();
+            startTestimonialsAutoPlay();
+        }
+
+        recalcTestimonials();
+        startTestimonialsAutoPlay();
+
+        if (testimonialsSlider) {
+            testimonialsSlider.addEventListener('mouseenter', stopTestimonialsAutoPlay);
+            testimonialsSlider.addEventListener('mouseleave', startTestimonialsAutoPlay);
+        }
+
+        if (testimonialsPrevBtn) {
+            testimonialsPrevBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (testimonialCurrentIndex > 0) {
+                    testimonialCurrentIndex -= 1;
+                    updateTestimonialsTrack();
+                    resetTestimonialsAutoPlay();
+                }
+            });
+        }
+
+        if (testimonialsNextBtn) {
+            testimonialsNextBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (testimonialCurrentIndex < testimonialMaxIndex) {
+                    testimonialCurrentIndex += 1;
+                    updateTestimonialsTrack();
+                    resetTestimonialsAutoPlay();
+                }
+            });
+        }
+
+        window.addEventListener('resize', function() {
+            clearTimeout(testimonialResizeTimeout);
+            testimonialResizeTimeout = setTimeout(function() {
+                recalcTestimonials();
+                resetTestimonialsAutoPlay();
+            }, 150);
+        });
+    }
 });
 </script>
 @endpush

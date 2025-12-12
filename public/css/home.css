@@ -6,7 +6,7 @@
    HERO SECTION
    ============================================ */
 .hero-top-section {
-    background-color: var(--primary-blue);
+    background-color: #00399E;
     color: white;
     padding: 80px 0 60px;
     padding-top: 200px;
@@ -17,7 +17,7 @@
     width: 100%;
     margin-top: -40px;
     padding-bottom: 0;
-    background-color: var(--primary-blue);
+    background-color: #00399E;
 }
 
 .hero-image-wrapper {
@@ -95,6 +95,16 @@
     align-items: center;
     gap: 10px;
     flex-shrink: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hero-explore-btn:hover {
+    transform: translateY(5px);
+}
+
+.hero-explore-btn:hover span {
+    color: #dbe8ff;
 }
 
 .hero-explore-btn button {
@@ -116,7 +126,7 @@
 }
 
 .hero-explore-btn button i {
-    color: var(--primary-blue);
+    color: #00399E;
     font-size: 1.2rem;
 }
 
@@ -124,6 +134,7 @@
     color: white;
     font-size: 0.9rem;
     font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 /* ============================================
@@ -199,8 +210,8 @@
    ============================================ */
 .selected-projects-btn {
     border-radius: 20px !important;
-    border-color: var(--primary-blue) !important;
-    color: var(--primary-blue)  !important;
+    border-color: #00399E !important;
+    color: #00399E  !important;
 }
 
 .featured-project {
@@ -311,7 +322,7 @@
 }
 
 .project-badge-fill {
-    background-color: var(--primary-blue) !important;
+    background-color: #00399E !important;
     color: white !important;
 }
 
@@ -376,8 +387,23 @@
 }
 
 .industrial-commercial-content-wrapper .container {
-    padding-left: 15px;
+    padding-left: 152px;
     padding-right: 50px;
+}
+
+/* Responsive padding for industrial-commercial-content-wrapper container */
+@media (max-width: 1400px) {
+    .industrial-commercial-content-wrapper .container {
+        padding-left: 100px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .industrial-commercial-content-wrapper .container {
+        padding-left: 60px;
+        padding-right: 30px;
+    }
 }
 
 .industrial-commercial-card {
@@ -424,8 +450,8 @@
 
 .industrial-overlay-card {
     background-color: #fff;
-    border-radius: 32px;
-    padding: 28px;
+    border-radius: 20px;
+    padding: 11px;
     min-height: 320px;
     display: flex;
     flex-direction: column;
@@ -434,10 +460,10 @@
 }
 
 .industrial-overlay-thumb {
-    border-radius: 24px;
+    border-radius: 10px;
     overflow: hidden;
     margin-bottom: 20px;
-    height: 140px;
+    height: 195px;
 }
 
 .industrial-overlay-thumb img {
@@ -451,12 +477,15 @@
     font-weight: 700;
     color: #0A1433;
     margin-bottom: 10px;
+    text-align: left;
 }
 
 .industrial-overlay-card p {
     color: #4a4a4a;
     font-size: 0.95rem;
     margin-bottom: 0;
+    margin-bottom: 25px;
+    text-align: justify;
 }
 
 .industrial-overlay-nav {
@@ -496,16 +525,16 @@
    ============================================ */
 .mobile-app-image {
     position: absolute;
-    left: 69px;
+    left: 220px;
     z-index: 10;
     margin-top: -228px;
 }
 
 .connect-icon {
     position: absolute;
-    left: 334px;
+    left: 514px;
     z-index: 10;
-    margin-top: -25px;
+    margin-top: 13px;
 }
 
 /* ============================================
@@ -767,6 +796,11 @@
         padding: 20px 15px;
     }
     
+    .industrial-commercial-content-wrapper .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
     .industrial-overlay-carousel {
         width: 92%;
     }
@@ -862,7 +896,7 @@
         position: absolute;
         left: 477px;
         z-index: 10;
-        margin-top: -25px;
+        margin-top: 13px;
     }
 }
 
@@ -886,7 +920,7 @@
     
     .connect-icon {
         left: 327px;
-        margin-top: -25px;
+        margin-top: 15px;
     }
 }
 
@@ -896,8 +930,8 @@
     }
     
     .connect-icon {
-        left: 56px;
-        margin-top: -25px;
+        left: 23px;
+        margin-top: 0px;
     }
 }
 
@@ -912,12 +946,14 @@
 }
 @media (min-width: 1601px) and (max-width: 1700px) {
     .mobile-app-image {
-        height: 383px;
+        height: 430px;
         left: 250px;
+        margin-top: -275px;
     }
 
     .connect-icon {
-        left: 550px;
+        left: 583px;
+        margin-top: 15px !important;
     }
 }
 
@@ -930,7 +966,7 @@
     
     .connect-icon {
         left: 422px;
-        margin-top: -6px;
+        margin-top: 30px;
         width: 248px;
     }
 }
@@ -943,7 +979,7 @@
     
     .connect-icon {
         left: 526px;
-        margin-top: -6px;
+        margin-top: 30px;
         width: 248px;
     }
 }
@@ -967,7 +1003,7 @@
     }
     .connect-icon {
         left: 695px !important;
-        margin-top: 0px !important;
+        margin-top: 73px !important;
     }
 }
 /* ============================================
@@ -1066,6 +1102,11 @@
     
     .industrial-commercial-content-wrapper {
         padding: 60px 0;
+    }
+    
+    .industrial-commercial-content-wrapper .container {
+        padding-left: 120px;
+        padding-right: 45px;
     }
     
     .industrial-overlay-card h5 {
@@ -1230,6 +1271,11 @@
         padding: 80px 0;
     }
     
+    .industrial-commercial-content-wrapper .container {
+        padding-left: 180px;
+        padding-right: 60px;
+    }
+    
     .industrial-overlay-card h5 {
         font-size: 2rem;
     }
@@ -1323,6 +1369,11 @@
         padding: 100px 0;
     }
     
+    .industrial-commercial-content-wrapper .container {
+        padding-left: 200px;
+        padding-right: 70px;
+    }
+    
     /* Projects Section */
     .project-featured-image {
         height: 500px;
@@ -1394,6 +1445,11 @@
         padding: 120px 0;
     }
     
+    .industrial-commercial-content-wrapper .container {
+        padding-left: 240px;
+        padding-right: 80px;
+    }
+    
     /* Projects Section */
     .project-featured-image {
         height: 550px;
@@ -1422,12 +1478,21 @@
 @media (min-width: 1931px) and (max-width: 2570px) {
     .mobile-app-image {
         height: 600px;
-        margin-top: -357px;
-        left: 500px;
+        margin-top: -358px;
+        left: 504px;
     }
 
     .connect-icon {
-        left: 955px;
+        left: 953px;
         margin-top: 54px;
     }
+}
+@media (max-width: 500px){
+    .hero-stat-item .stat-label {
+    font-size: 0.4rem !important;
+    }
+    .hero-stat-item .stat-number {
+        font-size: 1rem;
+    }
+
 }

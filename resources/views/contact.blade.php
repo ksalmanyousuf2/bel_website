@@ -9,13 +9,13 @@
 @section('content')
 <!-- Hero Section -->
 <section class="contact-hero-section">
-    <div class="animated-background">
+    {{-- <div class="animated-background">
         <div class="floating-shape shape-1"></div>
         <div class="floating-shape shape-2"></div>
         <div class="floating-shape shape-3"></div>
         <div class="floating-shape shape-4"></div>
         <div class="floating-shape shape-5"></div>
-    </div>
+    </div> --}}
     <div class="contact-hero-overlay"></div>
     <div class="container">
         <div class="row align-items-center">
