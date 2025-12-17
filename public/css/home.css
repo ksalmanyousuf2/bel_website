@@ -76,7 +76,7 @@
 
 .hero-stat-item .stat-number {
     font-size: 2.5rem;
-    font-weight: 500;
+    font-weight: 300;
     line-height: 1;
     margin-bottom: 8px;
     color: white;
@@ -155,7 +155,7 @@
 
 .solution-card img {
     width: 100%;
-    height: 400px;
+    height: 405px;
     object-fit: cover;
     display: block;
 }
@@ -172,9 +172,9 @@
 
 .solution-card-overlay h5 {
     color: white;
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 12px;
-    font-size: 1.25rem;
+    font-size: 24px !important;
 }
 
 .solution-card-overlay p {
@@ -312,7 +312,7 @@
     border: 1px solid #dee2e6;
     padding: 10px 12px;
     border-radius: 20px;
-    font-weight: 500;
+    font-weight: 300;
     font-size: 0.875rem;
     height: 39px;
     /* width: 120px; */
@@ -387,7 +387,7 @@
 }
 
 .industrial-commercial-content-wrapper .container {
-    padding-left: 152px;
+    padding-left: 75px;
     padding-right: 50px;
 }
 
@@ -890,11 +890,11 @@
     .mobile-app-image {
         margin-top: -240px;
         width: 266px;
-        left: 180px;
+        left: 224px;
     }
     .connect-icon {
         position: absolute;
-        left: 477px;
+        left: 508px;
         z-index: 10;
         margin-top: 13px;
     }
@@ -915,11 +915,11 @@
     .mobile-app-image {
         margin-top: -249px;
         height: 430px;
-        left: 33px;
+        left: 75px;
     }
     
     .connect-icon {
-        left: 327px;
+        left: 358px;
         margin-top: 15px;
     }
 }
@@ -930,8 +930,8 @@
     }
     
     .connect-icon {
-        left: 23px;
-        margin-top: 0px;
+        left: 83px;
+        margin-top: 29px;
     }
 }
 
@@ -947,12 +947,12 @@
 @media (min-width: 1601px) and (max-width: 1700px) {
     .mobile-app-image {
         height: 430px;
-        left: 250px;
+        left: 316px;
         margin-top: -275px;
     }
 
     .connect-icon {
-        left: 583px;
+        left: 625px;
         margin-top: 15px !important;
     }
 }
@@ -961,11 +961,11 @@
     .mobile-app-image {
         margin-top: -228px;
         height: 381px;
-        left: 136px;
+        left: 153px;
     }
     
     .connect-icon {
-        left: 422px;
+        left: 440px;
         margin-top: 30px;
         width: 248px;
     }
@@ -1496,3 +1496,11 @@
     }
 
 }
+.fw-bold {
+    font-weight: 300 !important;
+}
+.lead {
+    font-size: 1.25rem !important;
+    font-weight: 150 !important;
+}
+

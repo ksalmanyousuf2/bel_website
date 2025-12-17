@@ -21,12 +21,12 @@
                                 <li class="dropdown-item-text">
                                     <div class="solutions-dropdown-content">
                                         <div class="row g-0">
-                                            <div class="col-md-6 solutions-dropdown-column">
+                                            <div class="col-md-6 solutions-dropdown-column" style="width: 30% !important;">
                                                 <h6 class="solutions-dropdown-heading">Business Segments</h6>
                                                 <ul class="solutions-dropdown-list">
-                                                    <li><a class="dropdown-item" href="{{ route('industrial-business') }}#solutions">Commercial</a></li>
-                                                    <li><a class="dropdown-item" href="{{ route('commercial-business') }}#solutions">Industrial</a></li>
-                                                    <li><a class="dropdown-item" href="#">Residential</a></li>
+                                                    <li><a class="dropdown-item" href="{{ route('industrial-business') }}">Commercial</a></li>
+                                                    <li><a class="dropdown-item" href="{{ route('commercial-business') }}">Industrial</a></li>
+                                                    <li><a class="dropdown-item" href="{{ route('cleaning-services') }}">Cleaning Services</a></li>
                                                 </ul>
                                             </div>
                                             <div class="col-md-6 solutions-dropdown-column">

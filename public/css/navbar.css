@@ -173,3 +173,25 @@ main > div:first-child > section:first-child:not(.about-hero-section) {
     }
 }
 
+@media (max-width: 1680px) and (min-width: 1441px) {
+    .navbar-transparent .navbar-nav .nav-link {
+        padding-left: 25px;
+        padding-right: 25px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1440px) and (min-width: 1301px) {
+    .navbar-transparent .navbar-nav .nav-link {
+        padding-left: 25px;
+        padding-right: 25px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .navbar-transparent .navbar-nav .nav-link {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+}

@@ -40,7 +40,7 @@
                     </tr>
                     <tr>
                         <th>Applied Date:</th>
-                        <td>{{ $jobApplication->created_at->format('F d, Y h:i A') }}</td>
+                        <td>{{ $jobApplication->created_at->format('F d, Y') }}</td>
                     </tr>
                     <tr>
                         <th>Status:</th>

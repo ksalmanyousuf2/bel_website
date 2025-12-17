@@ -17,7 +17,7 @@
                     <h1 class="display-3 fw-bold mb-4 text-white">Leading the Shift to Renewable Power</h1>
                 </div>
                 <div class="col-lg-6">
-                    <p class="lead text-white mb-0">At Beacon Energy, we <strong>empower</strong> communities and industries with <strong>renewable energy</strong> innovations.</p>
+                    <p class="lead text-white mb-0" style="margin-top: 50px; text-align: justify;">At Beacon Energy, we <strong>empower</strong> communities and industries with <strong>renewable energy</strong> innovations.</p>
                 </div>
             </div>
         </div>
@@ -41,7 +41,7 @@
                             <div class="stat-label">Uptime with monitoring systems</div>
                         </div>
                         <div class="hero-stat-item">
-                            <div class="stat-number">1M+</div>
+                            <div class="stat-number">1 M+</div>
                             <div class="stat-label">Tons CO2 offset since 2019</div>
                         </div>
                     </div>
@@ -66,13 +66,13 @@
             <div class="col-lg-6">
                 <h2 class="display-5 fw-bold">Empowering the World with Clean Energy Solutions</h2>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6" style="display: flex;flex-direction: column;justify-content: flex-end; /* pushes content to bottom */">
                 <p class="text-muted">Discover the sustainable technologies we use to drive the global transition to renewable energy.</p>
             </div>
         </div>
         <div class="row g-4">
             @forelse($solutions as $solution)
-            <div class="col-lg-4 col-md-6">
+            <div class="@if($loop->first) col-lg-6 col-md-6 @else col-lg-3 col-md-6 @endif">
                 <div class="card solution-card shadow-sm">
                     @if($solution->image)
                     <img src="{{ asset('storage/' . $solution->image) }}" alt="{{ $solution->title }}">
@@ -265,12 +265,12 @@
                     <img src="{{ asset('assets/images/mobile_app.png') }}" alt="Connect App" class="img-fluid mobile-app-image">
                 </div>
             </div>
-            <div class="col-lg-8 col-md-6 col-sm-6 col-xs-8">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <h4 class="mb-4">Seamless Visibility and Support for Your Energy Journey.</h4>
                 <p>Beacon Energy has a robust Monitoring & support app that gives customers complete visibility over their solar system. Available on all mobile and desktop platforms, the app allows the user to see all current and historical data about energy production, utilization, export, and overall saving.</p>
                 <div class="d-flex gap-3 mt-4">
-                    <a href="#" class="btn btn-light"><img src="{{ asset('assets/icons/google_store.svg') }}" alt="Google Play"></a>
-                    <a href="#" class="btn btn-light"><img src="{{ asset('assets/icons/apple_store.svg') }}" alt="App Store"></a>
+                    <a href="#" class="btn btn-light" style="border-radius: 25px;"><img src="{{ asset('assets/icons/google_store.svg') }}" alt="Google Play"></a>
+                    <a href="#" class="btn btn-light" style="border-radius: 25px;"><img src="{{ asset('assets/icons/apple_store.svg') }}" alt="App Store"></a>
                 </div>
             </div>
         </div>
@@ -309,14 +309,14 @@
                 <div class="mb-4 pb-3 border-bottom">
                     <div class="row">
                         <div class="col-lg-9">
-                            @if($loop->first)<h5 @else <h6 @endif class="@if($loop->first) fw-bold @endif">{{ $blog->title }}
-                        </@if($loop->first)h5 @else h6 @endif>
+                            @if($loop->first)<h5 @else <p style="font-weight: 300;" @endif class="@if($loop->first) fw-bold @endif">{{ $blog->title }}
+                        </@if($loop->first)h5 @else p @endif>
                             @if($blog->excerpt && $loop->first)
                             <div class="text-muted">{!! Str::limit(strip_tags($blog->excerpt), 100) !!}</div>
                             @endif
                         </div>
                         <div class="col-lg-3">
-                            <a href="{{ route('blogs.show', $blog->slug) }}" class="text-decoration-underline">Read More </a>
+                            <a href="{{ route('blogs.show', $blog->slug) }}" style="color: black;" class="text-decoration-underline">Read More </a>
                         </div>
                     </div>
                     
@@ -347,7 +347,9 @@
                         <p>Discover the sustainable technologies we use to drive the global transition to renewable energy.</p>
                         <div class="d-inline-flex align-items-center">
                             <a href="#contact" class="btn btn-outline-primary flex-shrink-0 btn-outline-primary-cta text-white "style="border-radius: 28px; border-color:white !important;" >Get connected</a> 
-                            <img src="{{ asset('assets/icons/blue-arrow-up.png') }}" class="img-fluid" style="width: 40px;height: 40px;">
+                            <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="btn-icon-default img-fluid" style="width: 35px;height: 35px;     background: #00399E;
+    border: 1px solid #00399E;
+    border-radius: 16px;" alt="Arrow">
                         </div>
                     </div>
                 </div>

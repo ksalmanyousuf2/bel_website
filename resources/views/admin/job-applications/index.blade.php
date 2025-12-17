@@ -77,7 +77,7 @@
                         {{ ucfirst($application->status) }}
                     </span>
                 </td>
-                <td>{{ $application->created_at->format('M d, Y') }}</td>
+                <td>{{ $application->created_at->format('F d, Y') }}</td>
                 <td>
                     <a href="{{ route('admin.job-applications.show', $application) }}" class="btn btn-sm btn-primary">View</a>
                     <a href="{{ route('admin.job-applications.download-resume', $application) }}" class="btn btn-sm btn-info">Resume</a>
