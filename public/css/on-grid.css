@@ -1,0 +1,583 @@
+/* ============================================
+   ON-GRID / GRID-TIED SOLAR PAGE STYLES
+   ============================================ */
+
+/* Global / Utility */
+.ongrid-section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: white;
+}
+
+.ongrid-text-highlight {
+    color: #fbbf24;
+}
+
+.ongrid-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1320px;
+}
+
+/* Hero Section */
+.ongrid-hero-section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    color: white;
+    overflow: hidden;
+}
+
+.ongrid-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/images/on-grid-bg-1.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.ongrid-hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4));
+    z-index: 1;
+}
+
+.ongrid-hero-content {
+    position: relative;
+    z-index: 10;
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ongrid-hero-title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 10;
+    font-size: 3.5rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5), 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ongrid-hero-description {
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ffffff;
+    position: relative;
+    z-index: 10;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.ongrid-hero-product-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    z-index: 10;
+}
+
+.ongrid-product-image {
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+}
+
+.ongrid-hero-arrow {
+    position: absolute;
+    bottom: -80px;
+    right: 50%;
+    transform: translateX(50%);
+    background: white;
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00399E;
+    text-decoration: none;
+    z-index: 10;
+}
+
+.ongrid-hero-arrow:hover {
+    transform: translateX(50%) scale(1.1) translateY(5px);
+    background: #00399E;
+    color: white;
+}
+
+/* Info Section */
+.ongrid-info-section {
+    padding: 100px 0;
+    background-color: white;
+}
+
+.ongrid-info-content {
+    margin-top: 2rem;
+}
+
+.ongrid-info-text {
+    text-align: left;
+    color: #4b5563;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.ongrid-info-text p {
+    margin-bottom: 1rem;
+}
+
+.ongrid-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ongrid-features-list li {
+    padding: 0.75rem 0;
+    color: #1f2937;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.ongrid-features-list li i {
+    color: #10b981;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.ongrid-workflow-image {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Savings Section */
+.ongrid-savings-section {
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+    color: white;
+    background-image: linear-gradient(rgba(30, 58, 138, 0.85), rgba(37, 99, 235, 0.95));
+}
+
+.ongrid-bg-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.08;
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.ongrid-savings-content {
+    position: relative;
+    z-index: 10;
+}
+
+.ongrid-graph-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.ongrid-graph-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.ongrid-savings-text {
+    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.ongrid-savings-subtitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #fbbf24;
+}
+
+/* Benefits Section */
+.ongrid-benefits-section {
+    padding: 100px 0;
+    background-color: white;
+}
+
+.ongrid-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.ongrid-benefit-card {
+    background: #f9fafb;
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.ongrid-benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: #fbbf24;
+}
+
+.ongrid-benefit-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.ongrid-benefit-card:hover .ongrid-benefit-icon {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    transform: scale(1.1);
+}
+
+.ongrid-benefit-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.ongrid-benefit-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+}
+
+.ongrid-benefit-text {
+    color: #6b7280;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Packages Section */
+.ongrid-packages-section {
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+    color: white;
+    background-image: linear-gradient(rgba(30, 58, 138, 0.85), rgba(37, 99, 235, 0.95));
+}
+
+.ongrid-packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.ongrid-package-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.ongrid-package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.ongrid-package-featured {
+    border: 3px solid #fbbf24;
+    transform: scale(1.05);
+}
+
+.ongrid-package-featured:hover {
+    transform: scale(1.08) translateY(-10px);
+}
+
+.ongrid-package-badge {
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: #fbbf24;
+    color: #111827;
+    padding: 5px 40px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transform: rotate(45deg);
+    text-transform: uppercase;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ongrid-package-header {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+    padding: 2.5rem 2rem;
+    text-align: center;
+}
+
+.ongrid-package-featured .ongrid-package-header {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+}
+
+.ongrid-package-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.ongrid-package-featured .ongrid-package-title {
+    color: #111827;
+}
+
+.ongrid-package-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+.ongrid-package-featured .ongrid-package-subtitle {
+    color: rgba(17, 24, 39, 0.8);
+}
+
+.ongrid-package-body {
+    padding: 2.5rem 2rem;
+}
+
+.ongrid-package-specs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ongrid-package-specs li {
+    padding: 1rem 0;
+    color: #4b5563;
+    font-size: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.ongrid-package-specs li:last-child {
+    border-bottom: none;
+}
+
+.ongrid-package-specs li strong {
+    color: #1f2937;
+    font-weight: 600;
+}
+
+.ongrid-custom-note {
+    font-size: 1.1rem;
+    color: white;
+    margin-top: 3rem;
+}
+
+.ongrid-contact-link {
+    color: #fbbf24;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.ongrid-contact-link:hover {
+    color: #f59e0b;
+    text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .ongrid-section-title {
+        font-size: 2.5rem;
+    }
+
+    .ongrid-hero-title {
+        font-size: 3rem;
+        letter-spacing: 2px;
+    }
+
+    .ongrid-product-image {
+        max-width: 450px;
+    }
+
+    .ongrid-benefits-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .ongrid-packages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ongrid-package-featured {
+        transform: scale(1);
+    }
+
+    .ongrid-package-featured:hover {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .ongrid-section-title {
+        font-size: 2rem;
+    }
+
+    .ongrid-hero-content {
+        padding: 1.5rem 2rem;
+        margin: 0 15px 2rem;
+    }
+
+    .ongrid-hero-title {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+
+    .ongrid-hero-description {
+        font-size: 1.1rem;
+    }
+
+    .ongrid-product-image {
+        max-width: 350px;
+    }
+
+    .ongrid-hero-arrow {
+        bottom: -60px;
+        width: 45px;
+        height: 45px;
+    }
+
+    .ongrid-info-text {
+        font-size: 1rem;
+    }
+
+    .ongrid-features-list li {
+        font-size: 1rem;
+    }
+
+    .ongrid-benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .ongrid-graph-container {
+        padding: 1rem;
+    }
+
+    .ongrid-savings-subtitle {
+        font-size: 1.75rem;
+    }
+
+    .ongrid-savings-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .ongrid-hero-section {
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+
+    .ongrid-hero-content {
+        padding: 1.2rem 1.5rem;
+        margin: 0 10px 1.5rem;
+    }
+
+    .ongrid-section-title {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .ongrid-hero-title {
+        font-size: 2rem;
+    }
+
+    .ongrid-product-image {
+        max-width: 280px;
+    }
+
+    .ongrid-hero-arrow {
+        bottom: -50px;
+    }
+
+    .ongrid-benefit-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .ongrid-benefit-icon i {
+        font-size: 1.75rem;
+    }
+
+    .ongrid-benefit-title {
+        font-size: 1.25rem;
+    }
+
+    .ongrid-package-header {
+        padding: 2rem 1.5rem;
+    }
+
+    .ongrid-package-title {
+        font-size: 2.5rem;
+    }
+
+    .ongrid-package-body {
+        padding: 2rem 1.5rem;
+    }
+
+    .ongrid-custom-note {
+        font-size: 1rem;
+    }
+}
+

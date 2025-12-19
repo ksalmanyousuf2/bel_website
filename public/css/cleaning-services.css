@@ -107,7 +107,7 @@
 .cleaning-section-title {
     font-size: 3rem;
     font-weight: 700;
-    color: #00399E;
+    color: black;
     margin-bottom: 2rem;
     line-height: 1.2;
 }
@@ -252,7 +252,7 @@
 .service-title {
     font-size: 1.75rem;
     font-weight: 700;
-    color: #00399E;
+    color: black;
     margin: 0;
     line-height: 1.3;
     flex: 1;
@@ -607,6 +607,7 @@
     color: white;
     margin-bottom: 1.5rem;
     line-height: 1.2;
+    margin-top: 240px !important;
 }
 
 .cleaning-connect-description {
@@ -630,6 +631,7 @@
     transition: all 0.3s ease;
     text-decoration: none;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 35px;
 }
 
 .cleaning-app-btn:hover {
@@ -655,15 +657,42 @@
     }
 }
 
+@media (max-width: 1000px) {
+    .cleaning-connect-section {
+        background: linear-gradient(135deg, #00399E 0%, #0056b3 100%);
+    }
+    
+    .cleaning-connect-background {
+        display: none;
+    }
+    
+    .cleaning-connect-logo img {
+        position: relative;
+        margin-top: 0;
+        left: 0;
+        max-width: 250px;
+    }
+    
+    .cleaning-connect-title {
+        margin-top: 20px !important;
+    }
+}
+
 @media (max-width: 992px) {
     .cleaning-connect-section {
         padding: 80px 0;
         min-height: 500px;
+        background: linear-gradient(135deg, #00399E 0%, #0056b3 100%);
+    }
+    
+    .cleaning-connect-background {
+        display: none;
     }
     
     .cleaning-connect-title {
         font-size: 2rem;
         margin-bottom: 1.25rem;
+        margin-top: 0px !important;
     }
     
     .cleaning-connect-description {
@@ -675,12 +704,24 @@
         max-width: 180px;
         margin-bottom: 1.5rem;
     }
+    
+    .cleaning-connect-logo img {
+        position: relative;
+        margin-top: 0;
+        left: 0;
+        max-width: 180px;
+    }
 }
 
 @media (max-width: 768px) {
     .cleaning-connect-section {
         padding: 60px 0;
         min-height: 450px;
+        background: linear-gradient(135deg, #00399E 0%, #0056b3 100%);
+    }
+    
+    .cleaning-connect-background {
+        display: none;
     }
     
     .cleaning-connect-title {
@@ -697,6 +738,13 @@
     .cleaning-connect-logo {
         max-width: 160px;
         margin-bottom: 1.25rem;
+    }
+    
+    .cleaning-connect-logo img {
+        position: relative;
+        margin-top: 0;
+        left: 0;
+        max-width: 160px;
     }
     
     .cleaning-connect-buttons {
@@ -716,6 +764,11 @@
     .cleaning-connect-section {
         padding: 50px 0;
         min-height: 400px;
+        background: linear-gradient(135deg, #00399E 0%, #0056b3 100%);
+    }
+    
+    .cleaning-connect-background {
+        display: none;
     }
     
     .cleaning-connect-title {
@@ -732,6 +785,13 @@
     .cleaning-connect-logo {
         max-width: 140px;
         margin-bottom: 1rem;
+    }
+    
+    .cleaning-connect-logo img {
+        position: relative;
+        margin-top: 0;
+        left: 0;
+        max-width: 140px;
     }
     
     .cleaning-connect-buttons {
@@ -827,26 +887,27 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-items: center;
 }
 
 .projects-carousel-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #00399E;
+    color: black;
     margin: 0;
     line-height: 1.2;
 }
 
 .projects-see-all-link {
     font-size: 1rem;
-    color: #00399E;
+    color: black;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .projects-see-all-link:hover {
-    color: #0056b3;
+    color: black;
     text-decoration: underline;
 }
 

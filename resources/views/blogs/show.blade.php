@@ -239,7 +239,7 @@
     .related-blog-title {
         font-size: 1.1rem;
         font-weight: 700;
-        color: #00399E;
+        color: black;
         margin-bottom: 0.75rem;
         line-height: 1.4;
     }

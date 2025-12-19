@@ -387,22 +387,33 @@
 }
 
 .industrial-commercial-content-wrapper .container {
-    padding-left: 75px;
+    padding-left: calc((100vw - 1140px) / 2);
     padding-right: 50px;
+    max-width: 100%;
 }
 
 /* Responsive padding for industrial-commercial-content-wrapper container */
 @media (max-width: 1400px) {
     .industrial-commercial-content-wrapper .container {
-        padding-left: 100px;
+        padding-left: calc((100vw - 1140px) / 2);
         padding-right: 40px;
+        max-width: 100%;
     }
 }
 
 @media (max-width: 1200px) {
     .industrial-commercial-content-wrapper .container {
-        padding-left: 60px;
+        padding-left: calc((100vw - 960px) / 2);
         padding-right: 30px;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+    .industrial-commercial-content-wrapper .container {
+        padding-left: calc((100vw - 720px) / 2);
+        padding-right: 30px;
+        max-width: 100%;
     }
 }
 
@@ -697,8 +708,9 @@
     }
     
     .industrial-commercial-content-wrapper .container {
-        padding-left: 15px;
+        padding-left: calc((100vw - 720px) / 2);
         padding-right: 15px;
+        max-width: 100%;
     }
     
     .industrial-overlay-carousel {
@@ -797,8 +809,16 @@
     }
     
     .industrial-commercial-content-wrapper .container {
-        padding-left: 15px;
+        padding-left: calc((100vw - 540px) / 2);
         padding-right: 15px;
+        max-width: 100%;
+    }
+    
+    @media (max-width: 540px) {
+        .industrial-commercial-content-wrapper .container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
     }
     
     .industrial-overlay-carousel {
@@ -914,7 +934,7 @@
 @media (max-width: 1100px) {
     .mobile-app-image {
         margin-top: -249px;
-        height: 430px;
+        height: 443px;
         left: 75px;
     }
     
@@ -926,7 +946,7 @@
 
 @media (max-width: 1000px) {
     .mobile-app-image {
-        margin-top: -203px;
+        margin-top: -213px;
     }
     
     .connect-icon {
@@ -973,12 +993,12 @@
 
 @media (min-width: 1501px) and (max-width: 1600px) {
     .mobile-app-image {
-        height: 381px;
-        left: 244px;
+        height: 395px;
+        left: 260px;
     }
     
     .connect-icon {
-        left: 526px;
+        left: 544px;
         margin-top: 30px;
         width: 248px;
     }
@@ -999,7 +1019,7 @@
     .mobile-app-image {
         height: 570px !important;
         margin-top: -348px !important;
-        left: 276px !important;
+        left: 298px !important;
     }
     .connect-icon {
         left: 695px !important;
@@ -1105,8 +1125,9 @@
     }
     
     .industrial-commercial-content-wrapper .container {
-        padding-left: 120px;
+        padding-left: calc((100vw - 1320px) / 2);
         padding-right: 45px;
+        max-width: 100%;
     }
     
     .industrial-overlay-card h5 {
@@ -1272,8 +1293,9 @@
     }
     
     .industrial-commercial-content-wrapper .container {
-        padding-left: 180px;
+        padding-left: calc((100vw - 1320px) / 2);
         padding-right: 60px;
+        max-width: 100%;
     }
     
     .industrial-overlay-card h5 {
@@ -1370,8 +1392,9 @@
     }
     
     .industrial-commercial-content-wrapper .container {
-        padding-left: 200px;
+        padding-left: calc((100vw - 1320px) / 2);
         padding-right: 70px;
+        max-width: 100%;
     }
     
     /* Projects Section */
@@ -1446,8 +1469,9 @@
     }
     
     .industrial-commercial-content-wrapper .container {
-        padding-left: 240px;
+        padding-left: calc((100vw - 1320px) / 2);
         padding-right: 80px;
+        max-width: 100%;
     }
     
     /* Projects Section */

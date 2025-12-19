@@ -32,7 +32,8 @@
                                             <div class="col-md-6 solutions-dropdown-column">
                                                 <h6 class="solutions-dropdown-heading">Products & Services</h6>
                                                 <ul class="solutions-dropdown-list">
-                                                    <li><a class="dropdown-item" href="#">INTRIX - Battery Energy Storage Platform</a></li>
+                                                    <li><a class="dropdown-item" href="{{ route('intrix') }}">INTRIX - High Voltage Battery Energy Storage Platform</a></li>
+                                                    <li><a class="dropdown-item" href="{{ route('intrix-lv') }}">INTRIX - Low Voltage Battery Energy Storage Platform</a></li>
                                                     <li><a class="dropdown-item" href="#">BELConnect - The Intelligent Energy Management Platform</a></li>
                                                     <li><a class="dropdown-item" href="#">Grid-Tied PV Solution</a></li>
                                                     <li><a class="dropdown-item" href="#">BELPartner - The ultimate Referral App</a></li>

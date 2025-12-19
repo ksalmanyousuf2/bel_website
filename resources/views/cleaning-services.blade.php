@@ -122,7 +122,7 @@
                     <div class="cleaning-connect-logo">
                         <img src="{{ asset('assets/images/connect_icon.png') }}" alt="Connect" class="img-fluid">
                     </div>
-                    <h2 class="cleaning-connect-title mt-5" style="margin-top: 240px !important;">Get Solar Cleaning Service</h2>
+                    <h2 class="cleaning-connect-title mt-5">Get Solar Cleaning Service</h2>
                     <p class="cleaning-connect-description">
                         Beacon Energy has a robust Monitoring & support app that gives customers complete visibility over their solar system. Available on all mobile and desktop platforms, the app allows the user to see all current and historical data about energy production, utilization, export, and overall saving.
                     </p>

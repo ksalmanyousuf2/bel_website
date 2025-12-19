@@ -315,7 +315,7 @@
                             <div class="text-muted">{!! Str::limit(strip_tags($blog->excerpt), 100) !!}</div>
                             @endif
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3" style="display: flex; align-items: center;">
                             <a href="{{ route('blogs.show', $blog->slug) }}" style="color: black;" class="text-decoration-underline">Read More </a>
                         </div>
                     </div>
@@ -330,7 +330,7 @@
 </section>
 
 <!-- CTA Section -->
-<div class="row cta-section-row">
+{{-- <div class="row cta-section-row">
     <div class="col-lg-8 col-md-4 col-sm-8 col-xs-8">
         <section class="py-5 cta-section-item" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{{ asset('assets/images/8840190 6.png') }}') center/cover; border-radius: 0 26px 26px 0">
             <div class="container h-100 d-flex align-items-center" style="justify-content: center !important;">
@@ -356,8 +356,39 @@
             </div>
         </section>
     </div>
-</div>
+</div> --}}
 
+<section class="py-5 cta-section">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Left Section -->
+            <div class="col-lg-8 col-md-4 col-sm-8 ps-0">
+                <div class="cta-left h-100 d-flex justify-content-center align-items-center" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('{{ asset('assets/images/8840190 6.png') }}') center/cover; border-radius: 0 26px 26px 0; padding: 3rem 1rem;">
+                    <h2 class="display-4 fw-bold mb-0 text-white text-center">For a Brighter<br>Cleaner Future</h2>
+                </div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="col-lg-4 col-md-8 col-sm-4 px-0">
+                <div class="cta-right h-100 d-flex align-items-center" style="background-color: #00399E; border-radius: 26px 0 0 26px; padding: 6rem 1rem;">
+                    <div class="card bg-primary text-white w-100" style="border-color: #00399E;">
+                        <div class="card-body p-4">
+                            <h3 class="fw-bold mb-3">Let's Power the Planet—Sustainably</h3>
+                            <p>Discover the sustainable technologies we use to drive the global transition to renewable energy.</p>
+                            <div class="d-inline-flex align-items-center gap-2">
+                                <a href="#contact" class="btn btn-outline-primary flex-shrink-0 text-white" style="border-radius: 28px; border-color: white;">
+                                   Get connected
+                                </a> 
+                                <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="img-fluid" style="width: 40px; height: 40px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection
 
 @push('scripts')

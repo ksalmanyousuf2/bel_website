@@ -26,6 +26,9 @@ use App\Http\Controllers\Admin\CareerController as AdminCareerController;
 use App\Http\Controllers\Admin\JobApplicationController;
 use App\Http\Controllers\CleaningServicesController;
 use App\Http\Controllers\ReflexController;
+use App\Http\Controllers\IntrixController;
+use App\Http\Controllers\IntrixLvController;
+use App\Http\Controllers\OnGridController;
 use Illuminate\Support\Facades\Route;
 
 // Frontend Routes
@@ -46,6 +49,9 @@ Route::get('/industrial-business', [IndustrialCommercialController::class, 'inde
 Route::get('/support', [SupportController::class, 'index'])->name('support');
 Route::get('/cleaning-services', [CleaningServicesController::class, 'index'])->name('cleaning-services');
 Route::get('/reflex', [ReflexController::class, 'index'])->name('reflex');
+Route::get('/intrix', [IntrixController::class, 'index'])->name('intrix');
+Route::get('/intrix-lv', [IntrixLvController::class, 'index'])->name('intrix-lv');
+Route::get('/on-grid', [OnGridController::class, 'index'])->name('on-grid');
 Route::get('/faqs', [FaqController::class, 'index'])->name('faqs.index');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');

@@ -1,0 +1,638 @@
+/* ============================================
+   INTRIX PAGE STYLES
+   ============================================ */
+
+/* Global / Utility */
+.intrix-section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.intrix-text-highlight {
+    color: #fbbf24;
+}
+
+.intrix-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1320px;
+}
+
+/* Hero Section */
+.intrix-hero-section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    /* background: linear-gradient(135deg, #5a6268 0%, #3d4347 100%); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 120px;
+    padding-bottom: 50px;
+    color: white;
+    overflow: hidden;
+}
+
+.intrix-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/images/intrix-bg-1-1.png');
+    background-size: cover;
+    background-position: center;
+    /* opacity: 0.3; */
+    z-index: 0;
+}
+
+.intrix-hero-title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.intrix-hero-title-top {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: #ffffff;
+}
+
+.intrix-hero-title-bottom {
+    display: block;
+    font-size: 4.5rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-top: 0.5rem;
+    color: #ffffff;
+}
+
+.intrix-hero-description {
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    color: #e5e7eb;
+    position: relative;
+    z-index: 2;
+}
+
+.intrix-hero-product-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    z-index: 2;
+}
+
+.intrix-product-top {
+    width: 280px;
+    max-width: 90%;
+    position: relative;
+    z-index: 3;
+    margin-bottom: -30px;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+}
+
+.intrix-product-bottom {
+    width: 280px;
+    max-width: 90%;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+}
+
+.intrix-hero-arrow {
+    position: absolute;
+    bottom: -50px;
+    right: 50%;
+    transform: translateX(50%);
+    background: white;
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00399E;
+    text-decoration: none;
+    z-index: 10;
+}
+
+.intrix-hero-arrow:hover {
+    transform: translateX(50%) scale(1.1) translateY(5px);
+    background: #00399E;
+    color: white;
+}
+
+/* Smart Inverter Section */
+.intrix-inverter-section {
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+    color: white;
+}
+
+.intrix-bg-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.08;
+    background-image: url('../assets/images/intrix_bg_3.svg');
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.intrix-inverter-content {
+    position: relative;
+    z-index: 10;
+    min-height: 600px;
+}
+
+.intrix-inverter-image {
+    max-width: 692px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    filter: drop-shadow(0 10px 40px rgba(0, 0, 0, 0.3));
+}
+
+/* Diagram Connecting Lines & Labels */
+.intrix-diagram-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.intrix-label {
+    position: absolute;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.3;
+}
+
+.intrix-label span {
+    color: #fbbf24;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.intrix-label.top-left {
+    top: 20%;
+    left: 10%;
+    text-align: right;
+}
+
+.intrix-label.top-right {
+    top: 20%;
+    right: 10%;
+    text-align: left;
+}
+
+.intrix-label.bottom-left {
+    bottom: 25%;
+    left: 10%;
+    text-align: right;
+}
+
+.intrix-label.bottom-right {
+    bottom: 25%;
+    right: 10%;
+    text-align: left;
+}
+
+.intrix-connector-line {
+    position: absolute;
+    stroke: #fbbf24;
+    stroke-width: 2;
+    fill: none;
+}
+
+.intrix-description-box {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Smart Battery Section */
+.intrix-battery-section {
+    padding: 100px 0;
+    background-color: white;
+    text-align: center;
+}
+
+.intrix-battery-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.intrix-feature-col {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.intrix-feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intrix-feature-circle {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.intrix-feature-circle:hover {
+    background-color: #f3f4f6;
+    transform: scale(1.05);
+}
+
+.intrix-feature-circle svg {
+    width: 35px;
+    height: 35px;
+    color: #333;
+}
+
+.intrix-feature-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #4b5563;
+    line-height: 1.4;
+}
+
+.intrix-battery-image {
+    height: 500px;
+    object-fit: contain;
+}
+
+/* BEL Eye Section */
+.intrix-beleye-section {
+    position: relative;
+    /* background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #2563eb 100%); */
+    /* background-image: url('../assets/images/intrix-bg-2-2.svg'); */
+    background-image: linear-gradient(rgba(30, 58, 138, 0.65), rgba(37, 99, 235, 0.85)), url('../assets/images/intrix-bg-2-2.svg');
+    padding: 100px 0;
+    color: white;
+    overflow: hidden;
+}
+
+.intrix-beleye-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intrix-beleye-image-area {
+    margin: 3rem 0;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.intrix-beleye-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.intrix-beleye-text {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 300;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.intrix-beleye-text p {
+    margin-bottom: 1.5rem;
+}
+
+/* Packages Section */
+.intrix-packages-section {
+    padding: 100px 0;
+    background-color: white;
+}
+
+.intrix-packages-tabs {
+    display: inline-flex;
+    gap: 0;
+    background: white;
+    border: 2px solid #1e3a8a;
+    border-radius: 50px;
+    padding: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intrix-tab-btn {
+    padding: 12px 60px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+    background-color: transparent;
+    color: #1e3a8a;
+    margin: 0;
+    position: relative;
+    border-radius: 50px;
+    min-width: 150px;
+}
+
+.intrix-tab-btn:hover:not(.active) {
+    background-color: rgba(30, 58, 138, 0.05);
+}
+
+.intrix-tab-btn.active {
+    background-color: #1e3a8a;
+    color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.intrix-package-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intrix-package-image-col {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intrix-package-details-col {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.intrix-package-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #111827;
+}
+
+.intrix-spec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.intrix-spec-item {
+    text-align: left;
+}
+
+.intrix-spec-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #9ca3af;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.intrix-spec-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1f2937;
+    line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .intrix-section-title {
+        font-size: 2.5rem;
+    }
+
+    .intrix-hero-title-top {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+
+    .intrix-hero-title-bottom {
+        font-size: 3rem;
+        letter-spacing: 3px;
+    }
+
+    .intrix-battery-grid {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .intrix-feature-col {
+        flex-direction: row;
+        gap: 2rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .intrix-label {
+        position: relative !important;
+        text-align: center !important;
+        inset: auto !important;
+        margin-bottom: 1rem;
+    }
+
+    .intrix-diagram-container svg {
+        display: none;
+    }
+
+    .intrix-inverter-image {
+        margin-bottom: 2rem;
+        max-width: 300px;
+    }
+
+    .intrix-battery-image {
+        height: 400px;
+    }
+
+    .intrix-product-top,
+    .intrix-product-bottom {
+        width: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .intrix-section-title {
+        font-size: 2rem;
+    }
+
+    .intrix-hero-title-top {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    .intrix-hero-title-bottom {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+
+    .intrix-hero-description {
+        font-size: 1.1rem;
+        padding: 0 20px;
+    }
+
+    .intrix-package-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intrix-spec-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .intrix-feature-col {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .intrix-product-top,
+    .intrix-product-bottom {
+        width: 200px;
+    }
+
+    .intrix-hero-arrow {
+        bottom: -40px;
+        width: 45px;
+        height: 45px;
+    }
+
+    .intrix-description-box {
+        font-size: 0.95rem;
+        padding: 0 15px;
+    }
+
+    .intrix-package-title {
+        font-size: 2rem;
+    }
+
+    .intrix-beleye-text {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    .intrix-packages-tabs {
+        padding: 3px;
+    }
+
+    .intrix-tab-btn {
+        padding: 10px 40px;
+        min-width: 120px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .intrix-hero-section {
+        padding-top: 100px;
+    }
+
+    .intrix-section-title {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .intrix-hero-title-top {
+        font-size: 1.5rem;
+    }
+
+    .intrix-hero-title-bottom {
+        font-size: 2rem;
+    }
+
+    .intrix-product-top,
+    .intrix-product-bottom {
+        width: 180px;
+    }
+
+    .intrix-packages-tabs {
+        flex-direction: row;
+        gap: 0;
+        padding: 3px;
+    }
+
+    .intrix-tab-btn {
+        padding: 10px 30px;
+        min-width: 100px;
+        font-size: 0.9rem;
+    }
+
+    .intrix-package-title {
+        font-size: 1.75rem;
+    }
+
+    .intrix-battery-image {
+        height: 300px;
+    }
+
+    .intrix-feature-circle {
+        width: 70px;
+        height: 70px;
+    }
+
+    .intrix-feature-circle svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .intrix-feature-text {
+        font-size: 0.8rem;
+    }
+}

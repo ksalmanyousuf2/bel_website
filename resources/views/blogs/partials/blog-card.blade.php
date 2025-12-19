@@ -17,9 +17,14 @@
     <div class="blog-post-excerpt">
         <p>{{ $blog->excerpt ? Str::limit(strip_tags($blog->excerpt), 200) : Str::limit(strip_tags($blog->content), 200) }}</p>
     </div>
-    <a href="{{ route('blogs.show', $blog->slug) }}" class="btn blog-read-more-btn">
+    {{-- <a href="{{ route('blogs.show', $blog->slug) }}" class="btn blog-read-more-btn">
         Read More
     </a>
-    <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="blog-read-more-arrow" alt="Arrow">
+    <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="blog-read-more-arrow" alt="Arrow"> --}}
+    <div class="d-inline-flex align-items-center blog-post-excerpt ">
+        <a href="{{ route('blogs.show', $blog->slug) }}" class="btn" style="    border: 1px solid #00399E; border-radius: 20px; color: #00399E;">Read More</a>
+        <img src="{{ asset('assets/icons/solid-blue-arrow.svg') }}" class="img-fluid" 
+        style="width: 40px;height: 40px;">
+    </div>
 </article>
 
