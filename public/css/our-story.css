@@ -478,7 +478,7 @@
 
 /* Mission & Vision Section */
 .mission-vision-section {
-    padding: 100px 0;
+    padding: 30px 0;
     background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
     position: relative;
 }
@@ -955,7 +955,7 @@
 .beaconhouse-group-section {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 77vh;
     overflow: hidden;
     padding: 0;
     margin-top: -1px;
@@ -993,7 +993,7 @@
     position: relative;
     z-index: 2;
     width: 100%;
-    min-height: 100vh;
+    min-height: 77vh;
     padding: 100px 0;
     background: linear-gradient(to right, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.92) 32%, rgba(255, 255, 255, 0.85) 38%, rgba(255, 255, 255, 0) 52%);
 }
@@ -1537,6 +1537,37 @@
         max-width: 60%;
         max-height: 60%;
     }
+    
+    /* Sustainable Future Section Mobile Styles */
+    .sustainable-future-wrapper {
+        min-height: 400px;
+    }
+    
+    .sustainable-future-overlay {
+        width: 100% !important;
+        margin-left: 0 !important;
+        padding: 40px 10px !important;
+        min-height: 400px;
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(1px);
+        -webkit-backdrop-filter: blur(1px);
+    }
+    
+    .sustainable-future-content {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .sustainable-future-content h2 {
+        font-size: 1.75rem !important;
+        margin-bottom: 1rem;
+    }
+    
+    .sustainable-future-content p {
+        font-size: 0.95rem !important;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1642,7 +1673,7 @@
     
     .ceo-image-wrapper img {
         max-width: 250px;
-        margin-right: -72px;
+        /* margin-right: -72px; */
     }
     
     .beaconhouse-group-header-section {
@@ -1754,21 +1785,45 @@
         max-width: 55%;
         max-height: 55%;
     }
+    
+    /* Sustainable Future Section Small Mobile Styles */
+    .sustainable-future-wrapper {
+        min-height: 350px;
+    }
+    
+    .sustainable-future-overlay {
+        padding: 30px 10px !important;
+        min-height: 350px;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    
+    .sustainable-future-content h2 {
+        font-size: 1.5rem !important;
+        margin-bottom: 0.875rem;
+    }
+    
+    .sustainable-future-content p {
+        font-size: 0.875rem !important;
+        line-height: 1.5;
+        margin-bottom: 1.25rem;
+    }
 }
 
 @media (max-width: 1440px) {
     .ceo-image-wrapper img {
-        margin-right: -72px;
+        /* margin-right: -72px; */
     }
 }
 @media (min-width:1500px) and (max-width: 1600px) {
     .ceo-image-wrapper img {
-        margin-right: -110px;
+        /* margin-right: -110px; */
     }
 }
 @media (min-width:1601px) and (max-width: 2200px) {
     .ceo-image-wrapper img {
-        margin-right: -222px;
+        /* margin-right: -222px; */
     }
 }
 

@@ -36,6 +36,13 @@
         @enderror
     </div>
     <div class="mb-3">
+        <label for="url" class="form-label">URL</label>
+        <input type="text" class="form-control" id="url" name="url" value="{{ old('url') }}" placeholder="https://example.com">
+        @error('url')
+        <div class="text-danger">{{ $message }}</div>
+        @enderror
+    </div>
+    <div class="mb-3">
         <label for="image" class="form-label">Image</label>
         <input type="file" class="form-control" id="image" name="image" accept="image/*">
         @error('image')

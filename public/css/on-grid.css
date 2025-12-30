@@ -149,12 +149,64 @@
 
 /* Info Section */
 .ongrid-info-section {
-    padding: 100px 0;
+    padding: 0;
     background-color: white;
 }
 
 .ongrid-info-content {
-    margin-top: 2rem;
+    width: 100%;
+}
+
+.ongrid-product-image-full {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    min-height: 600px;
+}
+
+.ongrid-blue-section {
+    background-color: #00399E;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.ongrid-blue-content {
+    padding: 3rem 3.5rem;
+    width: 100%;
+}
+
+.ongrid-section-title-left {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    text-align: left;
+    color: white;
+}
+
+.ongrid-info-text-white {
+    text-align: left;
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.ongrid-info-text-white p {
+    margin-bottom: 0;
+}
+
+.ongrid-workflow-diagram {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.ongrid-workflow-diagram img {
+    max-width: 100%;
+    height: auto;
 }
 
 .ongrid-info-text {
@@ -194,11 +246,122 @@
 
 /* Savings Section */
 .ongrid-savings-section {
-    position: relative;
-    padding: 100px 0;
-    overflow: hidden;
-    color: white;
-    background-image: linear-gradient(rgba(30, 58, 138, 0.85), rgba(37, 99, 235, 0.95));
+    padding-top: 100px;
+    background-color: #f8f9fa;
+}
+
+.ongrid-savings-wrapper {
+    padding: 0 15px;
+}
+
+.ongrid-savings-left {
+    padding-right: 3rem;
+}
+
+.ongrid-savings-main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.ongrid-savings-description {
+    color: #4b5563;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.ongrid-savings-description p {
+    margin-bottom: 1.5rem;
+}
+
+.ongrid-savings-description p:last-child {
+    margin-bottom: 0;
+}
+
+.ongrid-savings-right {
+    padding-left: 2rem;
+}
+
+.ongrid-graph-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 1.5rem;
+    text-align: right;
+}
+
+.ongrid-graph-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5rem;
+}
+
+.ongrid-graph-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ongrid-graph-legend {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.ongrid-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.ongrid-legend-line {
+    width: 40px;
+    height: 3px;
+    display: block;
+    border-radius: 2px;
+}
+
+.ongrid-legend-solar {
+    background-color: #10b981;
+}
+
+.ongrid-legend-grid {
+    background-color: #f97316;
+}
+
+.ongrid-legend-text {
+    font-size: 0.95rem;
+    color: #4b5563;
+    font-weight: 500;
+}
+
+.ongrid-chart-descriptor {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.ongrid-descriptor-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.ongrid-descriptor-subtitle {
+    font-size: 1rem;
+    color: #4b5563;
+    margin-bottom: 0.25rem;
+}
+
+.ongrid-descriptor-source {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-bottom: 0;
 }
 
 .ongrid-bg-pattern {
@@ -217,18 +380,6 @@
 .ongrid-savings-content {
     position: relative;
     z-index: 10;
-}
-
-.ongrid-graph-container {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-}
-
-.ongrid-graph-image {
-    max-width: 100%;
-    height: auto;
 }
 
 .ongrid-savings-text {
@@ -309,113 +460,123 @@
 
 /* Packages Section */
 .ongrid-packages-section {
-    position: relative;
-    padding: 100px 0;
-    overflow: hidden;
-    color: white;
-    background-image: linear-gradient(rgba(30, 58, 138, 0.85), rgba(37, 99, 235, 0.95));
+    padding-top: 100px;
+    background-color: white;
 }
 
-.ongrid-packages-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.ongrid-package-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.ongrid-package-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-}
-
-.ongrid-package-featured {
-    border: 3px solid #fbbf24;
-    transform: scale(1.05);
-}
-
-.ongrid-package-featured:hover {
-    transform: scale(1.08) translateY(-10px);
-}
-
-.ongrid-package-badge {
-    position: absolute;
-    top: 20px;
-    right: -35px;
-    background: #fbbf24;
-    color: #111827;
-    padding: 5px 40px;
+.ongrid-packages-title {
+    font-size: 2.5rem;
     font-weight: 700;
-    font-size: 0.85rem;
-    transform: rotate(45deg);
+    text-align: center;
+    color: #111827;
+    margin-bottom: 3rem;
     text-transform: uppercase;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
 }
 
-.ongrid-package-header {
-    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
-    padding: 2.5rem 2rem;
+.ongrid-package-tabs {
+    display: inline-flex;
+    gap: 0;
+    background: white;
+    border: 2px solid #1e3a8a;
+    border-radius: 50px;
+    padding: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ongrid-package-tab {
+    padding: 12px 60px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+    background-color: transparent;
+    color: #1e3a8a;
+    margin: 0;
+    position: relative;
+    border-radius: 50px;
+    min-width: 150px;
     text-align: center;
 }
 
-.ongrid-package-featured .ongrid-package-header {
-    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+.ongrid-package-tab:hover:not(.active) {
+    background-color: rgba(30, 58, 138, 0.05);
 }
 
-.ongrid-package-title {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+.ongrid-package-tab.active {
+    background-color: #1e3a8a;
     color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-.ongrid-package-featured .ongrid-package-title {
+.ongrid-package-content-wrapper {
+    position: relative;
+}
+
+.ongrid-package-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.ongrid-package-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ongrid-package-image {
+    padding: 2rem;
+    text-align: center;
+}
+
+.ongrid-package-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ongrid-package-details {
+    padding: 2rem;
+}
+
+.ongrid-package-detail-title {
+    font-size: 2rem;
+    font-weight: 700;
     color: #111827;
+    margin-bottom: 2rem;
 }
 
-.ongrid-package-subtitle {
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.9);
-    margin: 0;
+.ongrid-package-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
 
-.ongrid-package-featured .ongrid-package-subtitle {
-    color: rgba(17, 24, 39, 0.8);
+.ongrid-spec-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-.ongrid-package-body {
-    padding: 2.5rem 2rem;
+.ongrid-spec-label {
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-weight: 400;
 }
 
-.ongrid-package-specs {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.ongrid-package-specs li {
-    padding: 1rem 0;
-    color: #4b5563;
-    font-size: 1rem;
-    border-bottom: 1px solid #e5e7eb;
-}
-
-.ongrid-package-specs li:last-child {
-    border-bottom: none;
-}
-
-.ongrid-package-specs li strong {
-    color: #1f2937;
-    font-weight: 600;
+.ongrid-spec-value {
+    font-size: 1.25rem;
+    color: #111827;
+    font-weight: 700;
 }
 
 .ongrid-custom-note {
@@ -442,6 +603,11 @@
         font-size: 2.5rem;
     }
 
+    .ongrid-section-title-left {
+        font-size: 2rem;
+        text-align: center;
+    }
+
     .ongrid-hero-title {
         font-size: 3rem;
         letter-spacing: 2px;
@@ -451,26 +617,78 @@
         max-width: 450px;
     }
 
+    .ongrid-product-image-full {
+        min-height: 400px;
+    }
+
+    .ongrid-blue-content {
+        padding: 2.5rem 2rem;
+    }
+
+    .ongrid-info-text-white {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+    .ongrid-workflow-diagram {
+        margin-top: 2rem;
+    }
+
+    .ongrid-savings-left {
+        padding-right: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .ongrid-savings-right {
+        padding-left: 1.5rem;
+    }
+
+    .ongrid-savings-main-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .ongrid-savings-description {
+        text-align: center;
+    }
+
     .ongrid-benefits-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 
-    .ongrid-packages-grid {
+    .ongrid-packages-title {
+        font-size: 2rem;
+    }
+
+    .ongrid-package-tab {
+        font-size: 0.9rem;
+        padding: 10px 40px;
+        min-width: 120px;
+    }
+
+    .ongrid-package-specs-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
-    .ongrid-package-featured {
-        transform: scale(1);
+    .ongrid-package-detail-title {
+        font-size: 1.75rem;
+        text-align: center;
     }
 
-    .ongrid-package-featured:hover {
-        transform: translateY(-10px);
+    .ongrid-package-details {
+        padding: 1.5rem 1rem;
     }
 }
 
 @media (max-width: 768px) {
     .ongrid-section-title {
         font-size: 2rem;
+    }
+
+    .ongrid-section-title-left {
+        font-size: 1.75rem;
+        text-align: center;
     }
 
     .ongrid-hero-content {
@@ -489,6 +707,54 @@
 
     .ongrid-product-image {
         max-width: 350px;
+    }
+
+    .ongrid-product-image-full {
+        min-height: 300px;
+    }
+
+    .ongrid-blue-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .ongrid-info-text-white {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    .ongrid-workflow-diagram {
+        margin-top: 1.5rem;
+    }
+
+    .ongrid-savings-left {
+        padding-right: 0;
+        margin-bottom: 3rem;
+    }
+
+    .ongrid-savings-right {
+        padding-left: 0;
+    }
+
+    .ongrid-savings-main-title {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    .ongrid-savings-description {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+    .ongrid-graph-title {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .ongrid-graph-legend {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
     }
 
     .ongrid-hero-arrow {
@@ -511,7 +777,7 @@
     }
 
     .ongrid-graph-container {
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     .ongrid-savings-subtitle {
@@ -520,6 +786,28 @@
 
     .ongrid-savings-text {
         font-size: 1rem;
+    }
+
+    .ongrid-packages-title {
+        font-size: 1.75rem;
+    }
+
+    .ongrid-package-tabs {
+        padding: 3px;
+    }
+
+    .ongrid-package-tab {
+        padding: 10px 40px;
+        min-width: 120px;
+        font-size: 0.95rem;
+    }
+
+    .ongrid-package-detail-title {
+        font-size: 1.5rem;
+    }
+
+    .ongrid-package-image {
+        padding: 1rem;
     }
 }
 
@@ -551,6 +839,39 @@
         bottom: -50px;
     }
 
+    .ongrid-savings-main-title {
+        font-size: 1.5rem;
+    }
+
+    .ongrid-savings-description {
+        font-size: 0.9rem;
+    }
+
+    .ongrid-savings-description p {
+        margin-bottom: 1rem;
+    }
+
+    .ongrid-graph-title {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .ongrid-graph-container {
+        padding: 1rem;
+    }
+
+    .ongrid-descriptor-title {
+        font-size: 1.1rem;
+    }
+
+    .ongrid-descriptor-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .ongrid-descriptor-source {
+        font-size: 0.8rem;
+    }
+
     .ongrid-benefit-icon {
         width: 70px;
         height: 70px;
@@ -579,5 +900,26 @@
     .ongrid-custom-note {
         font-size: 1rem;
     }
+
+    .ongrid-spec-value {
+        font-size: 1.1rem;
+    }
+
+    .ongrid-spec-label {
+        font-size: 0.85rem;
+    }
+
+    .ongrid-package-tabs {
+        flex-direction: row;
+        gap: 0;
+        padding: 3px;
+    }
+
+    .ongrid-package-tab {
+        padding: 10px 30px;
+        min-width: 100px;
+        font-size: 0.9rem;
+    }
 }
+
 

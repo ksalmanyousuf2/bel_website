@@ -7,7 +7,6 @@
 @endpush
 
 @section('content')
-
 <!-- Hero Section -->
 <section class="ongrid-hero-section">
     <div class="ongrid-container">
@@ -19,10 +18,6 @@
         </div>
 
         <div class="ongrid-hero-product-container">
-            <img src="{{ asset('assets/images/on-grid-pkg-img.png') }}" 
-                 alt="Grid Tied Solar Products" 
-                 class="ongrid-product-image">
-            
             <!-- Scroll Down Arrow -->
             <a href="#how-it-works" class="ongrid-hero-arrow">
                 <i class="fas fa-arrow-down"></i>
@@ -33,39 +28,27 @@
 
 <!-- How It Works Section -->
 <section class="ongrid-info-section" id="how-it-works">
-    <div class="ongrid-container">
-        <h2 class="ongrid-section-title">
-            HOW <span class="ongrid-text-highlight">IT WORKS</span>
-        </h2>
-
         <div class="ongrid-info-content">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <div class="ongrid-info-text">
-                        <p>
-                            Grid-tied solar systems, also known as on-grid or grid-connected systems, are the most 
-                            common type of solar installation. These systems are directly connected to your local 
-                            utility grid, allowing you to draw power when needed and send excess solar energy back 
-                            to the grid.
-                        </p>
-                        <p class="mt-3">
-                            With net metering, when your solar panels produce more electricity than you use, the 
-                            surplus energy is fed back into the grid, and you receive credits on your electricity 
-                            bill. This makes grid-tied systems highly cost-effective and enables you to achieve 
-                            significant savings on your energy costs.
-                        </p>
-                        <ul class="ongrid-features-list mt-4">
-                            <li><i class="fas fa-check-circle"></i> Lower electricity bills with net metering</li>
-                            <li><i class="fas fa-check-circle"></i> No battery required - lower installation cost</li>
-                            <li><i class="fas fa-check-circle"></i> Sell excess energy back to the grid</li>
-                            <li><i class="fas fa-check-circle"></i> Environmentally friendly and sustainable</li>
-                            <li><i class="fas fa-check-circle"></i> Minimal maintenance requirements</li>
-                            <li><i class="fas fa-check-circle"></i> Quick return on investment</li>
-                        </ul>
-                    </div>
+        <div class="row g-0 align-items-stretch">
+            <div class="col-lg-6">
+                <img src="{{ asset('assets/images/on-grid-1.png') }}" alt="Grid Tied Solar Products" class="ongrid-product-image-full">
                 </div>
-                <div class="col-lg-6">
-                    <div class="ongrid-workflow-image">
+            <div class="col-lg-6 ongrid-blue-section">
+                <div class="ongrid-blue-content">
+                    <h2 class="ongrid-section-title-left">
+                        SOLAR <span class="ongrid-text-highlight">INVERTER</span>
+                    </h2>
+                    <div class="ongrid-info-text-white" style="text-align: justify;">
+                        <p>
+                            A cutting-edge grid-tied solar inverter, epitomizes innovation and efficiency in renewable energy
+                            solutions. Boasting a robust design, it ensures seamless integration with the grid, maximizing energy
+                            conversion from solar panels. With advanced Maximum Power Point Tracking (MPPT) technology, it optimizes
+                            power output even in varying light conditions. BEL Connect allows remote monitoring and control through 
+                            NOC, empowering users with real-time insights. Built for longevity, Grid Tied Inverters come with a 
+                            comprehensive warranty, reinforcing its commitment to sustainable energy and customer satisfaction.
+                        </p>
+                    </div>
+                    <div class="ongrid-workflow-diagram">
                         <img src="{{ asset('assets/images/work-flow_solar-inverter.png') }}" 
                              alt="Solar System Workflow" 
                              class="img-fluid">
@@ -78,34 +61,56 @@
 
 <!-- Savings Graph Section -->
 <section class="ongrid-savings-section" id="savings">
-    <div class="ongrid-bg-pattern"></div>
-    
     <div class="ongrid-container">
-        <h2 class="ongrid-section-title">
-            YOUR <span class="ongrid-text-highlight">SAVINGS</span>
-        </h2>
+        <div class="ongrid-savings-wrapper">
+            <div class="row align-items-center">
+                <!-- Left Column - Text Content -->
+                <div class="col-lg-6">
+                    <div class="ongrid-savings-left">
+                        <h2 class="ongrid-savings-main-title">More Power More Savings</h2>
+                        <div class="ongrid-savings-description">
+                            <p>
+                                The global average cost of electricity from renewable power technologies is projected to continue decreasing, 
+                                making renewables more competitive compared to fossil fuels. This trend opens up opportunities for widespread 
+                                renewable adoption and significant decarbonization in the power sector.
+                            </p>
+                            <p>
+                                In Pakistan, increasing energy costs and attractive solar loan conditions offer a distinctive solar investment 
+                                payback period for solar investments. Typically, commercial and industrial consumers recover their investment 
+                                in 3 to 4 years, while residential consumers see a payback in 4 to 5 years. Afterward, solar energy remains 
+                                nearly cost-free for the next 20 years.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="ongrid-savings-content">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
+                <!-- Right Column - Graph -->
+                <div class="col-lg-6">
+                    <div class="ongrid-savings-right">
+                        {{-- <h3 class="ongrid-graph-title">Increase in Savings every year</h3> --}}
+                        
                     <div class="ongrid-graph-container">
                         <img src="{{ asset('assets/images/saving_graph.png') }}" 
                              alt="Savings Graph" 
                              class="ongrid-graph-image img-fluid">
                     </div>
 
-                    <div class="ongrid-savings-text mt-5">
-                        <h3 class="ongrid-savings-subtitle">Increase in Savings Every Year</h3>
-                        <p>
-                            As electricity prices continue to rise, your solar investment becomes increasingly valuable. 
-                            The graph above illustrates the growing gap between grid electricity costs and your fixed 
-                            solar levelized tariff, demonstrating the substantial long-term savings you can achieve.
-                        </p>
-                        <p class="mt-3">
-                            With grid-tied solar, you can lock in your energy costs for decades while traditional 
-                            electricity prices keep climbing. By 2030, the difference in costs could save you thousands 
-                            of rupees annually, making solar one of the smartest investments for your home or business.
-                        </p>
+                        {{-- <div class="ongrid-graph-legend">
+                            <div class="ongrid-legend-item">
+                                <span class="ongrid-legend-line ongrid-legend-solar"></span>
+                                <span class="ongrid-legend-text">Solar Levelized Tarrif</span>
+                            </div>
+                            <div class="ongrid-legend-item">
+                                <span class="ongrid-legend-line ongrid-legend-grid"></span>
+                                <span class="ongrid-legend-text">Grid Tarrif</span>
+                            </div>
+                        </div>
+
+                        <div class="ongrid-chart-descriptor">
+                            <h4 class="ongrid-descriptor-title">Chart Descriptor</h4>
+                            <p class="ongrid-descriptor-subtitle">Cost of Solar vs Grid Tarrif</p>
+                            <p class="ongrid-descriptor-source">Source: BEL Development Team</p>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -113,148 +118,175 @@
     </div>
 </section>
 
-<!-- System Benefits Section -->
-<section class="ongrid-benefits-section">
-    <div class="ongrid-container">
-        <h2 class="ongrid-section-title" style="color: #111827;">
-            SYSTEM <span style="color: #fbbf24;">BENEFITS</span>
-        </h2>
-
-        <div class="ongrid-benefits-grid">
-            <div class="ongrid-benefit-card">
-                <div class="ongrid-benefit-icon">
-                    <i class="fas fa-dollar-sign"></i>
-                </div>
-                <h3 class="ongrid-benefit-title">Lower Costs</h3>
-                <p class="ongrid-benefit-text">
-                    No battery storage required, reducing upfront investment and maintenance costs significantly.
-                </p>
-            </div>
-
-            <div class="ongrid-benefit-card">
-                <div class="ongrid-benefit-icon">
-                    <i class="fas fa-sync-alt"></i>
-                </div>
-                <h3 class="ongrid-benefit-title">Net Metering</h3>
-                <p class="ongrid-benefit-text">
-                    Earn credits by selling excess electricity back to the grid, offsetting your energy costs.
-                </p>
-            </div>
-
-            <div class="ongrid-benefit-card">
-                <div class="ongrid-benefit-icon">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h3 class="ongrid-benefit-title">High Efficiency</h3>
-                <p class="ongrid-benefit-text">
-                    Direct grid connection ensures maximum energy utilization with minimal losses.
-                </p>
-            </div>
-
-            <div class="ongrid-benefit-card">
-                <div class="ongrid-benefit-icon">
-                    <i class="fas fa-leaf"></i>
-                </div>
-                <h3 class="ongrid-benefit-title">Eco-Friendly</h3>
-                <p class="ongrid-benefit-text">
-                    Reduce your carbon footprint and contribute to a cleaner, greener environment.
-                </p>
-            </div>
-
-            <div class="ongrid-benefit-card">
-                <div class="ongrid-benefit-icon">
-                    <i class="fas fa-tools"></i>
-                </div>
-                <h3 class="ongrid-benefit-title">Low Maintenance</h3>
-                <p class="ongrid-benefit-text">
-                    Simple system design with fewer components means less maintenance and worry.
-                </p>
-            </div>
-
-            <div class="ongrid-benefit-card">
-                <div class="ongrid-benefit-icon">
-                    <i class="fas fa-clock"></i>
-                </div>
-                <h3 class="ongrid-benefit-title">Quick ROI</h3>
-                <p class="ongrid-benefit-text">
-                    Fast return on investment with immediate savings on your electricity bills.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- Package Options Section -->
 <section class="ongrid-packages-section" id="packages">
-    <div class="ongrid-bg-pattern"></div>
-    
     <div class="ongrid-container">
-        <h2 class="ongrid-section-title">
-            RESIDENTIAL <span class="ongrid-text-highlight">PACKAGES</span>
-        </h2>
+        <h2 class="ongrid-packages-title">RESIDENTIAL PACKAGES</h2>
 
-        <div class="ongrid-packages-grid">
-            <!-- 5kW Package -->
-            <div class="ongrid-package-card">
-                <div class="ongrid-package-header">
-                    <h3 class="ongrid-package-title">5 kW</h3>
-                    <p class="ongrid-package-subtitle">Basic Plan</p>
-                </div>
-                <div class="ongrid-package-body">
-                    <ul class="ongrid-package-specs">
-                        <li><strong>System Capacity:</strong> 5 kW</li>
-                        <li><strong>Solar Panels:</strong> 550W x 10</li>
-                        <li><strong>Inverter:</strong> 5kW Grid-Tied</li>
-                        <li><strong>Grid Type:</strong> Single Phase</li>
-                        <li><strong>Avg. Generation:</strong> 20-22 units/day</li>
-                        <li><strong>Ideal For:</strong> 2-3 bedroom home</li>
-                    </ul>
+        <!-- Package Tabs -->
+        <div class="text-center mb-5">
+            <div class="ongrid-package-tabs">
+                <button class="ongrid-package-tab active" data-package="10kw">10 kW</button>
+                <button class="ongrid-package-tab" data-package="15kw">15 kW</button>
+                <button class="ongrid-package-tab" data-package="20kw">20 kW</button>
+                <button class="ongrid-package-tab" data-package="25kw">25 kW</button>
+            </div>
+        </div>
+
+        <!-- Package Content -->
+        <div class="ongrid-package-content-wrapper">
+            <!-- 10kW Package -->
+            <div class="ongrid-package-content active" id="package-10kw">
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <div class="ongrid-package-image">
+                            <img src="{{ asset('assets/images/on-grid-pkg-img.png') }}" alt="Solar Equipment" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="ongrid-package-details">
+                            <h3 class="ongrid-package-detail-title">Package 10kW</h3>
+                            <div class="ongrid-package-specs-grid">
+                                <div class="ongrid-spec-item">
+                                    <div class="ongrid-spec-label">Inverter size:</div>
+                                    <div class="ongrid-spec-value">25 kVA</div>
+                                </div>
+                                <div class="ongrid-spec-item">
+                                    <div class="ongrid-spec-label">Units generated per month (Average)</div>
+                                    <div class="ongrid-spec-value">3375</div>
+                                </div>
+                                <div class="ongrid-spec-item">
+                                    <div class="ongrid-spec-label">Solar Panel capacity:</div>
+                                    <div class="ongrid-spec-value">31.25 Kwp</div>
+                                </div>
+                                <div class="ongrid-spec-item">
+                                    <div class="ongrid-spec-label">Cost saving monthly (without tax):</div>
+                                    <div class="ongrid-spec-value">118,125</div>
+                                </div>
+                                <div class="ongrid-spec-item">
+                                    <div class="ongrid-spec-label">Area Required:</div>
+                                    <div class="ongrid-spec-value">3125 Sqft</div>
+                                </div>
+                            </div>
                 </div>
             </div>
-
-            <!-- 10kW Package -->
-            <div class="ongrid-package-card ongrid-package-featured">
-                <div class="ongrid-package-badge">Most Popular</div>
-                <div class="ongrid-package-header">
-                    <h3 class="ongrid-package-title">10 kW</h3>
-                    <p class="ongrid-package-subtitle">Standard Plan</p>
-                </div>
-                <div class="ongrid-package-body">
-                    <ul class="ongrid-package-specs">
-                        <li><strong>System Capacity:</strong> 10 kW</li>
-                        <li><strong>Solar Panels:</strong> 550W x 20</li>
-                        <li><strong>Inverter:</strong> 10kW Grid-Tied</li>
-                        <li><strong>Grid Type:</strong> Three Phase</li>
-                        <li><strong>Avg. Generation:</strong> 40-45 units/day</li>
-                        <li><strong>Ideal For:</strong> 4-5 bedroom home</li>
-                    </ul>
                 </div>
             </div>
 
             <!-- 15kW Package -->
-            <div class="ongrid-package-card">
-                <div class="ongrid-package-header">
-                    <h3 class="ongrid-package-title">15 kW</h3>
-                    <p class="ongrid-package-subtitle">Premium Plan</p>
+            <div class="ongrid-package-content" id="package-15kw">
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <div class="ongrid-package-image">
+                            <img src="{{ asset('assets/images/on-grid-pkg-img.png') }}" alt="Solar Equipment" class="img-fluid">
+                        </div>
                 </div>
-                <div class="ongrid-package-body">
-                    <ul class="ongrid-package-specs">
-                        <li><strong>System Capacity:</strong> 15 kW</li>
-                        <li><strong>Solar Panels:</strong> 550W x 30</li>
-                        <li><strong>Inverter:</strong> 15kW Grid-Tied</li>
-                        <li><strong>Grid Type:</strong> Three Phase</li>
-                        <li><strong>Avg. Generation:</strong> 60-65 units/day</li>
-                        <li><strong>Ideal For:</strong> Large homes/Small business</li>
-                    </ul>
+                    <div class="col-lg-8">
+                        <div class="ongrid-package-details">
+                            <h3 class="ongrid-package-detail-title">Package 15kW</h3>
+                            <div class="ongrid-package-specs-grid">
+                                <div class="ongrid-spec-item">
+                                    <div class="ongrid-spec-label">Inverter size:</div>
+                                    <div class="ongrid-spec-value">30 kVA</div>
+            </div>
+                                <div class="ongrid-spec-item">
+                                    <div class="ongrid-spec-label">Units generated per month (Average)</div>
+                                    <div class="ongrid-spec-value">5063</div>
                 </div>
+                                <div class="ongrid-spec-item">
+                                    <div class="ongrid-spec-label">Solar Panel capacity:</div>
+                                    <div class="ongrid-spec-value">46.88 Kwp</div>
+            </div>
+                                <div class="ongrid-spec-item">
+                                    <div class="ongrid-spec-label">Cost saving monthly (without tax):</div>
+                                    <div class="ongrid-spec-value">177,188</div>
+                </div>
+                                <div class="ongrid-spec-item">
+                                    <div class="ongrid-spec-label">Area Required:</div>
+                                    <div class="ongrid-spec-value">4688 Sqft</div>
             </div>
         </div>
+    </div>
+                </div>
+                </div>
+            </div>
 
-        <div class="text-center mt-5">
-            <p class="ongrid-custom-note">
-                Need a custom solution? <a href="{{ route('contact') }}" class="ongrid-contact-link">Contact us</a> 
-                for a personalized quote tailored to your energy needs.
-            </p>
+            <!-- 20kW Package -->
+            <div class="ongrid-package-content" id="package-20kw">
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <div class="ongrid-package-image">
+                            <img src="{{ asset('assets/images/on-grid-pkg-img.png') }}" alt="Solar Equipment" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="ongrid-package-details">
+                            <h3 class="ongrid-package-detail-title">Package 20kW</h3>
+                            <div class="ongrid-package-specs-grid">
+                                <div class="ongrid-spec-item">
+                                    <div class="ongrid-spec-label">Inverter size:</div>
+                                    <div class="ongrid-spec-value">40 kVA</div>
+                                </div>
+                                <div class="ongrid-spec-item">
+                                    <div class="ongrid-spec-label">Units generated per month (Average)</div>
+                                    <div class="ongrid-spec-value">6750</div>
+                                </div>
+                                <div class="ongrid-spec-item">
+                                    <div class="ongrid-spec-label">Solar Panel capacity:</div>
+                                    <div class="ongrid-spec-value">62.5 Kwp</div>
+                                </div>
+                                <div class="ongrid-spec-item">
+                                    <div class="ongrid-spec-label">Cost saving monthly (without tax):</div>
+                                    <div class="ongrid-spec-value">236,250</div>
+                                </div>
+                                <div class="ongrid-spec-item">
+                                    <div class="ongrid-spec-label">Area Required:</div>
+                                    <div class="ongrid-spec-value">6250 Sqft</div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- 25kW Package -->
+            <div class="ongrid-package-content" id="package-25kw">
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <div class="ongrid-package-image">
+                            <img src="{{ asset('assets/images/on-grid-pkg-img.png') }}" alt="Solar Equipment" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="ongrid-package-details">
+                            <h3 class="ongrid-package-detail-title">Package 25kW</h3>
+                            <div class="ongrid-package-specs-grid">
+                                <div class="ongrid-spec-item">
+                                    <div class="ongrid-spec-label">Inverter size:</div>
+                                    <div class="ongrid-spec-value">50 kVA</div>
+                                </div>
+                                <div class="ongrid-spec-item">
+                                    <div class="ongrid-spec-label">Units generated per month (Average)</div>
+                                    <div class="ongrid-spec-value">8438</div>
+                                </div>
+                                <div class="ongrid-spec-item">
+                                    <div class="ongrid-spec-label">Solar Panel capacity:</div>
+                                    <div class="ongrid-spec-value">78.13 Kwp</div>
+                                </div>
+                                <div class="ongrid-spec-item">
+                                    <div class="ongrid-spec-label">Cost saving monthly (without tax):</div>
+                                    <div class="ongrid-spec-value">295,313</div>
+                                </div>
+                                <div class="ongrid-spec-item">
+                                    <div class="ongrid-spec-label">Area Required:</div>
+                                    <div class="ongrid-spec-value">7813 Sqft</div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -263,6 +295,32 @@
 
 @push('scripts')
 <script>
+    // Package Tabs Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabs = document.querySelectorAll('.ongrid-package-tab');
+        const contents = document.querySelectorAll('.ongrid-package-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                tabs.forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+
+                // Hide all content
+                contents.forEach(content => content.classList.remove('active'));
+
+                // Show corresponding content
+                const packageId = 'package-' + this.getAttribute('data-package');
+                const targetContent = document.getElementById(packageId);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+    });
+
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -320,4 +378,5 @@
     });
 </script>
 @endpush
+
 

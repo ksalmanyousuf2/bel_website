@@ -40,8 +40,8 @@
                 <h6 class="fw-bold mb-3 heading-footer">Quick Links</h6>
                 <ul class="list-unstyled">
                     <li class="footer-li" ><a href="{{ route('our-story') }}#about" class="text-decoration-none text-muted">Who are we</a></li>
-                    <li class="footer-li" ><a href="{{ route('industrial-business') }}" class="text-decoration-none text-muted">Industrial</a></li>
-                    <li class="footer-li" ><a href="{{ route('commercial-business') }}" class="text-decoration-none text-muted">Commercial</a></li>
+                    <li class="footer-li" ><a href="{{ route('commercial-business') }}" class="text-decoration-none text-muted">Industrial</a></li>
+                    <li class="footer-li" ><a href="{{ route('industrial-business') }}" class="text-decoration-none text-muted">Commercial</a></li>
                     <li class="footer-li" ><a href="{{ route('cleaning-services') }}" class="text-decoration-none text-muted">Cleaning Services</a></li>
                     <li class="footer-li" ><a href="{{ route('reflex') }}" class="text-decoration-none text-muted">REFLEX™</a></li>
                     <li class="footer-li" ><a href="#" class="text-decoration-none text-muted">Monitoring App</a></li>
@@ -81,9 +81,9 @@
                     style="    width: 35px;height: 35px; border: 1px solid;border-color: #00399E !important;border-radius: 17px; margin-left: 6px;">
                 </div>
                 <div class="d-flex gap-3 mt-3" style="font-size: 20px; margin-left: 10px;">
-                    <a href="#" class="text-dark"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-dark"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="text-dark"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/beacon_energy" class="text-dark"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/beaconenergypk" class="text-dark"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/beaconenergy" class="text-dark"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>

@@ -1,0 +1,347 @@
+/* ============================================
+   HYBRID SOLAR SOLUTIONS PAGE STYLES
+   ============================================ */
+
+/* Global / Utility */
+.hybrid-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1320px;
+}
+
+/* Hero Section */
+.hybrid-hero-section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('../assets/images/hybrid_solar_solutions_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 120px;
+    padding-bottom: 50px;
+    color: white;
+    overflow: hidden;
+}
+
+.hybrid-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+.hybrid-hero-section .hybrid-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.hybrid-hero-title {
+    font-size: 4.5rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+}
+
+.hybrid-hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    color: #ffffff;
+    line-height: 1.6;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 2;
+}
+
+.hybrid-learn-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background-color: white;
+    color: #00399E;
+    border: 2px solid #00399E;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hybrid-learn-more-btn:hover {
+    background-color: #00399E;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 57, 158, 0.3);
+}
+
+.hybrid-learn-more-btn i {
+    transition: transform 0.3s ease;
+}
+
+.hybrid-learn-more-btn:hover i {
+    transform: translateX(5px);
+}
+
+/* Product Grid Layout */
+.hybrid-product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    /* align-items: center; */
+    min-height: 600px;
+}
+
+.hybrid-product-grid-reverse {
+    grid-template-columns: 1fr 1fr;
+}
+
+.hybrid-product-image-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.hybrid-product-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 40px rgba(0, 0, 0, 0.2));
+}
+
+.hybrid-product-text-col {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    padding: 4rem 3rem;
+    /* border-radius: 10px; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    min-height: 500px;
+}
+
+.hybrid-product-text-col-light {
+    background: white;
+    padding: 4rem 3rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 500px;
+}
+
+.hybrid-product-title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hybrid-product-title-dark {
+    color: #f97316;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hybrid-product-description {
+    font-size: 1.1rem;
+    /* line-height: 1.8; */
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 0;
+}
+
+.hybrid-product-description-dark {
+    color: #4b5563;
+}
+
+/* Features List */
+.hybrid-features-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.hybrid-features-list li {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #ffffff;
+    /* margin-bottom: 0.8rem; */
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.hybrid-features-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* Section Styles */
+.hybrid-inverter-section {
+    padding-bottom: 60px;
+    background-color: white;
+}
+
+.hybrid-battery-section {
+    padding-bottom: 60px;
+    background-color: #f9fafb;
+}
+
+.hybrid-lv-inverter-section {
+    padding-bottom: 60px;
+    background-color: white;
+}
+
+.hybrid-lv-battery-section {
+    /* padding-bottom: 60px; */
+    background-color: #f9fafb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .hybrid-hero-title {
+        font-size: 3rem;
+    }
+
+    .hybrid-hero-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .hybrid-product-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .hybrid-product-grid-reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .hybrid-product-text-col,
+    .hybrid-product-text-col-light {
+        min-height: auto;
+        padding: 3rem 2rem;
+    }
+
+    .hybrid-product-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hybrid-hero-section {
+        min-height: 80vh;
+        padding-top: 100px;
+    }
+
+    .hybrid-hero-title {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+
+    .hybrid-hero-subtitle {
+        font-size: 1.1rem;
+        padding: 0 20px;
+    }
+
+    .hybrid-learn-more-btn {
+        padding: 12px 28px;
+        font-size: 0.9rem;
+    }
+
+    .hybrid-product-grid {
+        gap: 2rem;
+    }
+
+    .hybrid-product-text-col,
+    .hybrid-product-text-col-light {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .hybrid-product-title {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hybrid-product-description,
+    .hybrid-product-description-dark {
+        font-size: 1rem;
+    }
+
+    .hybrid-inverter-section,
+    .hybrid-battery-section,
+    .hybrid-lv-inverter-section,
+    .hybrid-lv-battery-section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hybrid-hero-title {
+        font-size: 2rem;
+    }
+
+    .hybrid-hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hybrid-product-title {
+        font-size: 1.5rem;
+    }
+
+    .hybrid-product-description,
+    .hybrid-product-description-dark {
+        font-size: 0.95rem;
+    }
+
+    .hybrid-product-text-col,
+    .hybrid-product-text-col-light {
+        padding: 2rem 1.25rem;
+    }
+
+    .hybrid-features-list li {
+        font-size: 0.9rem;
+    }
+}
+.hybrid-product-text-col .btn {
+        margin-top: 20px;
+    background: white;
+    color: #1a365d;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 500;
+    border-radius: 28px;
+    transition: all 0.3s;
+}
+

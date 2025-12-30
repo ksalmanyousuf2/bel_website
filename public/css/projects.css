@@ -337,11 +337,11 @@
     position: relative;
 }
 
-.project-card:hover {
+/* .project-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
     border-color: #00399E;
-}
+} */
 
 .project-card.active {
     background-color: #00399E;
@@ -371,9 +371,9 @@
     border-radius: 30px;
 }
 
-.project-card:hover .project-image {
+/* .project-card:hover .project-image {
     transform: scale(1.05);
-}
+} */
 
 .project-card-body {
     padding: 1.5rem;

@@ -4,6 +4,7 @@
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+<link rel="stylesheet" href="{{ asset('css/cleaning-services.css') }}">
 @endpush
 
 @section('content')
@@ -17,7 +18,7 @@
                     <h1 class="display-3 fw-bold mb-4 text-white">Leading the Shift to Renewable Power</h1>
                 </div>
                 <div class="col-lg-6">
-                    <p class="lead text-white mb-0" style="margin-top: 50px; text-align: justify;">At Beacon Energy, we <strong>empower</strong> communities and industries with <strong>renewable energy</strong> innovations.</p>
+                    <p class="lead text-white mb-0" style="margin-top: 50px;">At Beacon Energy, we <strong>empower</strong> communities and industries with <strong>renewable energy</strong> innovations.</p>
                 </div>
             </div>
         </div>
@@ -83,10 +84,11 @@
                         <h5>{{ $solution->title }}</h5>
                         <p>{!! Str::limit(strip_tags($solution->description), 120) !!}</p>
                         <div class="d-inline-flex align-items-center">
-                            <a href="#" class="btn">More Details</a>
+                            <a href="{{ $solution->url ?? '#' }}" class="btn">More Details</a>
                             <img src="{{ $loop->first ? asset('assets/icons/solid-white-arrow-up.svg')
                              : asset('assets/icons/slim-arrow-up.svg') }}" class="img-fluid" 
                             style="width: 40px;height: 40px;">
+                            
                         </div>
                     </div>
                 </div>
@@ -101,7 +103,7 @@
 </section>
 
 <!-- Industrial & Commercial Section -->
-<section class="py-5 bg-primary text-white industrial-commercial-section">
+{{-- <section class="py-5 bg-primary text-white industrial-commercial-section">
     <div class="container-fluid px-0">
         <div class="row g-0 align-items-center">
             <div class="col-lg-6">
@@ -150,10 +152,60 @@
             </div>
         </div>
     </div>
+</section> --}}
+<section class="py-5 bg-primary text-white industrial-commercial-section">
+    <div class="container-fluid px-0">
+        <div class="row g-0 align-items-center">
+            <div class="col-lg-5">
+                <div class="industrial-commercial-content-wrapper">
+                    <div class="container">
+                        <h2 class="display-5 fw-bold mb-4">Industrial &amp; Commercial Segments</h2>
+                        <p class="mt-5">Our solutions deliver optimal Return on Investment (ROI) and significantly reduce energy bills for our customers.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="card text-dark industrial-commercial-card" id="industrialCardWrapper" style="background-image: url(&quot;http://localhost/bel/bel%20website/public/assets/images/mask_group.png&quot;);">
+                    <div class="card-body">
+                        <div id="industrialCarousel" class="carousel slide industrial-overlay-carousel" data-bs-ride="carousel" data-bs-interval="6000">
+                            <div class="carousel-inner">
+                                <div class="carousel-item" data-background="{{ asset('assets/images/hero_section_image.png') }}">
+                                    <div class="industrial-overlay-card">
+                                        <div class="industrial-overlay-thumb">
+                                            <img src="{{ asset('assets/images/hero_section_image.png') }}" alt="Energy Independence">
+                                        </div>
+                                        <h5>Energy Independence</h5>
+                                        <p>Discover the sustainable technologies we use to drive the global transition to renewable energy.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item active" data-background="{{ asset('assets/images/mask_group.png') }}">
+                                    <div class="industrial-overlay-card">
+                                        <div class="industrial-overlay-thumb">
+                                            <img src="{{ asset('assets/images/mask_group.png') }}" alt="Smart Monitoring">
+                                        </div>
+                                        <h5>Smart Monitoring</h5>
+                                        <p>Track performance in real-time with proactive insights that keep your operations efficient and reliable.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="industrial-overlay-nav">
+                            <button class="industrial-nav-btn" type="button" data-bs-target="#industrialCarousel" data-bs-slide="prev">
+                                <i class="fas fa-arrow-left"></i> Previous
+                            </button>
+                            <button class="industrial-nav-btn" type="button" data-bs-target="#industrialCarousel" data-bs-slide="next">
+                                Next <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- Projects Section -->
-<section class="py-5" id="projects">
+<section id="projects" class="mt-5">
     <div class="container">
         <div class="row mb-4">
             <div class="col-lg-3">
@@ -251,27 +303,40 @@
                 <p>No projects available at the moment.</p>
             </div>
         @endif
-        <img src="{{ asset('assets/images/connect_icon.png') }}" class="img-fluid rounded connect-icon" alt="Connect Icon">
+        {{-- <img src="{{ asset('assets/images/connect_icon.png') }}" class="img-fluid rounded connect-icon" alt="Connect Icon"> --}}
 
     </div>
 </section>
 
 <!-- Connect App Section -->
-<section class="py-5 bg-primary text-white" style="margin-top: 3rem;">
+<section class="cleaning-connect-section">
+    <div class="cleaning-connect-background">
+        <img src="{{ asset('assets/images/Group 175.png') }}" alt="Background" class="img-fluid">
+    </div>
+    {{-- <div class="cleaning-connect-overlay"></div> --}}
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-4">
-                <div class="text-center mb-4">
-                    <img src="{{ asset('assets/images/mobile_app.png') }}" alt="Connect App" class="img-fluid mobile-app-image">
+            <div class="col-lg-6">
+                <div class="cleaning-connect-content">
+                    <div class="cleaning-connect-logo">
+                        <img src="{{ asset('assets/images/connect_icon.png') }}" alt="Connect" class="img-fluid">
+                    </div>
+                    <h2 class="cleaning-connect-title mt-5">Seamless Visibility and Support for Your Energy Journey.</h2>
+                    <p class="cleaning-connect-description">
+                        Beacon Energy has a robust Monitoring & support app that gives customers complete visibility over their solar system. Available on all mobile and desktop platforms, the app allows the user to see all current and historical data about energy production, utilization, export, and overall saving.
+                    </p>
+                    <div class="cleaning-connect-buttons">
+                        <a href="#" class="cleaning-app-btn">
+                            <img src="{{ asset('assets/icons/google_store.svg') }}" alt="Google Play" class="img-fluid">
+                        </a>
+                        <a href="#" class="cleaning-app-btn">
+                            <img src="{{ asset('assets/icons/apple_store.svg') }}" alt="App Store" class="img-fluid">
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                <h4 class="mb-4">Seamless Visibility and Support for Your Energy Journey.</h4>
-                <p>Beacon Energy has a robust Monitoring & support app that gives customers complete visibility over their solar system. Available on all mobile and desktop platforms, the app allows the user to see all current and historical data about energy production, utilization, export, and overall saving.</p>
-                <div class="d-flex gap-3 mt-4">
-                    <a href="#" class="btn btn-light" style="border-radius: 25px;"><img src="{{ asset('assets/icons/google_store.svg') }}" alt="Google Play"></a>
-                    <a href="#" class="btn btn-light" style="border-radius: 25px;"><img src="{{ asset('assets/icons/apple_store.svg') }}" alt="App Store"></a>
-                </div>
+            <div class="col-lg-6">
+                <!-- Space for potential phone images or other content -->
             </div>
         </div>
     </div>
@@ -359,25 +424,25 @@
 </div> --}}
 
 <section class="py-5 cta-section">
-    <div class="container-fluid">
-        <div class="row">
+    <div class="container-fluid px-0">
+        <div class="row g-0 mx-0 cta-row">
             <!-- Left Section -->
-            <div class="col-lg-8 col-md-4 col-sm-8 ps-0">
-                <div class="cta-left h-100 d-flex justify-content-center align-items-center" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+            <div class="col-lg-8 col-md-6 col-12 order-2 order-lg-1 cta-col-left" style="padding-right: 20px;">
+                <div class="cta-left h-100 d-flex justify-content-center align-items-center cta-left-mobile" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
                 url('{{ asset('assets/images/8840190 6.png') }}') center/cover; border-radius: 0 26px 26px 0; padding: 3rem 1rem;">
                     <h2 class="display-4 fw-bold mb-0 text-white text-center">For a Brighter<br>Cleaner Future</h2>
                 </div>
             </div>
 
             <!-- Right Section -->
-            <div class="col-lg-4 col-md-8 col-sm-4 px-0">
-                <div class="cta-right h-100 d-flex align-items-center" style="background-color: #00399E; border-radius: 26px 0 0 26px; padding: 6rem 1rem;">
+            <div class="col-lg-4 col-md-6 col-12 order-1 order-lg-2 cta-col-right">
+                <div class="cta-right h-100 d-flex align-items-center cta-right-mobile" style="background-color: #00399E; border-radius: 26px 0 0 26px; padding: 6rem 1rem;">
                     <div class="card bg-primary text-white w-100" style="border-color: #00399E;">
                         <div class="card-body p-4">
                             <h3 class="fw-bold mb-3">Let's Power the Planet—Sustainably</h3>
                             <p>Discover the sustainable technologies we use to drive the global transition to renewable energy.</p>
                             <div class="d-inline-flex align-items-center gap-2">
-                                <a href="#contact" class="btn btn-outline-primary flex-shrink-0 text-white" style="border-radius: 28px; border-color: white;">
+                                <a href="{{ route('contact') }}" class="btn btn-outline-primary flex-shrink-0 text-white" style="border-radius: 28px; border-color: white;">
                                    Get connected
                                 </a> 
                                 <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="img-fluid" style="width: 40px; height: 40px;">

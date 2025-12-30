@@ -28,7 +28,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="industrial-hero-content" style="margin-top: 200px;">
+                <div class="industrial-hero-content" style="margin-top: 50px;">
                     <span class="hero-badge">[BUSINESS]</span>
                     <h1 class="hero-title">INDUSTRIAL</h1>
                     <p class="hero-subtitle">POWERING INDUSTRIES WITH RENOWNED SOLAR SOLUTIONS</p>

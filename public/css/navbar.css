@@ -14,6 +14,137 @@
     width: 100%;
 }
 
+/* Ensure navbar container has consistent padding and alignment across all pages */
+.navbar-transparent .navbar .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Match Bootstrap's container max-widths for consistent alignment */
+@media (min-width: 576px) {
+    .navbar-transparent .navbar .container {
+        max-width: 540px;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-transparent .navbar .container {
+        max-width: 720px;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-transparent .navbar .container {
+        max-width: 960px;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar-transparent .navbar .container {
+        max-width: 1140px;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .navbar-transparent .navbar .container {
+        max-width: 1320px;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+
+/* Match container max-widths for larger screens to align with footer and content */
+@media (min-width: 1800px) {
+    .navbar-transparent .navbar .container {
+        max-width: 1600px;
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+}
+
+@media (min-width: 2400px) {
+    .navbar-transparent .navbar .container {
+        max-width: 2000px;
+        padding-left: 4rem !important;
+        padding-right: 4rem !important;
+    }
+}
+
+/* Ensure footer container matches navbar container alignment on all screen sizes */
+footer .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 576px) {
+    footer .container {
+        max-width: 540px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    footer .container {
+        max-width: 720px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (min-width: 992px) {
+    footer .container {
+        max-width: 960px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (min-width: 1200px) {
+    footer .container {
+        max-width: 1140px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (min-width: 1400px) {
+    footer .container {
+        max-width: 1320px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* Match footer container with navbar on larger screens */
+@media (min-width: 1800px) {
+    footer .container {
+        max-width: 1600px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 2400px) {
+    footer .container {
+        max-width: 2000px;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
 .navbar-transparent.scrolled {
     background-color: #00399E !important;
     backdrop-filter: blur(10px);
@@ -47,13 +178,26 @@ main > div:first-child > section:first-child:not(.about-hero-section) {
     margin-top: 0 !important;
 }
 
+/* Ensure navbar brand alignment is consistent */
+.navbar-transparent .navbar-brand {
+    margin-right: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Ensure navbar content alignment is consistent */
+.navbar-transparent .navbar {
+    padding: 0 !important;
+}
+
 .navbar-transparent .navbar-nav .nav-link {
     color: white !important;
     font-weight: 400;
     transition: color 0.3s ease;
     margin-left: 5px;
     /* font-family: montserrat; */
-    font-size: 14px;
+    font-size: 16px;
     padding-left: 15px;
     padding-right: 15px;
 }

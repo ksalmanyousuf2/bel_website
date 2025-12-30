@@ -90,8 +90,11 @@
                 <div class="event-card">
                     @if($event->image)
                     <div class="event-image-wrapper">
-                        <img src="{{ asset('storage/' . $event->image) }}" class="event-image" alt="{{ $event->title }}">
+                        <img src="{{ asset('storage/' . $event->image) }}" class="event-image" alt="{{ $event->title }}" >
                     </div>
+                    @endif
+                    @if($event->social_media_link) 
+                        <a href="{{ $event->social_media_link }}" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
                     @endif
                     <div class="event-card-body">
                         <div class="event-date">
@@ -105,14 +108,13 @@
                         <h5 class="event-title">{{ $event->title }}</h5>
                         <p class="event-description">{{ Str::limit(strip_tags($event->description), 120) }}</p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <a href="{{ route('events.show', $event->slug) }}" class="btn btn-outline-primary">Read More</a>
-                            @if($event->social_media_link)
-                            <a href="{{ $event->social_media_link }}" target="_blank" rel="noopener noreferrer" class="event-social-link">
-                                <i class="fas fa-external-link-alt me-2"></i>Social Media
-                            </a>
-                            @endif
+                            {{-- <a href="{{ route('events.show', $event->slug) }}" class="btn btn-outline-primary">Read More</a> --}}
+                           
                         </div>
                     </div>
+                    @if($event->social_media_link)
+                    </a>
+                    @endif
                 </div>
             </div>
             @empty

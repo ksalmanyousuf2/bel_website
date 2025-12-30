@@ -29,11 +29,14 @@ use App\Http\Controllers\ReflexController;
 use App\Http\Controllers\IntrixController;
 use App\Http\Controllers\IntrixLvController;
 use App\Http\Controllers\OnGridController;
+use App\Http\Controllers\BessController;
+use App\Http\Controllers\HybridSolarSolutionsController;
 use Illuminate\Support\Facades\Route;
 
 // Frontend Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home-variation-2', [HomeController::class, 'variation2'])->name('home.variation2');
+Route::get('/home-variation-3', [HomeController::class, 'variation3'])->name('home.variation3');
 Route::get('/about-us', [AboutUsController::class, 'index'])->name('about-us');
 Route::get('/our-story', [AboutUsController::class, 'ourStory'])->name('our-story');
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
@@ -52,6 +55,8 @@ Route::get('/reflex', [ReflexController::class, 'index'])->name('reflex');
 Route::get('/intrix', [IntrixController::class, 'index'])->name('intrix');
 Route::get('/intrix-lv', [IntrixLvController::class, 'index'])->name('intrix-lv');
 Route::get('/on-grid', [OnGridController::class, 'index'])->name('on-grid');
+Route::get('/bess', [BessController::class, 'index'])->name('bess');
+Route::get('/hybrid-solar-solutions', [HybridSolarSolutionsController::class, 'index'])->name('hybrid-solar-solutions');
 Route::get('/faqs', [FaqController::class, 'index'])->name('faqs.index');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');

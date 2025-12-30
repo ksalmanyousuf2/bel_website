@@ -144,7 +144,7 @@
             
             </div>
             <div class="col-lg-8">
-                <p class="section-description text-center mb-5">Beacon Energy has a robust Monitoring & support app that gives customers complete visibility over their solar system. Available on all mobile and desktop platforms, the app allows the user to see all current and historical data about energy production, utilization, export, and overall saving.</p>
+                <p class="section-description text-center mb-5">Beacon Energy has a robust monitoring & support app that gives customers complete visibility over their solar system. Available on all mobile and desktop platforms, the app allows the user to see all current and historical data about energy production, utilization, export, and overall saving.</p>
             </div>
         </div>
         <!-- Carousel Navigation - Top Left -->
@@ -265,12 +265,12 @@
             <div class="sustainable-future-content">
                 <h2>How Do We Build a More Sustainable Future</h2>
                 <p>By embedding ESG principles into our strategy and leveraging our global network to drive impactful green energy innovations, we have successfully achieved green and zero-waste factories since 2022, making significant strides toward carbon neutrality.</p>
-                <div class="sustainable-future-cta">
+                {{-- <div class="sustainable-future-cta">
                     <a href="#" class="btn sustainable-learn-btn">Learn more</a>
                     <div class="sustainable-arrow-circle">
                         <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" alt="Arrow" class="sustainable-arrow-icon">
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

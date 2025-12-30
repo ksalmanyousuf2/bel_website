@@ -170,12 +170,12 @@
             <div class="sustainable-future-content">
                 <h2>How Do We Build a More Sustainable Future</h2>
                 <p>By embedding ESG principles into our strategy and leveraging our global network to drive impactful green energy innovations, we have successfully achieved green and zero-waste factories since 2022, making significant strides toward carbon neutrality.</p>
-                <div class="sustainable-future-cta">
+                {{-- <div class="sustainable-future-cta">
                     <a href="#" class="btn sustainable-learn-btn">Learn more</a>
                     <div class="sustainable-arrow-circle">
                         <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" alt="Arrow" class="sustainable-arrow-icon">
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
@@ -186,11 +186,11 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4">  
-        <h2 class="section-title text-center mb-5">Timeline of Achievements</h2>
+        <h2 class="section-title mb-5">Timeline of Achievements</h2>
             
             </div>
             <div class="col-lg-8">
-                <p class="section-description text-center mb-5">Beacon Energy has a robust Monitoring & support app that gives customers complete visibility over their solar system. Available on all mobile and desktop platforms, the app allows the user to see all current and historical data about energy production, utilization, export, and overall saving.</p>
+                <p class="section-description mb-5" style="text-align: justify;">Beacon Energy has a robust Monitoring & support app that gives customers complete visibility over their solar system. Available on all mobile and desktop platforms, the app allows the user to see all current and historical data about energy production, utilization, export, and overall saving.</p>
             </div>
         </div>
         <!-- Carousel Navigation - Top Left -->
@@ -403,8 +403,27 @@
                                     <img src="{{ asset('assets/logos/Beacan_Child_company_Logos/Asset 52.png') }}" alt="Logo">
                                 </div>
                                 <div class="logo-item">
-                                    <img src="{{ asset('assets/logos/Beacan_Child_company_Logos/2648273629456.png') }}" alt="Logo">
+                                    <img src="{{ asset('assets/icons/2648273629456.png') }}" alt="Logo">
                                 </div>
+                                <div class="logo-item">
+                                    <img src="{{ asset('assets/icons/2648378431840.png') }}" alt="Logo">
+                                </div>
+                                <div class="logo-item">
+                                    <img src="{{ asset('assets/icons/2648378448576.png') }}" alt="Logo">
+                                </div>
+                                <div class="logo-item">
+                                    <img src="{{ asset('assets/icons/2648378466144.png') }}" alt="Logo">
+                                </div>
+                                <div class="logo-item">
+                                    <img src="{{ asset('assets/icons/2648378476000.png') }}" alt="Logo">
+                                </div>
+                                <div class="logo-item">
+                                    <img src="{{ asset('assets/icons/2648378486944.png') }}" alt="Logo">
+                                </div>
+                                <div class="logo-item">
+                                    <img src="{{ asset('assets/icons/2648322508528.png') }}" alt="Logo">
+                                </div>
+                                
                             </div>
                         </div>
 
@@ -425,7 +444,7 @@
                                     <img src="{{ asset('assets/logos/Beacan_Child_company_Logos/Asset 31.png') }}" alt="Logo">
                                 </div>
                                 <div class="logo-item">
-                                    <img src="{{ asset('assets/logos/Beacan_Child_company_Logos/2648329514416.png') }}" alt="Logo">
+                                    <img src="{{ asset('assets/icons/2648329514416.png') }}" alt="Logo">
                                 </div>
                             </div>
                         </div>
@@ -435,20 +454,18 @@
                             <h3 class="category-title">Non-Profit</h3>
                             <div class="logos-grid">
                                 <div class="logo-item">
-                                    <img src="{{ asset('assets/logos/Beacan_Child_company_Logos/2648378431840.png') }}" alt="Logo">
+                                    <img src="{{ asset('assets/icons/bnu.png') }}" alt="Logo">
                                 </div>
                                 <div class="logo-item">
-                                    <img src="{{ asset('assets/logos/Beacan_Child_company_Logos/2648378448576.png') }}" alt="Logo">
+                                    <img src="{{ asset('assets/icons/makwt.png') }}" alt="Logo">
                                 </div>
                                 <div class="logo-item">
-                                    <img src="{{ asset('assets/logos/Beacan_Child_company_Logos/2648378466144.png') }}" alt="Logo">
+                                    <img src="{{ asset('assets/icons/sot.png') }}" alt="Logo">
                                 </div>
                                 <div class="logo-item">
-                                    <img src="{{ asset('assets/logos/Beacan_Child_company_Logos/2648378476000.png') }}" alt="Logo">
+                                    <img src="{{ asset('assets/icons/lighthouse.png') }}" alt="Logo">
                                 </div>
-                                <div class="logo-item">
-                                    <img src="{{ asset('assets/logos/Beacan_Child_company_Logos/2648378486944.png') }}" alt="Logo">
-                                </div>
+
                             </div>
                         </div>
                     </div>

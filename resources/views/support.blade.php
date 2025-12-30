@@ -98,18 +98,19 @@
                     <h2 class="service-title">Network Operations Center</h2>
                     <p class="service-description">Our Network Operations Center ensures seamless production by proactively monitoring systems 24/7, addressing customer service calls for both proactive and reactive support. Operating year-round, we guarantee continuous availability, optimizing investment returns.</p>
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-12">
                         <a href="tel:+923100222235" class="btn service-contact-btn">
                             <i class="fas fa-phone me-2"></i>
                             <span>+92 310 0222 235</span>
                         </a>
-                        </div>
-                        <div class="col-lg-6">
-                        <a href="mailto:support@beaconenergy.pk" class="btn service-contact-btn float-left">
+                        <a href="mailto:support@beaconenergy.pk" class="btn service-contact-btn">
                             <i class="fas fa-envelope me-2"></i>
                             <span>support@beaconenergy.pk</span>
                         </a>
                         </div>
+                        {{-- <div class="col-lg-6">
+                        
+                        </div> --}}
                     </div>
                 </div>
             </div>
