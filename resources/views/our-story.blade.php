@@ -186,11 +186,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4">  
-        <h2 class="section-title mb-5">Timeline of Achievements</h2>
-            
+                <h2 class="section-title mb-5">Timeline of Achievements</h2>
             </div>
             <div class="col-lg-8">
-                <p class="section-description mb-5" style="text-align: justify;">Beacon Energy has a robust Monitoring & support app that gives customers complete visibility over their solar system. Available on all mobile and desktop platforms, the app allows the user to see all current and historical data about energy production, utilization, export, and overall saving.</p>
+                <p class="section-description mb-5" style="text-align: justify;">From our foundation in 2019 to our current position as a leader in renewable energy, Beacon Energy has consistently achieved significant milestones. Our journey reflects our commitment to innovation, expansion, and excellence in delivering sustainable energy solutions across Pakistan and beyond.</p>
             </div>
         </div>
         <!-- Carousel Navigation - Top Left -->
@@ -215,7 +214,13 @@
                                     <img src="{{ asset('assets/images/start_of_operations.png') }}" alt="Start of Operations" class="img-fluid">
                                 </div>
                                 <div class="achievement-text">
-                                    <p>September 2025 <br> Start of commercial operation of Phase I of Black Hollow Sun Solar Complex, with 185 MWp of installed capacity, located in Colorado, serving Platte River Power Authority.</p>
+                                    <h4 class="achievement-year">2019</h4>
+                                    <ul class="achievement-list">
+                                        <li>Opening of Beacon Energy office at Banigala, Islamabad</li>
+                                        <li>Foundation & Incorporation of Beacon Energy with SECP</li>
+                                        <li>Contract for solarization of Beaconhouse School (35 Branches)</li>
+                                        <li>Capacity: 3.26 MW</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -225,7 +230,14 @@
                                     <img src="{{ asset('assets/images/contourglobal.png') }}" alt="ContourGlobal" class="img-fluid">
                                 </div>
                                 <div class="achievement-text">
-                                    <p>September 2025 <br> Start of commercial operation of Phase I of Black Hollow Sun Solar Complex, with 185 MWp of installed capacity, located in Colorado, serving Platte River Power Authority.</p>
+                                    <h4 class="achievement-year">2020</h4>
+                                    <ul class="achievement-list">
+                                        <li>Project kickoff for Beaconhouse Schools</li>
+                                        <li>Muhammadi Medical College project (252 KW)</li>
+                                        <li>Launch of BELCONNECT - The Ultimate Monitoring App</li>
+                                        <li>Establishment of Customer Support (NOC)</li>
+                                        <li>First commercial trade transaction</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -235,17 +247,32 @@
                                     <img src="{{ asset('assets/images/inauguration.png') }}" alt="Inauguration" class="img-fluid">
                                 </div>
                                 <div class="achievement-text">
-                                    <p>September 2025 <br> Start of commercial operation of Phase I of Black Hollow Sun Solar Complex, with 185 MWp of installed capacity, located in Colorado, serving Platte River Power Authority.</p>
+                                    <h4 class="achievement-year">2021</h4>
+                                    <ul class="achievement-list">
+                                        <li>Formation of R&D Department</li>
+                                        <li>Development of Hybrid Solar Solution (INTRIX)</li>
+                                        <li>Launch of Regional Office Islamabad (I-8 Markaz)</li>
+                                        <li>Launch of Regional Office Lahore (DHA)</li>
+                                        <li>Launch of Regional Office Karachi (DHA)</li>
+                                        <li>Launch of Regional Office Kasur</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="achievement-card">
                                 <div class="achievement-image">
-                                    <img src="{{ asset('assets/images/sales.png') }}" alt="Sale" class="img-fluid">
+                                    <img src="{{ asset('assets/images/sales.png') }}" alt="Sales" class="img-fluid">
                                 </div>
                                 <div class="achievement-text">
-                                    <p>September 2025 <br> Start of commercial operation of Phase I of Black Hollow Sun Solar Complex, with 185 MWp of installed capacity, located in Colorado, serving Platte River Power Authority.</p>
+                                    <h4 class="achievement-year">2022</h4>
+                                    <ul class="achievement-list">
+                                        <li>Introduction of Beacon Energy and its journey in the renewable energy sector</li>
+                                        <li>Launch of INTRIX, a premium hybrid solar solution</li>
+                                        <li>Inaugural sales workshop in Islamabad</li>
+                                        <li>Launch of Head Office Islamabad (DHA)</li>
+                                        <li>Launch of BELPARTNER - The Ultimate Referral App</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -260,7 +287,13 @@
                                     <img src="{{ asset('assets/images/start_of_operations.png') }}" alt="Start of Operations" class="img-fluid">
                                 </div>
                                 <div class="achievement-text">
-                                    <p>September 2025 Start of commercial operation of Phase I of Black Hollow Sun Solar Complex, with 185 MWp of installed capacity, located in Colorado, serving Platte River Power Authority.</p>
+                                    <h4 class="achievement-year">2023</h4>
+                                    <ul class="achievement-list">
+                                        <li>Launch of Dubai Company (UAE)</li>
+                                        <li>Development of INTRIX with LED support</li>
+                                        <li>CRM implementation</li>
+                                        <li>Launch of Peshawar Office (Ring Road)</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -270,7 +303,12 @@
                                     <img src="{{ asset('assets/images/contourglobal.png') }}" alt="ContourGlobal" class="img-fluid">
                                 </div>
                                 <div class="achievement-text">
-                                    <p>September 2025 Start of commercial operation of Phase I of Black Hollow Sun Solar Complex, with 185 MWp of installed capacity, located in Colorado, serving Platte River Power Authority.</p>
+                                    <h4 class="achievement-year">2024</h4>
+                                    <ul class="achievement-list">
+                                        <li>Launch of Standard Grid-Tied Solar Solution (Low Cost)</li>
+                                        <li>Launch of INTRIX High Voltage Solar Solution</li>
+                                        <li>Planning for first AI Engine for Hybrid Solar optimization</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -280,17 +318,12 @@
                                     <img src="{{ asset('assets/images/inauguration.png') }}" alt="Inauguration" class="img-fluid">
                                 </div>
                                 <div class="achievement-text">
-                                    <p>September 2025 Start of commercial operation of Phase I of Black Hollow Sun Solar Complex, with 185 MWp of installed capacity, located in Colorado, serving Platte River Power Authority.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="achievement-card">
-                                <div class="achievement-image">
-                                    <img src="{{ asset('assets/images/sales.png') }}" alt="Sale" class="img-fluid">
-                                </div>
-                                <div class="achievement-text">
-                                    <p>September 2025 Start of commercial operation of Phase I of Black Hollow Sun Solar Complex, with 185 MWp of installed capacity, located in Colorado, serving Platte River Power Authority.</p>
+                                    <h4 class="achievement-year">2025</h4>
+                                    <ul class="achievement-list">
+                                        <li>Beacon Energy Sales Training Program 2025, strengthening sales excellence, innovation, and sustainability culture</li>
+                                        <li>Launch of AI-Driven Battery Energy Storage System (BESS) for SME and Industrial applications</li>
+                                        <li>Real-time optimization of energy storage, demand, and load management through intelligent control and automation</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

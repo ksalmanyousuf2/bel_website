@@ -85,9 +85,9 @@
                         <p>{!! Str::limit(strip_tags($solution->description), 120) !!}</p>
                         <div class="d-inline-flex align-items-center">
                             <a href="{{ $solution->url ?? '#' }}" class="btn">More Details</a>
-                            <img src="{{ $loop->first ? asset('assets/icons/solid-white-arrow-up.svg')
+                            <a href="{{ $solution->url ?? '#' }}"><img src="{{ $loop->first ? asset('assets/icons/solid-white-arrow-up.svg')
                              : asset('assets/icons/slim-arrow-up.svg') }}" class="img-fluid" 
-                            style="width: 40px;height: 40px;">
+                            style="width: 40px;height: 40px;"></a>
                             
                         </div>
                     </div>
@@ -326,10 +326,10 @@
                         Beacon Energy has a robust Monitoring & support app that gives customers complete visibility over their solar system. Available on all mobile and desktop platforms, the app allows the user to see all current and historical data about energy production, utilization, export, and overall saving.
                     </p>
                     <div class="cleaning-connect-buttons">
-                        <a href="#" class="cleaning-app-btn">
+                        <a href="https://play.google.com/store/apps/details?id=com.energise.bel&hl=en&gl=US&pli=1" class="cleaning-app-btn">
                             <img src="{{ asset('assets/icons/google_store.svg') }}" alt="Google Play" class="img-fluid">
                         </a>
-                        <a href="#" class="cleaning-app-btn">
+                        <a href="https://apps.apple.com/pk/app/bel-connect/id1523014430" class="cleaning-app-btn">
                             <img src="{{ asset('assets/icons/apple_store.svg') }}" alt="App Store" class="img-fluid">
                         </a>
                     </div>
@@ -441,11 +441,11 @@
                         <div class="card-body p-4">
                             <h3 class="fw-bold mb-3">Let's Power the Planet—Sustainably</h3>
                             <p>Discover the sustainable technologies we use to drive the global transition to renewable energy.</p>
-                            <div class="d-inline-flex align-items-center gap-2">
+                            <div class="d-inline-flex align-items-center">
                                 <a href="{{ route('contact') }}" class="btn btn-outline-primary flex-shrink-0 text-white" style="border-radius: 28px; border-color: white;">
                                    Get connected
                                 </a> 
-                                <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="img-fluid" style="width: 40px; height: 40px;">
+                                <a href="{{ route('contact') }}"><img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="img-fluid" style="width: 40px; height: 40px;"></a>
                             </div>
                         </div>
                     </div>
@@ -495,6 +495,32 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    // Add scroll animations (same as intrix page)
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observe sections (skip the hero section to avoid animation on initial load)
+    document.querySelectorAll('section').forEach((section, index) => {
+        // Skip the first section (hero) to avoid animation on page load
+        if (index > 0) {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        }
+    });
 });
 </script>
 @endpush

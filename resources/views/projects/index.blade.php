@@ -73,7 +73,7 @@
                         <a href="#projects-content" class="btn projects-learn-btn">
                             <i class="fas fa-arrow-down me-2"></i>Explore Projects
                         </a>
-                        <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="projects-cta-arrow" alt="Arrow">
+                        {{-- <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="projects-cta-arrow" alt="Arrow"> --}}
                     </div>
                 </div>
             </div>

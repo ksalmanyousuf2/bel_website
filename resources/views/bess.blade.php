@@ -16,14 +16,19 @@
             <h1 class="bess-hero-title">BESS</h1>
             <h2 class="bess-hero-subtitle">Battery Energy Storage System</h2>
             <div class="bess-hero-scroll-indicator">
-                <div class="bess-scroll-circle"></div>
+                {{-- <div class="bess-scroll-circle"></div> --}}
+                <div class="hero-learn-cta">
+                    <a href="#our-mission" class="btn hero-learn-btn">
+                        <i class="fas fa-arrow-down me-2"></i>Explore More
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Problem/Solution Introduction Section -->
-<section class="bess-intro-section py-5">
+<section class="bess-intro-section py-5" id="our-mission">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -121,7 +126,7 @@
 </section>
 
 <!-- Product Choice Section -->
-<section class="bess-product-choice-section py-5">
+<section class="bess-product-choice-section">
     <div class="container">
         <div class="row g-4 align-items-center">
             <div class="col-lg-5">
@@ -202,7 +207,7 @@
 </section>
 
 <!-- Applications Section -->
-<section class="bess-applications-section py-5">
+<section class="bess-applications-section">
     <div class="container">
         <div class="row mb-4">
             <div class="col-lg-12">
@@ -275,7 +280,21 @@
 
 @push('scripts')
 <script>
-// Add any JavaScript functionality if needed
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
 </script>
 @endpush
 

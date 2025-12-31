@@ -107,10 +107,10 @@
 <!-- Key Metric Section -->
 <section class="key-metric-section">
     <div class="container">
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col-md-6">
-                <div class="key-metric-content-wrapper" style="position: relative; height: 300px;">
-                    <div class="key-metric-content" style="position: absolute; bottom: 0; left: 0;">
+                <div class="key-metric-content-wrapper">
+                    <div class="key-metric-content">
                         <div class="key-metric-number">80</div>
                         <div class="key-metric-label">Megawatts Installed</div>
                     </div>
@@ -169,7 +169,8 @@
     <div class="container-fluid" style="padding-right: 0px !important;">
         <h2 class="section-title">Applications</h2>
         <p class="section-description">Our solutions deliver optimal Return on Investment (ROI) and significantly reduce energy bills for our customers.</p>
-        <hr class="my-4">
+
+        <hr class="my-4" style="margin-bottom: 6.5rem !important;">
         <div class="applications-carousel-wrapper">
             <div class="applications-carousel-nav">
                 <button class="applications-nav-btn carousel-control-prev" type="button" aria-label="Previous application">
@@ -250,19 +251,18 @@
 @if(isset($testimonials) && $testimonials->count() > 0)
 <section class="testimonials-carousel-section">
     <div class="container-fluid" style="padding-right: 0px !important;">
-        <h2 class="section-title" style="margin-bottom: 5rem !important; margin-left: 65px !important;">Clients <br> Testimonials</h2>
+        <h2 class="section-title">Client Testimonials</h2>
 
         <div class="testimonials-carousel-wrapper">
             <div class="testimonials-carousel-nav">
-                <button class="testimonials-nav-btn carousel-control-next" type="button" aria-label="Next testimonial">
-                    <i class="fas fa-arrow-right"></i>
-                    <span class="visually-hidden">Next</span>
-                </button>
                 <button class="testimonials-nav-btn carousel-control-prev" type="button" aria-label="Previous testimonial">
                     <i class="fas fa-arrow-left"></i>
                     <span class="visually-hidden">Previous</span>
                 </button>
-              
+                <button class="testimonials-nav-btn carousel-control-next" type="button" aria-label="Next testimonial">
+                    <i class="fas fa-arrow-right"></i>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
 
             <div class="testimonials-carousel-content">
@@ -271,6 +271,7 @@
                         @foreach($testimonials as $testimonial)
                         <div class="testimonial-carousel-card">
                             <div class="testimonial-carousel-image-wrapper">
+                                {{-- <div class="testimonial-badge">CUSTOMER TESTIMONIAL</div> --}}
                                 <img src="{{ asset('storage/' . $testimonial->image) }}" alt="{{ $testimonial->name }}" class="testimonial-carousel-image">
                                 @if($testimonial->youtube_video_link)
                                 <button class="testimonial-play-button" onclick="openTestimonialVideo('{{ $testimonial->youtube_video_link }}')" type="button" aria-label="Play video">
@@ -278,6 +279,16 @@
                                 </button>
                                 @endif
                             </div>
+                            {{-- <div class="testimonial-carousel-content">
+                                <h3 class="testimonial-name">{{ $testimonial->name }}</h3>
+                                @if($testimonial->company)
+                                <p class="testimonial-company">({{ $testimonial->company }})</p>
+                                @endif
+                                @if($testimonial->position)
+                                <p class="testimonial-position">{{ $testimonial->position }}</p>
+                                @endif
+                                <p class="testimonial-slogan">ILLUMINATING SUCCESS TOGETHER!</p>
+                            </div> --}}
                         </div>
                         @endforeach
                     </div>

@@ -23,9 +23,11 @@
             <img src="{{ asset('assets/images/LV-battery 1.png') }}" alt="INTRIX LV Battery" class="intrix-lv-product-bottom"> --}}
             
             <!-- Scroll Down Arrow -->
-            <a href="#smart-inverter" class="intrix-lv-hero-arrow">
-                <i class="fas fa-arrow-down"></i>
-            </a>
+            <div class="hero-learn-cta">
+                <a href="#smart-inverter" class="btn hero-learn-btn">
+                    <i class="fas fa-arrow-down me-2"></i>Explore More
+                </a>
+            </div>
         </div>
     </div>
 </section>

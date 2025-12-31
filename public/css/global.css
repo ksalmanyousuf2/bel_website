@@ -42,7 +42,9 @@
     padding: 20px;
     flex: 1;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: flex-end; */
 }
 
 .achievement-text p {
@@ -50,6 +52,41 @@
     line-height: 1.6;
     margin: 0;
     color: black;
+}
+
+.achievement-year {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #00399E;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.achievement-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.achievement-list li {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: black;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.achievement-list li:before {
+    content: "•";
+    color: #00399E;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.achievement-list li:last-child {
+    margin-bottom: 0;
 }
 
 /* ============================================
@@ -249,6 +286,16 @@
         font-size: 0.8rem;
     }
     
+    .achievement-year {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    
+    .achievement-list li {
+        font-size: 0.8rem;
+        margin-bottom: 6px;
+    }
+    
     .about-hero-section .carousel-inner {
         min-height: 80vh;
     }
@@ -392,12 +439,11 @@
 .key-metric-content-wrapper {
     position: relative;
     height: 300px;
+    display: flex;
+    align-items: flex-end;
 }
 
 .key-metric-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -421,7 +467,7 @@
     flex: 1;
     display: flex;
     align-items: flex-end;
-    /* gap: 20px; */
+    gap: 8px;
     height: 300px;
 }
 
@@ -524,32 +570,75 @@
     color: white;
 }
 
+.applications-section {
+    position: relative;
+    overflow: hidden;
+}
+
 .applications-section .section-title {
     color: white;
-    margin-bottom: 20px;
+    margin-bottom: 1rem !important;
     text-align: center;
+    margin-left: 0 !important;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .applications-section .section-description {
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 3rem !important;
     text-align: center;
+    margin-left: 0 !important;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 800px;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 .applications-carousel-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+    position: relative;
+    margin-top: 2rem;
 }
 
 .applications-carousel-nav {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    /* flex-direction: column; */
-    gap: 15px;
-    /* align-items: center; */
-    flex-shrink: 0;
-    margin-left:50px;
-    
+    gap: 10px;
+    z-index: 10;
+}
+
+/* Responsive alignment for applications carousel nav */
+@media (min-width: 1200px) {
+    .applications-carousel-nav {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (min-width: 1400px) {
+    .applications-carousel-nav {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (min-width: 1920px) {
+    .applications-carousel-nav {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 991px) {
+    .applications-carousel-nav {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -50px;
+    }
 }
 
 .applications-nav-btn {
@@ -564,23 +653,46 @@
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
-    position: relative;
-    opacity: 1;
+    font-size: 1.2rem;
     padding: 0;
+    position: relative;
 }
 
-.applications-nav-btn:hover {
-    background: white;
-    color: #00399E;
+.applications-nav-btn:hover:not(.disabled) {
+    background: rgba(255, 255, 255, 0.1);
     border-color: white;
+    color: white;
 }
 
-.applications-carousel-content {
-    flex: 1;
+.applications-nav-btn.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
 }
 
 .applications-nav-btn i {
-    font-size: 1rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    line-height: 1;
+}
+
+.applications-nav-btn .fa-arrow-left {
+    transform: translate(-50%, -50%) translateX(-1px);
+}
+
+.applications-nav-btn .fa-arrow-right {
+    transform: translate(-50%, -50%) translateX(1px);
+}
+
+.applications-carousel-content {
+    overflow: visible;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .applications-nav-btn.carousel-control-prev,
@@ -610,51 +722,100 @@
 .application-card {
     background-color: white;
     color: #333;
-    border-radius: 12px;
-    border: 1px solid #00399E;
+    border-radius: 16px;
+    border: none;
     padding: 0;
     height: 100%;
     min-height: 500px;
-    transition: transform 0.3s;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
 }
 
-.application-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+.application-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #00399E 0%, #0066FF 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* .application-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(0, 57, 158, 0.25);
+} */
+
+.application-card:hover::before {
+    opacity: 1;
 }
 
 .application-image {
     width: 100%;
-    height: 250px;
+    height: 280px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    background: linear-gradient(135deg, #00399E 0%, #0066FF 100%);
+}
+
+.application-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 57, 158, 0.1) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.application-card:hover .application-image::after {
+    opacity: 1;
 }
 
 .application-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.application-card:hover .application-image img {
+    transform: scale(1.1);
 }
 
 .application-content {
-    padding: 25px;
+    padding: 30px;
     flex: 1;
     display: flex;
     flex-direction: column;
     min-height: 0;
+    background: white;
 }
 
 .application-title {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.6rem;
+    font-weight: 700;
     color: #00399E;
     margin-bottom: 15px;
     flex-shrink: 0;
+    letter-spacing: -0.3px;
+    transition: color 0.3s ease;
+}
+
+.application-card:hover .application-title {
+    color: #0066FF;
 }
 
 .application-description {
@@ -698,13 +859,20 @@
         font-size: 0.9rem;
     }
     
+    .key-metric-section {
+        padding: 60px 0;
+    }
+    
     .key-metric-wrapper {
         flex-direction: column;
         gap: 40px;
     }
     
     .key-metric-content-wrapper {
-        height: 250px;
+        height: auto;
+        min-height: 200px;
+        padding: 20px 0;
+        align-items: flex-start;
     }
     
     .key-metric-number {
@@ -718,6 +886,12 @@
     .key-metric-chart {
         height: 250px;
         width: 100%;
+        gap: 8px;
+    }
+    
+    .key-metric-bar {
+        padding: 12px 8px;
+        min-width: 0;
     }
     
     .providing-solutions-title {
@@ -735,18 +909,39 @@
     }
     
     .applications-carousel-wrapper {
-        flex-direction: column;
-        gap: 30px;
+        margin-top: 2rem;
     }
     
     .applications-carousel-nav {
-        flex-direction: row;
-        justify-content: center;
+        top: -74px;
+        left: 15px;
     }
     
     .applications-nav-btn {
         width: 45px;
         height: 45px;
+        font-size: 1rem;
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+    }
+    
+    .applications-nav-btn i {
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        line-height: 1;
+    }
+    
+    .applications-nav-btn .fa-arrow-left {
+        transform: translate(-50%, -50%) translateX(-1px);
+    }
+    
+    .applications-nav-btn .fa-arrow-right {
+        transform: translate(-50%, -50%) translateX(1px);
     }
     
     .application-image {
@@ -763,25 +958,68 @@
 }
 
 @media (max-width: 576px) {
+    .key-metric-section {
+        padding: 40px 0;
+    }
+    
     .key-metric-content-wrapper {
-        height: 200px;
+        height: auto;
+        min-height: 150px;
+        padding: 15px 0;
+        align-items: flex-start;
     }
     
     .key-metric-number {
         font-size: 3rem;
     }
     
+    .key-metric-label {
+        font-size: 1rem;
+    }
+    
     .key-metric-chart {
         height: 200px;
-        gap: 10px;
+        gap: 6px;
+        width: 100%;
+        padding: 0;
+        margin: 0;
     }
     
     .key-metric-bar {
-        padding: 10px 5px;
+        padding: 12px 6px;
+        min-width: 0;
+        flex: 1 1 0;
+    }
+    
+    .key-metric-bar-label {
+        font-size: 0.7rem;
+        margin-bottom: 8px;
     }
     
     .key-metric-bar-value {
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+    
+    .key-metric-section .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .key-metric-section .container {
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 100%;
+    }
+    
+    .key-metric-section .col-md-6 {
+        padding-left: 15px;
+        padding-right: 15px;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .key-metric-section .key-metric-chart {
+        overflow: hidden;
     }
     
     .providing-solutions-grid {
@@ -792,6 +1030,65 @@
     .company-logo-card {
         min-height: 100px;
         padding: 15px 10px;
+    }
+}
+
+/* Fix alignment for 1024px resolution */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .key-metric-section {
+        overflow: hidden;
+    }
+    
+    .key-metric-section .container {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+    }
+    
+    .key-metric-section .row {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+    
+    .key-metric-section .col-md-6 {
+        padding-left: 15px;
+        padding-right: 15px;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    .key-metric-wrapper {
+        gap: 30px;
+    }
+    
+    .key-metric-chart {
+        gap: 6px;
+        overflow: hidden;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .key-metric-bar {
+        padding: 12px 8px;
+        min-width: 0;
+        flex: 1 1 0;
+    }
+    
+    .key-metric-bar-label {
+        font-size: 0.8rem;
+    }
+    
+    .key-metric-bar-value {
+        font-size: 1.2rem;
+    }
+}
+
+/* Ensure bottom alignment for screens up to 1440px */
+@media (max-width: 1440px) {
+    .key-metric-content-wrapper {
+        align-items: flex-end !important;
     }
 }
 

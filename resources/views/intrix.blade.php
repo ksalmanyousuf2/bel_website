@@ -27,13 +27,13 @@
         </p>
 
         <div class="intrix-hero-product-container">
-            <!-- <img src="{{ asset('assets/images/intrix-1.png') }}" alt="INTRIX Inverter" class="intrix-product-top">
-            <img src="{{ asset('assets/images/intrix-2.png') }}" alt="INTRIX Battery" class="intrix-product-bottom"> -->
-            
+
             <!-- Scroll Down Arrow -->
-            <a href="#smart-inverter" class="intrix-hero-arrow">
-                <i class="fas fa-arrow-down"></i>
-            </a>
+            <div class="careers-hero-cta">
+                <a href="#smart-inverter" class="btn career-learn-btn">
+                    <i class="fas fa-arrow-down me-2"></i>Explore More
+                </a>
+            </div>
         </div>
     </div>
 </section>

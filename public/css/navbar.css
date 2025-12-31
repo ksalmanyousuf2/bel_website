@@ -265,6 +265,15 @@ main > div:first-child > section:first-child:not(.about-hero-section) {
     filter: none; /* Remove white filter for black navbar */
 }
 
+/* Make navbar toggler visible on white navbar pages */
+.navbar-transparent.navbar-black-links .navbar-toggler {
+    border-color: #000 !important;
+}
+
+.navbar-transparent.navbar-black-links .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
 /* Get Connected Button - Variant 2 */
 .navbar-transparent.navbar-black-links .btn-outline-primary-cta {
     background-color: #00399E !important;
@@ -338,4 +347,8 @@ main > div:first-child > section:first-child:not(.about-hero-section) {
         padding-left: 7px;
         padding-right: 7px;
     }
+}
+
+.dropdown-toggle::after {
+    vertical-align: 0.19em !important;
 }

@@ -73,7 +73,7 @@
                         <a href="#services" class="btn support-learn-btn">
                             <i class="fas fa-arrow-down me-2"></i>Explore Services
                         </a>
-                        <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="support-cta-arrow" alt="Arrow">
+                        {{-- <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="support-cta-arrow" alt="Arrow"> --}}
                     </div>
                 </div>
             </div>

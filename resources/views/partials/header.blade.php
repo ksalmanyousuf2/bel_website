@@ -34,9 +34,9 @@
                                                 <ul class="solutions-dropdown-list">
                                                     <li><a class="dropdown-item" href="{{ route('intrix') }}">INTRIX - High Voltage Battery Energy Storage Platform</a></li>
                                                     <li><a class="dropdown-item" href="{{ route('intrix-lv') }}">INTRIX - Low Voltage Battery Energy Storage Platform</a></li>
-                                                    <li><a class="dropdown-item" href="#">BELConnect - The Intelligent Energy Management Platform</a></li>
+                                                    <li><a class="dropdown-item" href="https://beaconenergy.pk/belconnect/">BELConnect - The Intelligent Energy Management Platform</a></li>
                                                     <li><a class="dropdown-item" href="{{ route('on-grid') }}">Grid-Tied PV Solution</a></li>
-                                                    <li><a class="dropdown-item" href="#">BELPartner - The ultimate Referral App</a></li>
+                                                    <li><a class="dropdown-item" href="https://beaconenergy.pk/belpartner/">BELPartner - The ultimate Referral App</a></li>
                                                     {{-- <li><a class="dropdown-item" href="#">Energy as a service (PPA Model)</a></li> --}}
                                                 </ul>
                                             </div>
@@ -61,19 +61,19 @@
                             <a class="nav-link" href="{{ route('careers.index') }}">Careers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">App</a>
+                            <a class="nav-link" href="https://beaconenergy.pk/belconnect/">App</a>
                         </li>
                     </ul>
                     <div class="ms-3">
                         <a href="{{ route('contact') }}" class="btn btn-outline-primary flex-shrink-0 btn-outline-primary-cta text-white d-inline-flex align-items-center" style="border-radius: 28px; border-color:white !important; gap: 8px;">
                             Get connected
                         </a>
-                        <span class="btn-icon-wrapper">
-                            <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="btn-icon-default img-fluid" style="width: 35px;height: 35px;     background: #00399E;
-    border: 1px solid #00399E;
-    border-radius: 16px;" alt="Arrow">
-                            <img src="{{ asset('assets/icons/slim-arrow-up.svg') }}" class="btn-icon-variant img-fluid" style="width: 35px;height: 35px; display: none;" alt="Arrow">
-                        </span>
+                        <a href="{{ route('contact') }}" style="text-decoration: none;">
+                            <span class="btn-icon-wrapper">
+                                <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="btn-icon-default img-fluid" style="width: 35px;height: 35px; background: #00399E; border: 1px solid #00399E; border-radius: 16px; margin-left: -5px;" alt="Arrow">
+                                <img src="{{ asset('assets/icons/slim-arrow-up.svg') }}" class="btn-icon-variant img-fluid" style="width: 35px;height: 35px; display: none;" alt="Arrow">
+                            </span>
+                        </a>
                         
                     </div>
                 </div>

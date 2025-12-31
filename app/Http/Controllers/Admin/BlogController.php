@@ -37,6 +37,10 @@ class BlogController extends Controller
             $validated['featured_image'] = $request->file('featured_image')->store('blogs', 'public');
         }
 
+        // Set default values for checkboxes if they're not present
+        $validated['is_featured'] = $validated['is_featured'] ?? false;
+        $validated['is_published'] = $validated['is_published'] ?? false;
+
         if ($validated['is_published'] && !$validated['published_at']) {
             $validated['published_at'] = now();
         }
@@ -75,6 +79,10 @@ class BlogController extends Controller
             }
             $validated['featured_image'] = $request->file('featured_image')->store('blogs', 'public');
         }
+
+        // Set default values for checkboxes if they're not present
+        $validated['is_featured'] = $validated['is_featured'] ?? false;
+        $validated['is_published'] = $validated['is_published'] ?? false;
 
         if ($validated['is_published'] && !$validated['published_at']) {
             $validated['published_at'] = now();

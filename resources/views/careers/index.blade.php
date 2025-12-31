@@ -73,7 +73,6 @@
                         <a href="#careers-content" class="btn careers-learn-btn">
                             <i class="fas fa-arrow-down me-2"></i>View Openings
                         </a>
-                        <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="careers-cta-arrow" alt="Arrow">
                     </div>
                 </div>
             </div>

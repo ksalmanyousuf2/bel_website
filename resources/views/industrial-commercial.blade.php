@@ -129,10 +129,10 @@
 <!-- Key Metric Section -->
 <section class="key-metric-section">
     <div class="container">
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col-md-6">
-                <div class="key-metric-content-wrapper" style="position: relative; height: 300px;">
-                    <div class="key-metric-content" style="position: absolute; bottom: 0; left: 0;">
+                <div class="key-metric-content-wrapper">
+                    <div class="key-metric-content">
                         <div class="key-metric-number">80</div>
                         <div class="key-metric-label">Megawatts Installed</div>
                     </div>
@@ -191,7 +191,7 @@
     <div class="container-fluid" style="padding-right: 0px !important;">
         <h2 class="section-title">Applications</h2>
         <p class="section-description">Our solutions deliver optimal Return on Investment (ROI) and significantly reduce energy bills for our customers.</p>
-        <hr class="my-4">
+        <hr class="my-4" style="margin-bottom: 5.5rem !important;">
         <div class="applications-carousel-wrapper">
             <div class="applications-carousel-nav">
                 <button class="applications-nav-btn carousel-control-prev" type="button" aria-label="Previous application">
@@ -272,7 +272,7 @@
 @if(isset($testimonials) && $testimonials->count() > 0)
 <section class="testimonials-carousel-section">
     <div class="container-fluid" style="padding-right: 0px !important;">
-        <h2 class="section-title" style="margin-bottom: 5rem !important; margin-left: 65px !important;">Clients <br> Testimonials</h2>
+        <h2 class="section-title" style="margin-bottom: 6rem !important;">Clients Testimonials</h2>
         {{-- <p class="section-description">Hear from our satisfied clients about their experience with Beacon Energy.</p> --}}
         {{-- <hr class="my-4"> --}}
         <div class="testimonials-carousel-wrapper">

@@ -13,10 +13,11 @@
     <div class="hybrid-container">
         <h1 class="hybrid-hero-title">Hybrid Solar Solutions</h1>
         <p class="hybrid-hero-subtitle">The Heart of Next Generation Power Grids</p>
-        <a href="#hv-inverter" class="hybrid-learn-more-btn">
-            Learn more
-            <i class="fas fa-arrow-right"></i>
-        </a>
+        <div class="hero-learn-cta">
+            <a href="#hv-inverter" class="btn hybrid-learn-more-btn">
+                <i class="fas fa-arrow-down me-2"></i>Explore More
+            </a>
+        </div>
     </div>
 </section>
 

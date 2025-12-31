@@ -73,7 +73,7 @@
                         <a href="#blogs-content" class="btn blogs-learn-btn">
                             <i class="fas fa-arrow-down me-2"></i>Read Articles
                         </a>
-                        <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="blogs-cta-arrow" alt="Arrow">
+                        {{-- <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="blogs-cta-arrow" alt="Arrow"> --}}
                     </div>
                 </div>
             </div>

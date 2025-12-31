@@ -73,7 +73,7 @@
                         <a href="#events-content" class="btn events-learn-btn">
                             <i class="fas fa-arrow-down me-2"></i>View Events
                         </a>
-                        <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="events-cta-arrow" alt="Arrow">
+                        {{-- <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="events-cta-arrow" alt="Arrow"> --}}
                     </div>
                 </div>
             </div>

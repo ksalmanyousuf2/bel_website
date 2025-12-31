@@ -43,9 +43,9 @@
                     <li class="footer-li" ><a href="{{ route('commercial-business') }}" class="text-decoration-none text-muted">Industrial</a></li>
                     <li class="footer-li" ><a href="{{ route('industrial-business') }}" class="text-decoration-none text-muted">Commercial</a></li>
                     <li class="footer-li" ><a href="{{ route('cleaning-services') }}" class="text-decoration-none text-muted">Cleaning Services</a></li>
-                    <li class="footer-li" ><a href="{{ route('reflex') }}" class="text-decoration-none text-muted">REFLEX™</a></li>
-                    <li class="footer-li" ><a href="#" class="text-decoration-none text-muted">Monitoring App</a></li>
-                    <li class="footer-li" ><a href="#" class="text-decoration-none text-muted">Referral App</a></li>
+                    {{-- <li class="footer-li" ><a href="{{ route('reflex') }}" class="text-decoration-none text-muted">REFLEX™</a></li> --}}
+                    <li class="footer-li" ><a href="https://beaconenergy.pk/belconnect/" class="text-decoration-none text-muted">Monitoring App</a></li>
+                    <li class="footer-li" ><a href="https://beaconenergy.pk/belpartner/" class="text-decoration-none text-muted">Referral App</a></li>
 
                     {{-- <li><a href="{{ route('projects.index') }}" class="text-decoration-none text-muted">Projects</a></li>
                     <li><a href="{{ route('support') }}" class="text-decoration-none text-muted">Support</a></li>
@@ -60,7 +60,7 @@
                 <ul class="list-unstyled">
                     <li class="footer-li" ><a href="{{ route('support') }}#solutions" class="text-decoration-none text-muted">Support Center</a></li>
                     <li class="footer-li" ><a href="{{ route('events.index') }}" class="text-decoration-none text-muted">Events</a></li>
-                    <li class="footer-li" ><a href="#case-studies" class="text-decoration-none text-muted">Case Studies</a></li>
+                    {{-- <li class="footer-li" ><a href="#case-studies" class="text-decoration-none text-muted">Case Studies</a></li> --}}
                     <li class="footer-li" ><a href="{{ route('faqs.index') }}" class="text-decoration-none text-muted">FAQs</a></li>
                     <li class="footer-li" ><a href="{{ route('blogs.index') }}" class="text-decoration-none text-muted">Blogs</a></li>
                     <li class="footer-li" ><a href="{{ route('careers.index') }}" class="text-decoration-none text-muted">Careers</a></li>
@@ -77,8 +77,8 @@
                 
                 <div class="d-inline-flex align-items-cente r">
                     <a href="{{ route('contact') }}" class="btn btn-outline-primary flex-shrink-0 selected-projects-btn" style="border-radius: 28px;">Get connected</a>
-                    <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="img-fluid" 
-                    style="    width: 35px;height: 35px; border: 1px solid;border-color: #00399E !important;border-radius: 17px; margin-left: 6px;">
+                    <a href="{{ route('contact') }}"><img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="img-fluid" 
+                    style="    width: 35px;height: 35px; border: 1px solid;border-color: #00399E !important;border-radius: 17px;"></a>
                 </div>
                 <div class="d-flex gap-3 mt-3" style="font-size: 20px; margin-left: 10px;">
                     <a href="https://www.instagram.com/beacon_energy" class="text-dark"><i class="fab fa-instagram"></i></a>

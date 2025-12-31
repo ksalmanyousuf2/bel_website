@@ -19,9 +19,11 @@
 
         <div class="ongrid-hero-product-container">
             <!-- Scroll Down Arrow -->
-            <a href="#how-it-works" class="ongrid-hero-arrow">
-                <i class="fas fa-arrow-down"></i>
-            </a>
+          <div class="hero-learn-cta">
+                <a href="#how-it-works" class="btn hero-learn-btn">
+                    <i class="fas fa-arrow-down me-2"></i>Explore More
+                </a>
+            </div>
         </div>
     </div>
 </section>
