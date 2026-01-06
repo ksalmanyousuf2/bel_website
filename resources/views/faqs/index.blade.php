@@ -14,7 +14,7 @@
         <div class="row align-items-center">
             <div class="col-12 text-center">
                 <h1 class="faq-hero-title">Frequently Asked Questions</h1>
-                <p class="faq-hero-subtitle">Find answers to common questions about our solar solutions</p>
+                {{-- <p class="faq-hero-subtitle">Find answers to common questions about our solar solutions</p> --}}
             </div>
         </div>
     </div>

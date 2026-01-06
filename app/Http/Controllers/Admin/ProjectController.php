@@ -29,6 +29,7 @@ class ProjectController extends Controller
             'capacity' => 'nullable|string|max:255',
             'description' => 'nullable|string',
             'category' => 'nullable|string|max:255',
+            'type' => 'nullable|in:commercial,industrial',
             'completion_date' => 'nullable|date',
             'order' => 'nullable|integer',
             'is_active' => 'boolean',
@@ -70,6 +71,7 @@ class ProjectController extends Controller
             'capacity' => 'nullable|string|max:255',
             'description' => 'nullable|string',
             'category' => 'nullable|string|max:255',
+            'type' => 'nullable|in:commercial,industrial',
             'completion_date' => 'nullable|date',
             'order' => 'nullable|integer',
             'is_active' => 'boolean',
@@ -124,6 +126,10 @@ class ProjectController extends Controller
     {
         Storage::disk('public')->delete($image->image_path);
         $image->delete();
+
+        if (request()->ajax() || request()->wantsJson()) {
+            return response()->json(['message' => 'Image deleted successfully.']);
+        }
 
         return back()->with('success', 'Image deleted successfully.');
     }

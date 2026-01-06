@@ -5,6 +5,50 @@
 /* About Hero Section - Background Images */
 /* Note: Background images are set inline in the Blade template using Laravel asset() helper */
 
+.about-hero-section {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    margin-top: 0;
+}
+
+.about-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+    z-index: 1;
+}
+
+.about-hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.about-hero-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    line-height: 1.1;
+}
+
+.about-hero-subtitle {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
 /* About Hero Carousel Controls */
 .about-hero-section .carousel-controls-wrapper {
     position: absolute;

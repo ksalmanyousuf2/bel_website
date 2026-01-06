@@ -18,64 +18,9 @@
     <div class="our-story-hero-overlay"></div>
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-8 mx-auto">
-                <div class="hero-content-wrapper text-center">
-                    <div class="hero-badge">
-                        <i class="fas fa-seedling me-2"></i>Pioneering Clean Energy
-                    </div>
-                    <h1 class="our-story-hero-title">Our Story</h1>
-                    <p class="our-story-hero-subtitle">Illuminating Paths to Progress</p>
-                    <p class="our-story-hero-description">
-                        One of our key aspirations for diversifying into renewable energy was to be a catalyst for positive change in the world. We believe in creating a sustainable future through innovative clean energy solutions that empower communities and transform lives.
-                    </p>
-                    
-                    <!-- Key Highlights -->
-                    {{-- <div class="hero-highlights">
-                        <div class="highlight-item">
-                            <div class="highlight-icon">
-                                <i class="fas fa-globe"></i>
-                            </div>
-                            <div class="highlight-content">
-                                <div class="highlight-number" data-count="7">0</div>
-                                <div class="highlight-label">Countries</div>
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <div class="highlight-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="highlight-content">
-                                <div class="highlight-number" data-count="315">0</div>
-                                <div class="highlight-label">Thousand+ Students</div>
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <div class="highlight-icon">
-                                <i class="fas fa-leaf"></i>
-                            </div>
-                            <div class="highlight-content">
-                                <div class="highlight-number" data-count="2022">0</div>
-                                <div class="highlight-label">Green Since</div>
-                            </div>
-                        </div>
-                        <div class="highlight-item">
-                            <div class="highlight-icon">
-                                <i class="fas fa-industry"></i>
-                            </div>
-                            <div class="highlight-content">
-                                <div class="highlight-number" data-count="5">0</div>
-                                <div class="highlight-label">Industries</div>
-                            </div>
-                        </div>
-                    </div> --}}
-                    
-                    <div class="our-story-hero-cta">
-                        <a href="#ceo-message" class="btn our-story-learn-btn">
-                            <i class="fas fa-arrow-down me-2"></i>Discover Our Journey
-                        </a>
-                        {{-- <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="our-story-cta-arrow" alt="Arrow"> --}}
-                    </div>
-                </div>
+            <div class="col-12 text-center">
+                <h1 class="our-story-hero-title">Our Story</h1>
+                <p class="our-story-hero-subtitle">Illuminating Paths to Progress</p>
             </div>
         </div>
     </div>
@@ -208,7 +153,7 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="row g-4">
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="achievement-card">
                                 <div class="achievement-image">
                                     <img src="{{ asset('assets/images/start_of_operations.png') }}" alt="Start of Operations" class="img-fluid">
@@ -224,7 +169,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="achievement-card">
                                 <div class="achievement-image">
                                     <img src="{{ asset('assets/images/contourglobal.png') }}" alt="ContourGlobal" class="img-fluid">
@@ -241,7 +186,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="achievement-card">
                                 <div class="achievement-image">
                                     <img src="{{ asset('assets/images/inauguration.png') }}" alt="Inauguration" class="img-fluid">
@@ -259,7 +204,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                    </div>
+                </div>
+                <!-- Second slide for carousel rotation -->
+                <div class="carousel-item">
+                    <div class="row g-4">
+                        <div class="col-md-4">
                             <div class="achievement-card">
                                 <div class="achievement-image">
                                     <img src="{{ asset('assets/images/sales.png') }}" alt="Sales" class="img-fluid">
@@ -276,12 +226,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <!-- Second slide for carousel rotation -->
-                <div class="carousel-item">
-                    <div class="row g-4">
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="achievement-card">
                                 <div class="achievement-image">
                                     <img src="{{ asset('assets/images/start_of_operations.png') }}" alt="Start of Operations" class="img-fluid">
@@ -297,7 +242,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="achievement-card">
                                 <div class="achievement-image">
                                     <img src="{{ asset('assets/images/contourglobal.png') }}" alt="ContourGlobal" class="img-fluid">
@@ -312,7 +257,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row g-4">
+                        <div class="col-md-4">
                             <div class="achievement-card">
                                 <div class="achievement-image">
                                     <img src="{{ asset('assets/images/inauguration.png') }}" alt="Inauguration" class="img-fluid">
@@ -389,7 +338,7 @@
         <img src="{{ asset('assets/images/Asset 24 1.png') }}" alt="Beaconhouse Group" class="beaconhouse-group-bg-image">
     </div>
     <div class="beaconhouse-group-content">
-        <div class="container-fluid">
+        <div class="container">
             
             <div class="row">
                 <div class="col-lg-12 col-md-12">

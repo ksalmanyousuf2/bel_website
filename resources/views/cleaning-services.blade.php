@@ -13,15 +13,9 @@
     <div class="cleaning-hero-overlay"></div>
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-8 mx-auto text-center">
+            <div class="col-12 text-center">
                 <h1 class="cleaning-hero-title">Cleaning Services</h1>
                 <p class="cleaning-hero-subtitle">Spotless spaces, stress-free living</p>
-                <div class="hero-learn-cta">
-                    <a href="#our-mission" class="btn cleaning-hero-btn">
-                        <i class="fas fa-arrow-down me-2"></i>Explore More
-                    </a>
-                </div>
-                {{-- <a href="#our-mission" class="btn cleaning-hero-btn">Learn more</a> --}}
             </div>
         </div>
     </div>

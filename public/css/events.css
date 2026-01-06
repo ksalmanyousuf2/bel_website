@@ -8,7 +8,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url('../assets/images/events_bg.webp');
+    background-image: url('../assets/images/Event-1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -391,6 +391,195 @@
     font-size: 0.9rem;
 }
 
+/* Pagination Styles */
+.events-pagination {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.events-pagination nav[role="navigation"] {
+    display: block;
+}
+
+/* Mobile Pagination Styles (Previous/Next buttons) - visible on small screens */
+.events-pagination nav[role="navigation"] > div[class*="sm:hidden"] {
+    display: flex !important;
+    gap: 0.75rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.events-pagination nav[role="navigation"] > div[class*="sm:hidden"] a,
+.events-pagination nav[role="navigation"] > div[class*="sm:hidden"] span {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 0.75rem 1.5rem !important;
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+    border-radius: 12px !important;
+    border: 1.5px solid #e5e7eb !important;
+    background-color: #ffffff !important;
+    color: #00399E !important;
+    text-decoration: none !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    min-height: 44px !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+}
+
+.events-pagination nav[role="navigation"] > div[class*="sm:hidden"] a:hover {
+    background-color: #00399E !important;
+    color: #ffffff !important;
+    border-color: #00399E !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 57, 158, 0.25) !important;
+}
+
+.events-pagination nav[role="navigation"] > div[class*="sm:hidden"] span {
+    color: #9ca3af !important;
+    cursor: not-allowed !important;
+    opacity: 0.7 !important;
+    background-color: #f9fafb !important;
+    border-color: #e5e7eb !important;
+}
+
+/* Desktop Pagination Container - hidden on small screens */
+.events-pagination nav[role="navigation"] > div[class*="hidden"][class*="sm:flex"] {
+    display: none !important;
+}
+
+@media (min-width: 640px) {
+    .events-pagination nav[role="navigation"] > div[class*="sm:hidden"] {
+        display: none !important;
+    }
+    
+    .events-pagination nav[role="navigation"] > div[class*="hidden"][class*="sm:flex"] {
+        display: flex !important;
+        flex: 1 1 0% !important;
+        gap: 1rem !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+    
+    .events-pagination nav[role="navigation"] > div[class*="hidden"][class*="sm:flex"] > div:first-child p {
+        font-size: 0.95rem !important;
+        color: #666 !important;
+        margin: 0 !important;
+        line-height: 1.5 !important;
+    }
+    
+    .events-pagination nav[role="navigation"] > div[class*="hidden"][class*="sm:flex"] > div:first-child p span {
+        font-weight: 600 !important;
+        color: #1a1a1a !important;
+    }
+}
+
+/* Pagination Buttons Container */
+.events-pagination nav[role="navigation"] > div[class*="hidden"][class*="sm:flex"] > div:last-child > span {
+    display: inline-flex !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    background-color: #ffffff !important;
+    padding: 4px !important;
+    gap: 4px !important;
+}
+
+/* Page Number Buttons and Navigation Arrows */
+.events-pagination nav[role="navigation"] > div[class*="hidden"][class*="sm:flex"] > div:last-child > span > span,
+.events-pagination nav[role="navigation"] > div[class*="hidden"][class*="sm:flex"] > div:last-child > span > a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 44px !important;
+    height: 44px !important;
+    padding: 0.5rem 0.875rem !important;
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+    border: 1.5px solid transparent !important;
+    background-color: #ffffff !important;
+    color: #374151 !important;
+    text-decoration: none !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative !important;
+    border-radius: 10px !important;
+}
+
+.events-pagination nav[role="navigation"] > div[class*="hidden"][class*="sm:flex"] > div:last-child > span > a:hover {
+    background-color: #f3f4f6 !important;
+    color: #00399E !important;
+    border-color: #e5e7eb !important;
+    z-index: 1;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 57, 158, 0.15);
+}
+
+/* Active Page */
+.events-pagination nav[role="navigation"] span[aria-current="page"] span {
+    background: linear-gradient(135deg, #00399E 0%, #002d7a 100%) !important;
+    color: #ffffff !important;
+    border-color: #00399E !important;
+    cursor: default !important;
+    z-index: 2;
+    box-shadow: 0 4px 12px rgba(0, 57, 158, 0.3) !important;
+    font-weight: 700 !important;
+    border-radius: 10px;
+}
+
+/* Disabled Navigation Buttons */
+.events-pagination nav[role="navigation"] span[aria-disabled="true"] span {
+    color: #9ca3af !important;
+    background-color: #f9fafb !important;
+    border-color: #e5e7eb !important;
+    cursor: not-allowed !important;
+    opacity: 0.7 !important;
+}
+
+/* First and Last Buttons (Previous/Next) - rounded corners */
+.events-pagination nav[role="navigation"] > div[class*="hidden"][class*="sm:flex"] > div:last-child > span > span:first-child span,
+.events-pagination nav[role="navigation"] > div[class*="hidden"][class*="sm:flex"] > div:last-child > span > a:first-child {
+    border-radius: 10px !important;
+}
+
+.events-pagination nav[role="navigation"] > div[class*="hidden"][class*="sm:flex"] > div:last-child > span > span:last-child,
+.events-pagination nav[role="navigation"] > div[class*="hidden"][class*="sm:flex"] > div:last-child > span > a:last-child {
+    border-radius: 10px !important;
+}
+
+/* SVG Icons in Navigation Buttons */
+.events-pagination nav[role="navigation"] svg {
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+}
+
+/* Additional direct selectors for better compatibility */
+.events-pagination nav[role="navigation"] a[rel="next"],
+.events-pagination nav[role="navigation"] a[rel="prev"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.5rem 0.875rem !important;
+    font-weight: 600 !important;
+    border-radius: 10px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.events-pagination nav[role="navigation"] a[aria-label*="Next"],
+.events-pagination nav[role="navigation"] a[aria-label*="Previous"] {
+    background-color: #ffffff !important;
+    color: #00399E !important;
+    border: 1.5px solid transparent !important;
+}
+
+.events-pagination nav[role="navigation"] a[aria-label*="Next"]:hover,
+.events-pagination nav[role="navigation"] a[aria-label*="Previous"]:hover {
+    background-color: #00399E !important;
+    color: #ffffff !important;
+    border-color: #00399E !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 57, 158, 0.25) !important;
+}
+
 /* Responsive Styles */
 @media (max-width: 992px) {
     .events-hero-section {
@@ -442,6 +631,13 @@
     
     .event-card-body {
         padding: 1.5rem;
+    }
+    
+    .events-pagination .page-link {
+        min-width: 38px;
+        height: 38px;
+        padding: 0.45rem 0.75rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -530,6 +726,23 @@
     .event-description {
         font-size: 0.95rem;
     }
+    
+    .events-pagination {
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .events-pagination .pagination {
+        gap: 0.375rem;
+        flex-wrap: wrap;
+    }
+    
+    .events-pagination .page-link {
+        min-width: 36px;
+        height: 36px;
+        padding: 0.4rem 0.65rem;
+        font-size: 0.875rem;
+    }
 }
 
 @media (max-width: 576px) {
@@ -616,6 +829,22 @@
     
     .event-social-link {
         font-size: 0.9rem;
+    }
+    
+    .events-pagination {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .events-pagination .pagination {
+        gap: 0.25rem;
+    }
+    
+    .events-pagination .page-link {
+        min-width: 32px;
+        height: 32px;
+        padding: 0.35rem 0.5rem;
+        font-size: 0.8rem;
     }
 }
 

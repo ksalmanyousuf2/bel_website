@@ -105,10 +105,10 @@
                     </div>
 
                     <div class="job-detail-actions mt-4">
-                        <a href="{{ route('careers.apply', $job->slug) }}" class="btn btn-primary btn-lg">
+                        <a href="{{ route('careers.apply', $job->slug) }}" class="btn btn-primary" style="border-radius: 16px;">
                             <i class="fas fa-paper-plane me-2"></i> Apply Now
                         </a>
-                        <a href="{{ route('careers.index') }}" class="btn btn-outline-secondary btn-lg">
+                        <a href="{{ route('careers.index') }}" class="btn btn-outline-secondary" style="border-radius: 16px;">
                             <i class="fas fa-arrow-left me-2"></i> Back to Jobs
                         </a>
                     </div>

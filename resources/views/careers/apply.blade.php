@@ -88,10 +88,10 @@
                         </div>
 
                         <div class="d-flex gap-3">
-                            <button type="submit" class="btn btn-primary btn-lg">
+                            <button type="submit" class="btn btn-primary" style="border-radius: 16px;">
                                 <i class="fas fa-paper-plane me-2"></i> Submit Application
                             </button>
-                            <a href="{{ route('careers.show', $job->slug) }}" class="btn btn-outline-secondary btn-lg">
+                            <a href="{{ route('careers.show', $job->slug) }}" class="btn btn-outline-secondary" style="border-radius: 16px;">
                                 Cancel
                             </a>
                         </div>

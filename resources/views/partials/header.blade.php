@@ -32,11 +32,12 @@
                                             <div class="col-md-6 solutions-dropdown-column">
                                                 <h6 class="solutions-dropdown-heading">Products & Services</h6>
                                                 <ul class="solutions-dropdown-list">
+                                                    <li><a class="dropdown-item" href="{{ route('bess') }}">BESS - Battery Energy Storage System</a></li>
                                                     <li><a class="dropdown-item" href="{{ route('intrix') }}">INTRIX - High Voltage Battery Energy Storage Platform</a></li>
                                                     <li><a class="dropdown-item" href="{{ route('intrix-lv') }}">INTRIX - Low Voltage Battery Energy Storage Platform</a></li>
-                                                    <li><a class="dropdown-item" href="https://beaconenergy.pk/belconnect/">BELConnect - The Intelligent Energy Management Platform</a></li>
+                                                    {{-- <li><a class="dropdown-item" href="https://beaconenergy.pk/belconnect/">BELConnect - The Intelligent Energy Management Platform</a></li> --}}
                                                     <li><a class="dropdown-item" href="{{ route('on-grid') }}">Grid-Tied PV Solution</a></li>
-                                                    <li><a class="dropdown-item" href="https://beaconenergy.pk/belpartner/">BELPartner - The ultimate Referral App</a></li>
+                                                    {{-- <li><a class="dropdown-item" href="https://beaconenergy.pk/belpartner/">BELPartner - The ultimate Referral App</a></li> --}}
                                                     {{-- <li><a class="dropdown-item" href="#">Energy as a service (PPA Model)</a></li> --}}
                                                 </ul>
                                             </div>
@@ -158,7 +159,7 @@
     }
     
     .solutions-dropdown-list .dropdown-item {
-        padding: 10px 15px;
+        padding: 10px 0px;
         color: #4a5568;
         font-size: 0.95rem;
         border-radius: 6px;

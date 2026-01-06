@@ -18,64 +18,9 @@
     <div class="blogs-hero-overlay"></div>
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-10 mx-auto">
-                <div class="blogs-hero-content-wrapper text-center">
-                    <div class="blogs-hero-badge">
-                        <i class="fas fa-blog me-2"></i>Latest Insights
-                    </div>
-                    <h1 class="blogs-hero-title">From the Blogs</h1>
-                    <p class="blogs-hero-subtitle">Exploring Clean Energy Insights</p>
-                    <p class="blogs-hero-description">
-                        Stay informed with our latest articles, industry updates, and expert insights on renewable energy, solar technology, sustainability practices, and the future of clean energy. Discover valuable knowledge to power your journey towards a greener tomorrow.
-                    </p>
-                    
-                    {{-- <!-- Blog Statistics -->
-                    <div class="blogs-hero-stats">
-                        <div class="blogs-stat-item">
-                            <div class="blogs-stat-icon">
-                                <i class="fas fa-newspaper"></i>
-                            </div>
-                            <div class="blogs-stat-content">
-                                <div class="blogs-stat-number" data-count="{{ $blogs->total() }}">0</div>
-                                <div class="blogs-stat-label">Total Articles</div>
-                            </div>
-                        </div>
-                        <div class="blogs-stat-item">
-                            <div class="blogs-stat-icon">
-                                <i class="fas fa-calendar-check"></i>
-                            </div>
-                            <div class="blogs-stat-content">
-                                <div class="blogs-stat-number" data-count="{{ $recentPosts->count() }}">0</div>
-                                <div class="blogs-stat-label">Recent Posts</div>
-                            </div>
-                        </div>
-                        <div class="blogs-stat-item">
-                            <div class="blogs-stat-icon">
-                                <i class="fas fa-archive"></i>
-                            </div>
-                            <div class="blogs-stat-content">
-                                <div class="blogs-stat-number" data-count="{{ $archives->count() }}">0</div>
-                                <div class="blogs-stat-label">Archives</div>
-                            </div>
-                        </div>
-                        <div class="blogs-stat-item">
-                            <div class="blogs-stat-icon">
-                                <i class="fas fa-book-reader"></i>
-                            </div>
-                            <div class="blogs-stat-content">
-                                <div class="blogs-stat-number" data-count="5">0</div>
-                                <div class="blogs-stat-label">Min Read</div>
-                            </div>
-                        </div>
-                    </div>
-                     --}}
-                    <div class="blogs-hero-cta">
-                        <a href="#blogs-content" class="btn blogs-learn-btn">
-                            <i class="fas fa-arrow-down me-2"></i>Read Articles
-                        </a>
-                        {{-- <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="blogs-cta-arrow" alt="Arrow"> --}}
-                    </div>
-                </div>
+            <div class="col-12 text-center">
+                <h1 class="blogs-hero-title">From the Blogs</h1>
+                <p class="blogs-hero-subtitle">Exploring Clean Energy Insights</p>
             </div>
         </div>
     </div>
@@ -102,7 +47,7 @@
                     <!-- Load More Button -->
                     @if($blogs->hasMorePages())
                     <div class="blogs-load-more-wrapper mt-5 text-center">
-                        <button id="loadMoreBtn" class="btn blog-load-more-btn" data-page="2" data-has-more="true">
+                        <button id="loadMoreBtn" class="btn blog-load-more-btn" data-page="2" data-has-more="true" style="border-radius: 30px;">
                             <span class="btn-text">Load More</span>
                             <span class="btn-spinner d-none">
                                 <i class="fas fa-spinner fa-spin me-2"></i>Loading...

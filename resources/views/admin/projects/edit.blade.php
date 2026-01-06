@@ -8,7 +8,7 @@
     <a href="{{ route('admin.projects.index') }}" class="btn btn-secondary">Back</a>
 </div>
 
-<form action="{{ route('admin.projects.update', $project) }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('admin.projects.update', $project) }}" method="POST" enctype="multipart/form-data" id="project-form">
     @csrf
     @method('PUT')
     <div class="mb-3">
@@ -28,6 +28,14 @@
         <input type="text" class="form-control" id="category" name="category" value="{{ old('category', $project->category) }}">
     </div>
     <div class="mb-3">
+        <label for="type" class="form-label">Type</label>
+        <select class="form-select" id="type" name="type">
+            <option value="">Select Type</option>
+            <option value="commercial" {{ old('type', $project->type) === 'commercial' ? 'selected' : '' }}>Commercial</option>
+            <option value="industrial" {{ old('type', $project->type) === 'industrial' ? 'selected' : '' }}>Industrial</option>
+        </select>
+    </div>
+    <div class="mb-3">
         <label for="description" class="form-label">Description</label>
         <textarea class="form-control" id="description" name="description" rows="5">{{ old('description', $project->description) }}</textarea>
     </div>
@@ -36,17 +44,16 @@
         <input type="date" class="form-control" id="completion_date" name="completion_date" value="{{ old('completion_date', $project->completion_date ? $project->completion_date->format('Y-m-d') : '') }}">
     </div>
     <div class="mb-3">
-        <label class="form-label">Current Images</label>
-        <div class="row g-2">
+        <label>Current Images</label>
+        <div class="row g-2" id="project-images-container">
             @foreach($project->images as $image)
-            <div class="col-md-3">
+            <div class="col-md-3 image-item" data-image-id="{{ $image->id }}">
                 <div class="position-relative">
                     <img src="{{ asset('storage/' . $image->image_path) }}" class="img-fluid rounded" alt="Project Image">
-                    <form action="{{ route('admin.projects.images.delete', ['project' => $project, 'image' => $image]) }}" method="POST" class="position-absolute top-0 end-0 m-1">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Delete this image?')">×</button>
-                    </form>
+                    <button type="button" 
+                            class="btn btn-sm btn-danger delete-image-btn position-absolute top-0 end-0 m-1" 
+                            data-delete-url="{{ route('admin.projects.images.delete', ['project' => $project, 'image' => $image]) }}"
+                            data-image-id="{{ $image->id }}">×</button>
                 </div>
             </div>
             @endforeach
@@ -71,24 +78,77 @@
 @endsection
 
 @push('scripts')
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     let editor;
-    ClassicEditor
-        .create(document.querySelector('#description'), {
-            toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote', 'insertTable', '|', 'undo', 'redo']
-        })
-        .then(instance => {
-            editor = instance;
-        })
-        .catch(error => {
-            console.error(error);
-        });
+    const descriptionTextarea = document.querySelector('#description');
+    
+    if (descriptionTextarea) {
+        ClassicEditor
+            .create(descriptionTextarea, {
+                toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote', 'insertTable', '|', 'undo', 'redo']
+            })
+            .then(instance => {
+                editor = instance;
+            })
+            .catch(error => {
+                console.error('CKEditor initialization error:', error);
+            });
+    }
     
     // Sync CKEditor with textarea before form submission
-    document.querySelector('form').addEventListener('submit', function(e) {
-        if (editor) {
-            editor.updateSourceElement();
+    const form = descriptionTextarea ? descriptionTextarea.closest('form') : document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            if (editor) {
+                editor.updateSourceElement();
+            }
+        });
+    }
+    
+    // Handle image deletion with AJAX
+    $(document).on('click', '.delete-image-btn', function(e) {
+        e.preventDefault();
+        
+        if (!confirm('Are you sure you want to delete this image?')) {
+            return;
         }
+        
+        const $button = $(this);
+        const deleteUrl = $button.data('delete-url');
+        const $imageItem = $button.closest('.image-item');
+        
+        // Disable button during request
+        $button.prop('disabled', true).text('...');
+        
+        $.ajax({
+            url: deleteUrl,
+            type: 'DELETE',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function(response) {
+                // Remove the image item from DOM
+                $imageItem.fadeOut(300, function() {
+                    $(this).remove();
+                });
+                
+                // Show success message if needed
+                if (response.message) {
+                    // You can add a toast notification here if you have one
+                    console.log(response.message);
+                }
+            },
+            error: function(xhr) {
+                // Re-enable button
+                $button.prop('disabled', false).text('×');
+                
+                // Show error message
+                alert('Error deleting image. Please try again.');
+                console.error('Error:', xhr);
+            }
+        });
     });
 </script>
 @endpush

@@ -470,7 +470,7 @@
     background: linear-gradient(135deg, var(--primary-blue, #1a365d) 0%, #4299e1 100%);
     color: white;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 30px;
     font-weight: 600;
     font-size: 0.9rem;
     transition: all 0.3s ease;
@@ -910,6 +910,7 @@
 .submit-btn {
     position: relative;
     overflow: hidden;
+    border-radius: 30px;
 }
 
 .submit-btn:disabled {

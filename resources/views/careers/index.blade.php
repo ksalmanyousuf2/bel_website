@@ -162,8 +162,8 @@
                         @endif
                     </div>
                     <div class="job-card-footer">
-                        <a href="{{ route('careers.show', $job->slug) }}" class="btn btn-primary btn-sm">View Details</a>
-                        <a href="{{ route('careers.apply', $job->slug) }}" class="btn btn-outline-primary btn-sm">Apply Now</a>
+                        <a href="{{ route('careers.show', $job->slug) }}" class="btn btn-primary btn-sm" style="border-radius: 16px;">View Details</a>
+                        <a href="{{ route('careers.apply', $job->slug) }}" class="btn btn-outline-primary btn-sm" style="border-radius: 16px;">Apply Now</a>
                     </div>
                 </div>
             </div>

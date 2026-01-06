@@ -200,6 +200,35 @@
 }
 
 /* ============================================
+   GLOBAL HERO SECTION HEIGHT
+   Matches FAQs page height for consistency
+   Excludes: home page, industrial-business, industrial-commercial
+   ============================================ */
+.about-hero-section:not(.carousel),
+.bess-hero-section,
+.contact-hero-section,
+.support-hero-section,
+.reflex-hero-section,
+.cleaning-hero-section,
+.ongrid-hero-section,
+.hybrid-hero-section,
+.intrix-hero-section,
+.intrix-lv-hero-section,
+.our-story-hero-section,
+.blogs-hero-section,
+.careers-hero-section,
+.projects-hero-section,
+.events-hero-section,
+.page-hero-section,
+.faq-hero-section {
+    min-height: 60vh !important;
+    padding-top: 120px !important;
+    padding-bottom: 80px !important;
+}
+
+/* Note: industrial-hero-section, hero-top-section, and hero-image-section are excluded from global height rule */
+
+/* ============================================
    GENERAL BUTTON COMPONENTS
    ============================================ */
 .hero-cta-wrapper {

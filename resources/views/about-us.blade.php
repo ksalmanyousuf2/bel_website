@@ -16,61 +16,18 @@
 @endpush
 
 @section('content')
-<!-- Hero Section Carousel -->
-<section class="about-hero-section">
-    <div id="aboutHeroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="false">
-        <div class="carousel-inner">
-            <!-- Slide 1 -->
-            <div class="carousel-item active about-hero-slide-1">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-8">
-                            <div class="about-hero-content">
-                                <h1>
-                                    <span class="d-block">Doing Clean Power</span>
-                                    <span class="d-block">Right</span>
-                                </h1>
-                                <p class="subtitle">Sustainable energy, smart storage, and reliable power.</p>
-                                <div class="hero-cta-wrapper">
-                                    <a href="#learn-more" class="btn hero-learn-btn">Learn more</a>
-                                    <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="hero-cta-arrow" alt="Arrow">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!-- Hero Section -->
+<section class="about-hero-section about-hero-slide-1">
+    <div class="about-hero-overlay"></div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 text-center">
+                <h1 class="about-hero-title">
+                    <span class="d-block">Doing Clean Power</span>
+                    <span class="d-block">Right</span>
+                </h1>
+                <p class="about-hero-subtitle">Sustainable energy, smart storage, and reliable power</p>
             </div>
-            <!-- Slide 2 -->
-            <div class="carousel-item about-hero-slide-2">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-8">
-                            <div class="about-hero-content">
-                                <h1>
-                                    <span class="d-block">Leading the Future</span>
-                                    <span class="d-block">of Energy</span>
-                                </h1>
-                                <p class="subtitle">Innovative solutions for a sustainable tomorrow. Empowering communities with clean, reliable energy.</p>
-                                <div class="hero-cta-wrapper">
-                                    <a href="#learn-more" class="btn hero-learn-btn">Learn more</a>
-                                    <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="hero-cta-arrow" alt="Arrow">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Carousel Controls - Bottom Right -->
-        <div class="carousel-controls-wrapper">
-            <button class="carousel-control-prev" type="button" data-bs-target="#aboutHeroCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#aboutHeroCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
     </div>
 </section>
@@ -82,7 +39,6 @@
             <div class="col-lg-6">
                 <h2 class="section-title">The Right Power Forward</h2>
                 <p class="section-description">Beacon Energy has a robust Monitoring & support app that gives customers complete visibility over their solar system. Available on all mobile and desktop platforms, the app allows the user to see all current and historical data about energy production, utilization, export, and overall saving.</p>
-                <a href="#" class="btn btn-primary btn-lg">Learn more <i class="fas fa-arrow-up-right"></i></a>
             </div>
             <div class="col-lg-6">
                 <img src="{{ asset('assets/icons/system_flow.svg') }}" alt="System Flow" class="img-fluid system-flow-image">

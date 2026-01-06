@@ -18,64 +18,9 @@
     <div class="events-hero-overlay"></div>
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-10 mx-auto">
-                <div class="events-hero-content-wrapper text-center">
-                    <div class="events-hero-badge">
-                        <i class="fas fa-calendar-alt me-2"></i>Upcoming Events
-                    </div>
-                    <h1 class="events-hero-title">Events</h1>
-                    <p class="events-hero-subtitle">Join Us in Shaping the Future of Clean Energy</p>
-                    <p class="events-hero-description">
-                        Be part of our exciting events, conferences, and community gatherings focused on renewable energy innovation, sustainability, and clean technology. Connect with industry leaders, learn from experts, and contribute to the clean energy revolution.
-                    </p>
-                    
-                    {{-- <!-- Event Statistics -->
-                    <div class="events-hero-stats">
-                        <div class="events-stat-item">
-                            <div class="events-stat-icon">
-                                <i class="fas fa-calendar-check"></i>
-                            </div>
-                            <div class="events-stat-content">
-                                <div class="events-stat-number" data-count="{{ $events->total() }}">0</div>
-                                <div class="events-stat-label">Total Events</div>
-                            </div>
-                        </div>
-                        <div class="events-stat-item">
-                            <div class="events-stat-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="events-stat-content">
-                                <div class="events-stat-number" data-count="{{ $events->where('event_date', '>=', now())->count() }}">0</div>
-                                <div class="events-stat-label">Upcoming</div>
-                            </div>
-                        </div>
-                        <div class="events-stat-item">
-                            <div class="events-stat-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="events-stat-content">
-                                <div class="events-stat-number" data-count="{{ $events->pluck('location')->filter()->unique()->count() }}">0</div>
-                                <div class="events-stat-label">Locations</div>
-                            </div>
-                        </div>
-                        <div class="events-stat-item">
-                            <div class="events-stat-icon">
-                                <i class="fas fa-share-alt"></i>
-                            </div>
-                            <div class="events-stat-content">
-                                <div class="events-stat-number" data-count="{{ $events->whereNotNull('social_media_link')->count() }}">0</div>
-                                <div class="events-stat-label">Social Links</div>
-                            </div>
-                        </div>
-                    </div> --}}
-                    
-                    <div class="events-hero-cta">
-                        <a href="#events-content" class="btn events-learn-btn">
-                            <i class="fas fa-arrow-down me-2"></i>View Events
-                        </a>
-                        {{-- <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="events-cta-arrow" alt="Arrow"> --}}
-                    </div>
-                </div>
+            <div class="col-12 text-center">
+                <h1 class="events-hero-title">Events</h1>
+                <p class="events-hero-subtitle">Join Us in Shaping the Future of Clean Energy" to "Milestones, moments, and meaningful connections that shape our journey</p>
             </div>
         </div>
     </div>
@@ -123,9 +68,11 @@
             </div>
             @endforelse
         </div>
-        <div class="mt-5">
+        @if($events->hasPages())
+        <div class="events-pagination">
             {{ $events->links() }}
         </div>
+        @endif
     </div>
 </section>
 

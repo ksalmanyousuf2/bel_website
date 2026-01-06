@@ -209,56 +209,56 @@
                     <div class="applications-slider-track">
                         <div class="application-card">
                             <div class="application-image">
-                                <img src="{{ asset('assets/images/hero_section_image.png') }}" alt="Textile" class="img-fluid">
+                                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop&q=80" alt="Textile mill with solar panels" class="img-fluid" loading="lazy">
                             </div>
                             <div class="application-content">
                                 <h3 class="application-title">Textile</h3>
-                                <p class="application-description">Beacon Energy has a robust Monitoring & support app that gives customers complete visibility over their solar system. Available on all mobile and desktop platforms, the app allows the user to see all current and historical data about energy production, utilization, export, and overall saving.</p>
+                                <p class="application-description">Beacon Energy delivers tailored solar solutions for textile mills, enabling uninterrupted power for spinning, weaving, and processing operations. Our systems reduce energy costs, stabilize production, and support sustainability goals while providing real-time monitoring and long-term reliability across high-consumption industrial environments.</p>
                             </div>
                         </div>
                         <div class="application-card">
                             <div class="application-image">
-                                <img src="{{ asset('assets/images/hero_section_image.png') }}" alt="Beverages" class="img-fluid">
+                                <img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Beverage manufacturing facility" class="img-fluid" loading="lazy">
                             </div>
                             <div class="application-content">
                                 <h3 class="application-title">Beverages</h3>
-                                <p class="application-description">Beacon Energy has a robust Monitoring & support app that gives customers complete visibility over their solar system. Available on all mobile and desktop platforms, the app allows the user to see all current and historical data about energy production, utilization, export, and overall saving.</p>
+                                <p class="application-description">Beacon Energy provides reliable solar energy solutions for beverage manufacturers, ensuring continuous power for bottling, processing, and refrigeration systems. Our solar installations lower operational costs, enhance energy efficiency, and protect businesses from rising electricity tariffs while maintaining consistent production performance year-round.</p>
                             </div>
                         </div>
                         <div class="application-card">
                             <div class="application-image">
-                                <img src="{{ asset('assets/images/hero_section_image.png') }}" alt="Cold Storage" class="img-fluid">
+                                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop&q=80" alt="Cold storage warehouse" class="img-fluid" loading="lazy">
                             </div>
                             <div class="application-content">
                                 <h3 class="application-title">Cold Storage</h3>
-                                <p class="application-description">Beacon Energy has a robust Monitoring & support app that gives customers complete visibility over their solar system. Available on all mobile and desktop platforms, the app allows the user to see all current and historical data about energy production, utilization, export, and overall saving.</p>
+                                <p class="application-description">Beacon Energy offers specialized solar solutions for cold storage facilities, delivering dependable power for refrigeration and temperature-controlled environments. Our systems minimize energy expenses, reduce product spoilage risks, and ensure uninterrupted operations, even during peak load hours and grid instability.</p>
                             </div>
                         </div>
                         <div class="application-card">
                             <div class="application-image">
-                                <img src="{{ asset('assets/images/hero_section_image.png') }}" alt="Manufacturing" class="img-fluid">
+                                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop&q=80" alt="Manufacturing facility" class="img-fluid" loading="lazy">
                             </div>
                             <div class="application-content">
                                 <h3 class="application-title">Manufacturing</h3>
-                                <p class="application-description">Beacon Energy provides comprehensive solar solutions for manufacturing facilities, helping reduce operational costs and carbon footprint.</p>
+                                <p class="application-description">Beacon Energy supports manufacturing facilities with high-capacity solar solutions designed for heavy machinery and continuous operations. Our systems help manufacturers control energy costs, improve operational efficiency, and achieve sustainable growth while maintaining consistent power availability across production cycles.</p>
                             </div>
                         </div>
                         <div class="application-card">
                             <div class="application-image">
-                                <img src="{{ asset('assets/images/hero_section_image.png') }}" alt="Warehouses" class="img-fluid">
+                                <img src="https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Warehouse and logistics center" class="img-fluid" loading="lazy">
                             </div>
                             <div class="application-content">
-                                <h3 class="application-title">Warehouses</h3>
-                                <p class="application-description">Large-scale solar installations for warehouses provide significant energy savings and support sustainable logistics operations.</p>
+                                <h3 class="application-title">Warehousing</h3>
+                                <p class="application-description">Beacon Energy designs solar solutions for warehouses and logistics centers, utilizing large rooftop spaces to generate clean energy. Our systems reduce electricity expenses, power lighting and automation, and enhance operational efficiency while supporting sustainable, cost-effective warehouse operations.</p>
                             </div>
                         </div>
                         <div class="application-card">
                             <div class="application-image">
-                                <img src="{{ asset('assets/images/hero_section_image.png') }}" alt="Retail" class="img-fluid">
+                                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop&q=80" alt="Retail store with solar panels" class="img-fluid" loading="lazy">
                             </div>
                             <div class="application-content">
                                 <h3 class="application-title">Retail</h3>
-                                <p class="application-description">Retail chains benefit from our solar solutions with reduced electricity costs and enhanced brand reputation for sustainability.</p>
+                                <p class="application-description">Beacon Energy delivers smart solar solutions for retail businesses, powering lighting, cooling, and daily operations efficiently. Our systems help retailers reduce electricity bills, improve profitability, and strengthen sustainability credentials while ensuring reliable energy during peak customer hours.</p>
                             </div>
                         </div>
                     </div>

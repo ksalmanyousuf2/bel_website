@@ -18,64 +18,9 @@
     <div class="support-hero-overlay"></div>
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-10 mx-auto">
-                <div class="support-hero-content-wrapper text-center">
-                    <div class="support-hero-badge">
-                        <i class="fas fa-headset me-2"></i>24/7 Customer Support
-                    </div>
-                    <h1 class="support-hero-title">Customer Services</h1>
-                    <p class="support-hero-subtitle">Comprehensive Support for Your Energy Needs</p>
-                    <p class="support-hero-description">
-                        At Beacon Energy, we provide exceptional customer service through our Network Operations Center, financing solutions, net-metering services, and Power Purchase Agreements. Our dedicated team ensures seamless operations and maximum value for your renewable energy investments.
-                    </p>
-                    
-                    <!-- Support Statistics -->
-                    {{-- <div class="support-hero-stats">
-                        <div class="support-stat-item">
-                            <div class="support-stat-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="support-stat-content">
-                                <div class="support-stat-number" data-count="24">0</div>
-                                <div class="support-stat-label">/7 Support</div>
-                            </div>
-                        </div>
-                        <div class="support-stat-item">
-                            <div class="support-stat-icon">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <div class="support-stat-content">
-                                <div class="support-stat-number" data-count="4">0</div>
-                                <div class="support-stat-label">Services</div>
-                            </div>
-                        </div>
-                        <div class="support-stat-item">
-                            <div class="support-stat-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="support-stat-content">
-                                <div class="support-stat-number" data-count="100">0</div>
-                                <div class="support-stat-label">% Available</div>
-                            </div>
-                        </div>
-                        <div class="support-stat-item">
-                            <div class="support-stat-icon">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <div class="support-stat-content">
-                                <div class="support-stat-number" data-count="365">0</div>
-                                <div class="support-stat-label">Days/Year</div>
-                            </div>
-                        </div>
-                    </div> --}}
-                    
-                    <div class="support-hero-cta">
-                        <a href="#services" class="btn support-learn-btn">
-                            <i class="fas fa-arrow-down me-2"></i>Explore Services
-                        </a>
-                        {{-- <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="support-cta-arrow" alt="Arrow"> --}}
-                    </div>
-                </div>
+            <div class="col-12 text-center">
+                <h1 class="support-hero-title">Customer Services</h1>
+                <p class="support-hero-subtitle">Comprehensive Support for Your Energy Needs</p>
             </div>
         </div>
     </div>

@@ -398,7 +398,7 @@
     align-items: flex-start;
     padding: 2rem 0;
     padding-bottom: 0px;
-    margin-top: -100px;
+    margin-top: 12px;
 }
 
 .ceo-image-wrapper {
@@ -431,7 +431,7 @@
 
 .ceo-image-wrapper img {
     width: 100%;
-    max-width: 500px;
+    max-width: 570px;
     height: auto;
     object-fit: contain;
     position: relative;
@@ -938,7 +938,7 @@
     bottom: 0;
 }
 
-.beaconhouse-group-section-connector::after {
+/* .beaconhouse-group-section-connector::after {
     content: '';
     position: absolute;
     left: 50%;
@@ -949,7 +949,7 @@
     background: #00399E;
     border-radius: 50%;
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 1), 0 0 0 6px rgba(0, 102, 204, 0.2);
-}
+} */
 
 /* Beaconhouse Group Section */
 .beaconhouse-group-section {

@@ -15,7 +15,7 @@
 /* Hero Section */
 .hybrid-hero-section {
     position: relative;
-    min-height: 100vh;
+    min-height: 100vh !important;
     width: 100%;
     background-image: url('../assets/images/hybrid_solar_solutions_bg.png');
     background-size: cover;

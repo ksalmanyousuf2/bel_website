@@ -18,64 +18,9 @@
     <div class="projects-hero-overlay"></div>
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-10 mx-auto">
-                <div class="projects-hero-content-wrapper text-center">
-                    <div class="projects-hero-badge">
-                        <i class="fas fa-solar-panel me-2"></i>Clean Energy Projects
-                    </div>
-                    <h1 class="projects-hero-title">Selected Projects</h1>
-                    <p class="projects-hero-subtitle">Innovating Sustainable Energy Solutions</p>
-                    <p class="projects-hero-description">
-                        Discover our portfolio of cutting-edge renewable energy projects that are transforming communities and industries across Pakistan. From commercial installations to large-scale industrial solutions, we deliver sustainable energy systems that power progress.
-                    </p>
-                    
-                    {{-- <!-- Project Statistics -->
-                    <div class="projects-hero-stats">
-                        <div class="projects-stat-item">
-                            <div class="projects-stat-icon">
-                                <i class="fas fa-project-diagram"></i>
-                            </div>
-                            <div class="projects-stat-content">
-                                <div class="projects-stat-number" data-count="{{ $projects->count() }}">0</div>
-                                <div class="projects-stat-label">Total Projects</div>
-                            </div>
-                        </div>
-                        <div class="projects-stat-item">
-                            <div class="projects-stat-icon">
-                                <i class="fas fa-building"></i>
-                            </div>
-                            <div class="projects-stat-content">
-                                <div class="projects-stat-number" data-count="{{ $projects->where('type', 'commercial')->count() }}">0</div>
-                                <div class="projects-stat-label">Commercial</div>
-                            </div>
-                        </div>
-                        <div class="projects-stat-item">
-                            <div class="projects-stat-icon">
-                                <i class="fas fa-industry"></i>
-                            </div>
-                            <div class="projects-stat-content">
-                                <div class="projects-stat-number" data-count="{{ $projects->where('type', 'industrial')->count() }}">0</div>
-                                <div class="projects-stat-label">Industrial</div>
-                            </div>
-                        </div>
-                        <div class="projects-stat-item">
-                            <div class="projects-stat-icon">
-                                <i class="fas fa-bolt"></i>
-                            </div>
-                            <div class="projects-stat-content">
-                                <div class="projects-stat-number" data-count="{{ $projects->whereNotNull('capacity')->count() }}">0</div>
-                                <div class="projects-stat-label">With Capacity</div>
-                            </div>
-                        </div>
-                    </div> --}}
-                    
-                    <div class="projects-hero-cta">
-                        <a href="#projects-content" class="btn projects-learn-btn">
-                            <i class="fas fa-arrow-down me-2"></i>Explore Projects
-                        </a>
-                        {{-- <img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="projects-cta-arrow" alt="Arrow"> --}}
-                    </div>
-                </div>
+            <div class="col-12 text-center">
+                <h1 class="projects-hero-title">Selected Projects</h1>
+                <p class="projects-hero-subtitle">Innovating Sustainable Energy Solutions</p>
             </div>
         </div>
     </div>
@@ -103,7 +48,7 @@
             @php
                 $projectType = $project->type ? strtolower(trim($project->type)) : 'both';
             @endphp
-            <div class="project-card {{ $index === 0 ? 'active' : '' }}" data-category="{{ $projectType }}" @if($loop->first) style="background-color: #00399E; color: white;" @endif>
+            <div class="project-card {{ $index === 0 ? 'active' : '' }}" data-category="{{ $projectType }}">
                 
                 @if($project->images->count() > 0)
                 <div class="project-image-wrapper">
@@ -113,11 +58,11 @@
                 </div>
                 @endif
                 <div class="project-card-body">
-                    <p class="project-capacity" @if($loop->first) style="color: white;" @endif>{{ $project->name }}</p>
+                    <p class="project-capacity">{{ $project->name }}</p>
                     @if($project->capacity)
-                    <p class="project-capacity" @if($loop->first) style="color: white;" @endif>Capacity: {{ $project->capacity }}</p>
+                    <p class="project-capacity">Capacity: {{ $project->capacity }}</p>
                     @endif
-                    <p class="project-location" @if($loop->first) style="color: white;" @endif>
+                    <p class="project-location">
                         <i class="fas fa-map-marker-alt"></i>
                         {{ $project->location }}
                     </p>

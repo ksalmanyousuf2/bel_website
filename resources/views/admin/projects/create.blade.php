@@ -38,6 +38,14 @@
         <input type="text" class="form-control" id="category" name="category" value="{{ old('category') }}" placeholder="e.g., Solar energy">
     </div>
     <div class="mb-3">
+        <label for="type" class="form-label">Type</label>
+        <select class="form-select" id="type" name="type">
+            <option value="">Select Type</option>
+            <option value="commercial" {{ old('type') === 'commercial' ? 'selected' : '' }}>Commercial</option>
+            <option value="industrial" {{ old('type') === 'industrial' ? 'selected' : '' }}>Industrial</option>
+        </select>
+    </div>
+    <div class="mb-3">
         <label for="description" class="form-label">Description</label>
         <textarea class="form-control" id="description" name="description" rows="5">{{ old('description') }}</textarea>
     </div>
@@ -66,23 +74,30 @@
 @push('scripts')
 <script>
     let editor;
-    ClassicEditor
-        .create(document.querySelector('#description'), {
-            toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote', 'insertTable', '|', 'undo', 'redo']
-        })
-        .then(instance => {
-            editor = instance;
-        })
-        .catch(error => {
-            console.error(error);
-        });
+    const descriptionTextarea = document.querySelector('#description');
+    
+    if (descriptionTextarea) {
+        ClassicEditor
+            .create(descriptionTextarea, {
+                toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote', 'insertTable', '|', 'undo', 'redo']
+            })
+            .then(instance => {
+                editor = instance;
+            })
+            .catch(error => {
+                console.error('CKEditor initialization error:', error);
+            });
+    }
     
     // Sync CKEditor with textarea before form submission
-    document.querySelector('form').addEventListener('submit', function(e) {
-        if (editor) {
-            editor.updateSourceElement();
-        }
-    });
+    const form = descriptionTextarea ? descriptionTextarea.closest('form') : document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            if (editor) {
+                editor.updateSourceElement();
+            }
+        });
+    }
 </script>
 @endpush
 

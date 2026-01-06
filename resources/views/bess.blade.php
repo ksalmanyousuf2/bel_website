@@ -4,6 +4,7 @@
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/bess.css') }}">
+<link rel="stylesheet" href="{{ asset('css/industrial-commercial.css') }}">
 @endpush
 
 @section('content')
@@ -12,16 +13,10 @@
 <section class="bess-hero-section">
     <div class="bess-hero-overlay"></div>
     <div class="container">
-        <div class="bess-hero-content">
-            <h1 class="bess-hero-title">BESS</h1>
-            <h2 class="bess-hero-subtitle">Battery Energy Storage System</h2>
-            <div class="bess-hero-scroll-indicator">
-                {{-- <div class="bess-scroll-circle"></div> --}}
-                <div class="hero-learn-cta">
-                    <a href="#our-mission" class="btn hero-learn-btn">
-                        <i class="fas fa-arrow-down me-2"></i>Explore More
-                    </a>
-                </div>
+        <div class="row align-items-center">
+            <div class="col-12 text-center">
+                <h1 class="bess-hero-title">BESS</h1>
+                <p class="bess-hero-subtitle">Battery Energy Storage System</p>
             </div>
         </div>
     </div>
@@ -206,7 +201,7 @@
     </div>
 </section>
 
-<!-- Applications Section -->
+{{-- <!-- Applications Section -->
 <section class="bess-applications-section">
     <div class="container">
         <div class="row mb-4">
@@ -274,6 +269,89 @@
             
         </div>
     </div>
+</section> --}}
+
+<!-- Applications Section -->
+<section class="applications-section">
+    <div class="container-fluid" style="padding-right: 0px !important;">
+        <h2 class="section-title">Applications</h2>
+        <p class="section-description">Our solutions deliver optimal Return on Investment (ROI) and significantly reduce energy bills for our customers.</p>
+
+        <hr class="my-4" style="margin-bottom: 6.5rem !important;">
+        <div class="applications-carousel-wrapper">
+            <div class="applications-carousel-nav">
+                <button class="applications-nav-btn carousel-control-prev" type="button" aria-label="Previous application">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="applications-nav-btn carousel-control-next" type="button" aria-label="Next application">
+                    <i class="fas fa-arrow-right"></i>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="applications-carousel-content">
+                <div class="applications-slider">
+                    <div class="applications-slider-track">
+                        <div class="application-card">
+                            <div class="application-image">
+                                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop&q=80" alt="Textile mill with solar panels" class="img-fluid" loading="lazy">
+                            </div>
+                            <div class="application-content">
+                                <h3 class="application-title">Textile</h3>
+                                <p class="application-description">Beacon Energy delivers tailored solar solutions for textile mills, enabling uninterrupted power for spinning, weaving, and processing operations. Our systems reduce energy costs, stabilize production, and support sustainability goals while providing real-time monitoring and long-term reliability across high-consumption industrial environments.</p>
+                            </div>
+                        </div>
+                        <div class="application-card">
+                            <div class="application-image">
+                                <img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Beverage manufacturing facility" class="img-fluid" loading="lazy">
+                            </div>
+                            <div class="application-content">
+                                <h3 class="application-title">Beverages</h3>
+                                <p class="application-description">Beacon Energy provides reliable solar energy solutions for beverage manufacturers, ensuring continuous power for bottling, processing, and refrigeration systems. Our solar installations lower operational costs, enhance energy efficiency, and protect businesses from rising electricity tariffs while maintaining consistent production performance year-round.</p>
+                            </div>
+                        </div>
+                        <div class="application-card">
+                            <div class="application-image">
+                                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop&q=80" alt="Cold storage warehouse" class="img-fluid" loading="lazy">
+                            </div>
+                            <div class="application-content">
+                                <h3 class="application-title">Cold Storage</h3>
+                                <p class="application-description">Beacon Energy offers specialized solar solutions for cold storage facilities, delivering dependable power for refrigeration and temperature-controlled environments. Our systems minimize energy expenses, reduce product spoilage risks, and ensure uninterrupted operations, even during peak load hours and grid instability.</p>
+                            </div>
+                        </div>
+                        <div class="application-card">
+                            <div class="application-image">
+                                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop&q=80" alt="Manufacturing facility" class="img-fluid" loading="lazy">
+                            </div>
+                            <div class="application-content">
+                                <h3 class="application-title">Manufacturing</h3>
+                                <p class="application-description">Beacon Energy supports manufacturing facilities with high-capacity solar solutions designed for heavy machinery and continuous operations. Our systems help manufacturers control energy costs, improve operational efficiency, and achieve sustainable growth while maintaining consistent power availability across production cycles.</p>
+                            </div>
+                        </div>
+                        <div class="application-card">
+                            <div class="application-image">
+                                <img src="https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Warehouse and logistics center" class="img-fluid" loading="lazy">
+                            </div>
+                            <div class="application-content">
+                                <h3 class="application-title">Warehousing</h3>
+                                <p class="application-description">Beacon Energy designs solar solutions for warehouses and logistics centers, utilizing large rooftop spaces to generate clean energy. Our systems reduce electricity expenses, power lighting and automation, and enhance operational efficiency while supporting sustainable, cost-effective warehouse operations.</p>
+                            </div>
+                        </div>
+                        <div class="application-card">
+                            <div class="application-image">
+                                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop&q=80" alt="Retail store with solar panels" class="img-fluid" loading="lazy">
+                            </div>
+                            <div class="application-content">
+                                <h3 class="application-title">Retail</h3>
+                                <p class="application-description">Beacon Energy delivers smart solar solutions for retail businesses, powering lighting, cooling, and daily operations efficiently. Our systems help retailers reduce electricity bills, improve profitability, and strengthen sustainability credentials while ensuring reliable energy during peak customer hours.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 @endsection
@@ -293,6 +371,118 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         });
+    });
+
+    // Applications Carousel
+    var slider = document.querySelector('.applications-slider');
+    var track = slider ? slider.querySelector('.applications-slider-track') : null;
+    var cards = track ? Array.from(track.children) : [];
+    var prevBtn = document.querySelector('.applications-nav-btn.carousel-control-prev');
+    var nextBtn = document.querySelector('.applications-nav-btn.carousel-control-next');
+
+    if (!slider || !track || cards.length === 0) {
+        return;
+    }
+
+    var cardFullWidth = 0;
+    var maxIndex = 0;
+    var currentIndex = 0;
+    var resizeTimeout = null;
+    var autoPlayInterval = null;
+    var autoPlayDelay = 4000; // 4 seconds between slides
+
+    function updateTrack() {
+        track.style.transform = 'translateX(-' + (currentIndex * cardFullWidth) + 'px)';
+        if (prevBtn) {
+            prevBtn.classList.toggle('disabled', currentIndex === 0);
+        }
+        if (nextBtn) {
+            nextBtn.classList.toggle('disabled', currentIndex >= maxIndex);
+        }
+    }
+
+    function recalc() {
+        var computedStyles = getComputedStyle(track);
+        var gapValue = parseFloat(computedStyles.gap || computedStyles.columnGap || '0') || 0;
+        var cardWidth = cards[0].getBoundingClientRect().width;
+        cardFullWidth = cardWidth + gapValue;
+        
+        // Calculate max index to allow scrolling one card at a time
+        // Allow scrolling until the last card is visible
+        var visibleCount = Math.floor(slider.offsetWidth / cardFullWidth);
+        maxIndex = Math.max(0, cards.length - visibleCount);
+        
+        // Ensure currentIndex doesn't exceed maxIndex
+        if (currentIndex > maxIndex) {
+            currentIndex = maxIndex;
+        }
+        updateTrack();
+    }
+
+    function moveNext() {
+        if (currentIndex < maxIndex) {
+            currentIndex += 1;
+        } else {
+            // Loop back to the beginning
+            currentIndex = 0;
+        }
+        updateTrack();
+    }
+
+    function startAutoPlay() {
+        stopAutoPlay(); // Clear any existing interval
+        autoPlayInterval = setInterval(moveNext, autoPlayDelay);
+    }
+
+    function stopAutoPlay() {
+        if (autoPlayInterval) {
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = null;
+        }
+    }
+
+    function resetAutoPlay() {
+        stopAutoPlay();
+        startAutoPlay();
+    }
+
+    recalc();
+    startAutoPlay(); // Start auto-play
+
+    // Pause on hover
+    if (slider) {
+        slider.addEventListener('mouseenter', stopAutoPlay);
+        slider.addEventListener('mouseleave', startAutoPlay);
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (currentIndex > 0) {
+                currentIndex -= 1; // Move back one card
+                updateTrack();
+                resetAutoPlay(); // Reset auto-play timer
+            }
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (currentIndex < maxIndex) {
+                currentIndex += 1; // Move forward one card
+                updateTrack();
+                resetAutoPlay(); // Reset auto-play timer
+            }
+        });
+    }
+
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(function() {
+            recalc();
+            resetAutoPlay(); // Restart auto-play after resize
+        }, 150);
     });
 });
 </script>

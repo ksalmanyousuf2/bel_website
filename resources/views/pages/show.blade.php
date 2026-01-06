@@ -28,16 +28,23 @@
         <div class="row align-items-center">
             <div class="col-12 text-center">
                 <h1 class="page-hero-title">{{ $page->hero_title ?? $page->title }}</h1>
+                @if($page->hero_subtitle)
+                <p class="page-hero-subtitle">{{ $page->hero_subtitle }}</p>
+                @endif
             </div>
         </div>
     </div>
 </section>
 @else
 <section class="page-hero-section page-hero-no-image">
+    <div class="page-hero-overlay"></div>
     <div class="container">
         <div class="row align-items-center">
             <div class="col-12 text-center">
                 <h1 class="page-hero-title">{{ $page->title }}</h1>
+                @if($page->hero_subtitle)
+                <p class="page-hero-subtitle">{{ $page->hero_subtitle }}</p>
+                @endif
             </div>
         </div>
     </div>

@@ -17,7 +17,7 @@
         <div class="row align-items-center">
             <div class="col-12 text-center">
                 <h1 class="reflex-hero-title">REFLEX™</h1>
-                <p class="reflex-hero-subtitle">The Heart of Next Generation Power Grids.</p>
+                <p class="reflex-hero-subtitle">The Heart of Next Generation Power Grids</p>
             </div>
         </div>
     </div>

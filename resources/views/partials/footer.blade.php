@@ -29,7 +29,7 @@
     }
     </style>
 
-<footer class="bg-white py-5 mt-5">
+<footer class="bg-white py-5">
     <div class="container">
         <img src="{{ asset('assets/logos/header_logo.svg') }}" alt="Beacon Energy" style="height: 50px; width: auto;">
 
@@ -76,9 +76,8 @@
                 <p class="text-muted small">By increasing the effectiveness and efficiency of electricity use</p>
                 
                 <div class="d-inline-flex align-items-cente r">
-                    <a href="{{ route('contact') }}" class="btn btn-outline-primary flex-shrink-0 selected-projects-btn" style="border-radius: 28px;">Get connected</a>
-                    <a href="{{ route('contact') }}"><img src="{{ asset('assets/icons/solid-white-arrow-up.svg') }}" class="img-fluid" 
-                    style="    width: 35px;height: 35px; border: 1px solid;border-color: #00399E !important;border-radius: 17px;"></a>
+                    <a href="{{ route('contact') }}" class="btn btn-outline-primary flex-shrink-0 selected-projects-btn" style="color: #00399E !important; border: 1px solid #00399E !important; border-radius: 28px;">Get connected</a>
+                    <a href="{{ route('contact') }}"><img src="{{ asset('assets/icons/blue-arrow-up-rounded.svg') }}" class="img-fluid" style="width: 38px;height: 40px;"></a>
                 </div>
                 <div class="d-flex gap-3 mt-3" style="font-size: 20px; margin-left: 10px;">
                     <a href="https://www.instagram.com/beacon_energy" class="text-dark"><i class="fab fa-instagram"></i></a>

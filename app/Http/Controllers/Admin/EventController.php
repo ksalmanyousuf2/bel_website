@@ -26,7 +26,7 @@ class EventController extends Controller
             'title' => 'required|string|max:255',
             'slug' => 'nullable|string|max:255|unique:events,slug',
             'description' => 'required|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'event_date' => 'required|date',
             'location' => 'nullable|string|max:255',
             'social_media_link' => 'nullable|url|max:500',

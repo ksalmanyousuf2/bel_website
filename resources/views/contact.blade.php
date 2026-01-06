@@ -20,27 +20,8 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-12 text-center">
-                <div class="hero-content-wrapper">
-                    <div class="hero-badge">
-                        <i class="fas fa-bolt me-2"></i>Get Started Today
-                    </div>
-                    <h1 class="contact-hero-title">Have a project in mind?</h1>
-                    <p class="contact-hero-subtitle">Exploring Clean Energy Insights</p>
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="1000">0</div>
-                            <div class="stat-label">Happy Customers</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="24">0</div>
-                            <div class="stat-label">Hour Support</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="99">0</div>
-                            <div class="stat-label">% Satisfaction</div>
-                        </div>
-                    </div>
-                </div>
+                <h1 class="contact-hero-title">Have a project in mind?</h1>
+                <p class="contact-hero-subtitle">Exploring Clean Energy Insights</p>
             </div>
         </div>
     </div>

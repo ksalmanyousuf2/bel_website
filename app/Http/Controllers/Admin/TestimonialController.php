@@ -60,7 +60,7 @@ class TestimonialController extends Controller
             'position' => 'nullable|string|max:255',
             'company' => 'nullable|string|max:255',
             'testimonial' => 'required|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'youtube_video_link' => 'nullable|url|max:500',
             'rating' => 'nullable|integer|min:1|max:5',
             'order' => 'nullable|integer',

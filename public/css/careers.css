@@ -8,11 +8,11 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url('../assets/images/11414176 2 (1).png');
+    background-image: url('../assets/images/Career-1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     padding-top: 120px;
     padding-bottom: 120px;
     margin-top: 0;
