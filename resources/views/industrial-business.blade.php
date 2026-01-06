@@ -119,24 +119,24 @@
             <div class="col-md-6">
                 <div class="key-metric-chart">
                     <div class="key-metric-bar" style="height: 50%;">
-                        <div class="key-metric-bar-label">Commercial</div>
-                        <div class="key-metric-bar-value">120</div>
+                        <div class="key-metric-bar-label">2021</div>
+                        <div class="key-metric-bar-value">2.8 MW</div>
                     </div>
                     <div class="key-metric-bar" style="height: 65%;">
-                        <div class="key-metric-bar-label">Commercial</div>
-                        <div class="key-metric-bar-value">120</div>
+                        <div class="key-metric-bar-label">2022</div>
+                        <div class="key-metric-bar-value">7.0 MW</div>
                     </div>
                     <div class="key-metric-bar" style="height: 85%;">
-                        <div class="key-metric-bar-label">Commercial</div>
-                        <div class="key-metric-bar-value">120</div>
+                        <div class="key-metric-bar-label">2023</div>
+                        <div class="key-metric-bar-value">8.2 MW</div>
                     </div>
                     <div class="key-metric-bar" style="height: 90%;">
-                        <div class="key-metric-bar-label">Commercial</div>
-                        <div class="key-metric-bar-value">120</div>
+                        <div class="key-metric-bar-label">2024</div>
+                        <div class="key-metric-bar-value">8.6 MW</div>
                     </div>
                     <div class="key-metric-bar" style="height: 100%;">
-                        <div class="key-metric-bar-label">Commercial</div>
-                        <div class="key-metric-bar-value">120</div>
+                        <div class="key-metric-bar-label">2025</div>
+                        <div class="key-metric-bar-value">9.9 MW</div>
                     </div>
                 </div>
             </div>
