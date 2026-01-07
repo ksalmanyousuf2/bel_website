@@ -28,7 +28,7 @@
     <div class="hero-image-section">
         <div class="container">
             <div class="hero-image-wrapper">
-                <img src="{{ asset('assets/images/hero_section_image.png') }}" alt="Solar Farm" class="img-fluid">
+                <img src="{{ asset('assets/images/D1.png') }}" alt="Solar Farm" class="img-fluid">
                 
                 <!-- Stats and Explore Button Overlay -->
                 <div class="hero-stats-overlay">
@@ -102,57 +102,6 @@
     </div>
 </section>
 
-<!-- Industrial & Commercial Section -->
-{{-- <section class="py-5 bg-primary text-white industrial-commercial-section">
-    <div class="container-fluid px-0">
-        <div class="row g-0 align-items-center">
-            <div class="col-lg-6">
-                <div class="industrial-commercial-content-wrapper">
-                    <div class="container">
-                        <h2 class="display-5 fw-bold mb-4">Industrial & Commercial Segments</h2>
-                        <p>Our solutions deliver optimal Return on Investment (ROI) and significantly reduce energy bills for our customers.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="card text-dark industrial-commercial-card" id="industrialCardWrapper" style="background-image: url('{{ asset('assets/images/hero_section_image.png') }}');">
-                    <div class="card-body">
-                        <div id="industrialCarousel" class="carousel slide industrial-overlay-carousel" data-bs-ride="carousel" data-bs-interval="6000">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active" data-background="{{ asset('assets/images/hero_section_image.png') }}">
-                                    <div class="industrial-overlay-card">
-                                        <div class="industrial-overlay-thumb">
-                                            <img src="{{ asset('assets/images/hero_section_image.png') }}" alt="Energy Independence">
-                                        </div>
-                                        <h5>Energy Independence</h5>
-                                        <p>Discover the sustainable technologies we use to drive the global transition to renewable energy.</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item" data-background="{{ asset('assets/images/mask_group.png') }}">
-                                    <div class="industrial-overlay-card">
-                                        <div class="industrial-overlay-thumb">
-                                            <img src="{{ asset('assets/images/mask_group.png') }}" alt="Smart Monitoring">
-                                        </div>
-                                        <h5>Smart Monitoring</h5>
-                                        <p>Track performance in real-time with proactive insights that keep your operations efficient and reliable.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="industrial-overlay-nav">
-                            <button class="industrial-nav-btn" type="button" data-bs-target="#industrialCarousel" data-bs-slide="prev">
-                                <i class="fas fa-arrow-left"></i> Previous
-                            </button>
-                            <button class="industrial-nav-btn" type="button" data-bs-target="#industrialCarousel" data-bs-slide="next">
-                                Next <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> --}}
 <section class="py-5 bg-primary text-white industrial-commercial-section">
     <div class="container-fluid px-0">
         <div class="row g-0 align-items-center">
@@ -169,22 +118,40 @@
                     <div class="card-body">
                         <div id="industrialCarousel" class="carousel slide industrial-overlay-carousel" data-bs-ride="carousel" data-bs-interval="6000">
                             <div class="carousel-inner">
-                                <div class="carousel-item" data-background="{{ asset('assets/images/hero_section_image.png') }}">
+                                <div class="carousel-item active" data-background="{{ asset('assets/images/D3.png') }}">
                                     <div class="industrial-overlay-card">
                                         <div class="industrial-overlay-thumb">
-                                            <img src="{{ asset('assets/images/hero_section_image.png') }}" alt="Energy Independence">
+                                            <img src="{{ asset('assets/images/D3.png') }}" alt="Energy Independence">
                                         </div>
                                         <h5>Energy Independence</h5>
                                         <p>Discover the sustainable technologies we use to drive the global transition to renewable energy.</p>
                                     </div>
                                 </div>
-                                <div class="carousel-item active" data-background="{{ asset('assets/images/mask_group.png') }}">
+                                <div class="carousel-item" data-background="{{ asset('assets/images/D4.png') }}">
                                     <div class="industrial-overlay-card">
                                         <div class="industrial-overlay-thumb">
-                                            <img src="{{ asset('assets/images/mask_group.png') }}" alt="Smart Monitoring">
+                                            <img src="{{ asset('assets/images/D4.png') }}" alt="Smart Monitoring">
                                         </div>
                                         <h5>Smart Monitoring</h5>
                                         <p>Track performance in real-time with proactive insights that keep your operations efficient and reliable.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-background="{{ asset('assets/images/D5.png') }}">
+                                    <div class="industrial-overlay-card">
+                                        <div class="industrial-overlay-thumb">
+                                            <img src="{{ asset('assets/images/D5.png') }}" alt="Smart Monitoring">
+                                        </div>
+                                        <h5>Backup Power & System Reliability</h5>
+                                        <p>Energy storage solutions designed to maintain critical operations during grid outages, ensuring continuity, safety, and system resilience.</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-background="{{ asset('assets/images/D6.png') }}">
+                                    <div class="industrial-overlay-card">
+                                        <div class="industrial-overlay-thumb">
+                                            <img src="{{ asset('assets/images/D6.png') }}" alt="Smart Monitoring">
+                                        </div>
+                                        <h5>Renewable Energy Integration</h5>
+                                        <p>Integrated storage and control systems that enable efficient utilization of solar and other renewable sources within industrial and commercial power networks.</p>
                                     </div>
                                 </div>
                             </div>
@@ -478,6 +445,112 @@ document.addEventListener('DOMContentLoaded', function () {
 
     carouselEl.addEventListener('slide.bs.carousel', function (event) {
         updateBackground(event.relatedTarget);
+    });
+
+    // Equalize heights of all carousel cards
+    function equalizeCardHeights() {
+        var cards = carouselEl.querySelectorAll('.industrial-overlay-card');
+        var carouselItems = carouselEl.querySelectorAll('.carousel-item');
+        if (cards.length === 0) return;
+
+        // Temporarily make all carousel items visible to measure their true heights
+        var originalStyles = [];
+        carouselItems.forEach(function(item, index) {
+            originalStyles[index] = {
+                display: item.style.display,
+                visibility: item.style.visibility,
+                position: item.style.position
+            };
+            // Make item visible but off-screen for measurement
+            item.style.display = 'block';
+            item.style.visibility = 'hidden';
+            item.style.position = 'absolute';
+            item.style.left = '-9999px';
+        });
+
+        // Reset heights to auto to get natural heights
+        cards.forEach(function(card) {
+            card.style.height = 'auto';
+            card.style.minHeight = 'auto';
+        });
+
+        // Force a reflow to ensure heights are recalculated
+        void carouselEl.offsetHeight;
+
+        // Calculate maximum height using scrollHeight for accurate measurement
+        var maxHeight = 0;
+        cards.forEach(function(card) {
+            // Use scrollHeight to get the full content height including overflow
+            var cardHeight = Math.max(card.scrollHeight, card.offsetHeight);
+            if (cardHeight > maxHeight) {
+                maxHeight = cardHeight;
+            }
+        });
+
+        // Restore original display states
+        carouselItems.forEach(function(item, index) {
+            if (originalStyles[index]) {
+                item.style.display = originalStyles[index].display || '';
+                item.style.visibility = originalStyles[index].visibility || '';
+                item.style.position = originalStyles[index].position || '';
+                item.style.left = '';
+            }
+        });
+
+        // Apply maximum height to all cards with a buffer
+        if (maxHeight > 0) {
+            var finalHeight = maxHeight + 15; // Add 15px buffer for safety
+            cards.forEach(function(card) {
+                card.style.height = finalHeight + 'px';
+                card.style.minHeight = finalHeight + 'px';
+                card.style.overflow = 'visible';
+            });
+        }
+    }
+
+    // Wait for images to load before equalizing heights
+    var images = carouselEl.querySelectorAll('.industrial-overlay-card img');
+    var imagesLoaded = 0;
+    var totalImages = images.length;
+
+    if (totalImages === 0) {
+        // No images, equalize immediately
+        equalizeCardHeights();
+    } else {
+        // Wait for all images to load
+        images.forEach(function(img) {
+            if (img.complete) {
+                imagesLoaded++;
+            } else {
+                img.addEventListener('load', function() {
+                    imagesLoaded++;
+                    if (imagesLoaded === totalImages) {
+                        equalizeCardHeights();
+                    }
+                });
+                img.addEventListener('error', function() {
+                    imagesLoaded++;
+                    if (imagesLoaded === totalImages) {
+                        equalizeCardHeights();
+                    }
+                });
+            }
+        });
+
+        // If all images are already loaded
+        if (imagesLoaded === totalImages) {
+            equalizeCardHeights();
+        }
+
+        // Fallback timeout in case images don't load
+        setTimeout(equalizeCardHeights, 1000);
+    }
+
+    // Re-equalize on window resize
+    var resizeTimer;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(equalizeCardHeights, 250);
     });
 
     // Smooth scroll for Explore More button

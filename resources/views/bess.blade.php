@@ -142,7 +142,7 @@
                         <div class="col-lg-6">
                             <div class="bess-product-image" style="height: 500px !important; min-height: 500px;">
                                 <!-- Image placeholder - user will add image -->
-                                <img src="{{ asset('assets/images/commercial-bess.png') }}" alt="Commercial BESS" class="img-fluid" style="width: 485px; height: 458px; object-fit: contain;">
+                                <img src="{{ asset('assets/images/D11.png') }}" alt="Commercial BESS" class="img-fluid" style="width: 485px; height: 458px; object-fit: contain;">
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -178,7 +178,7 @@
                         <div class="col-lg-6">
                             <div class="bess-product-image" style="height: 500px !important; min-height: 500px; background:white !important;">
                                 <!-- Image placeholder - user will add image -->
-                                <img src="{{ asset('assets/images/industrial_bess.png') }}" alt="Industrial BESS" class="img-fluid">
+                                <img src="{{ asset('assets/images/D10 (1).png') }}" alt="Industrial BESS" class="img-fluid">
                             </div>
                         </div>
                         

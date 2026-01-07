@@ -476,12 +476,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    max-width: 320px;
+    max-width: 380px;
     z-index: 2;
 }
 
 .industrial-overlay-carousel .carousel-item {
     padding: 6px 12px;
+}
+
+.industrial-overlay-carousel .carousel-inner {
+    display: block;
 }
 
 .industrial-overlay-card {
@@ -493,6 +497,8 @@
     flex-direction: column;
     text-align: center;
     box-shadow: 0 25px 35px rgba(20, 34, 68, 0.25);
+    overflow: visible;
+    box-sizing: border-box;
 }
 
 .industrial-overlay-thumb {
@@ -500,6 +506,7 @@
     overflow: hidden;
     margin-bottom: 20px;
     height: 195px;
+    flex-shrink: 0;
 }
 
 .industrial-overlay-thumb img {
@@ -514,14 +521,18 @@
     color: #0A1433;
     margin-bottom: 10px;
     text-align: left;
+    line-height: 1.3;
+    flex-shrink: 0;
 }
 
 .industrial-overlay-card p {
     color: #4a4a4a;
     font-size: 0.95rem;
     margin-bottom: 0;
-    margin-bottom: 25px;
     text-align: left;
+    line-height: 1.5;
+    flex-shrink: 0;
+    overflow: visible;
 }
 
 .industrial-overlay-nav {
@@ -830,6 +841,7 @@
     
     .industrial-overlay-card {
         padding: 22px;
+        min-height: 320px;
     }
     
     .industrial-overlay-thumb {
@@ -955,6 +967,7 @@
     
     .industrial-overlay-card {
         padding: 20px;
+        min-height: 320px;
     }
     
     .industrial-overlay-card h5 {
@@ -1456,7 +1469,7 @@
     }
     
     .industrial-overlay-card h5 {
-        font-size: 1.8rem;
+        font-size: 1.25rem;
         margin-bottom: 15px;
     }
     
@@ -1645,7 +1658,7 @@
     }
     
     .industrial-overlay-card h5 {
-        font-size: 2rem;
+        font-size: 1.25rem;
     }
     
     .industrial-overlay-card p {

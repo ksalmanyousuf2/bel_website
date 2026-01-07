@@ -156,7 +156,7 @@
                         <div class="col-md-4">
                             <div class="achievement-card">
                                 <div class="achievement-image">
-                                    <img src="{{ asset('assets/images/start_of_operations.png') }}" alt="Start of Operations" class="img-fluid">
+                                    <img src="{{ asset('assets/images/2019.png') }}" alt="Start of Operations" class="img-fluid">
                                 </div>
                                 <div class="achievement-text">
                                     <h4 class="achievement-year">2019</h4>
@@ -172,7 +172,7 @@
                         <div class="col-md-4">
                             <div class="achievement-card">
                                 <div class="achievement-image">
-                                    <img src="{{ asset('assets/images/contourglobal.png') }}" alt="ContourGlobal" class="img-fluid">
+                                    <img src="{{ asset('assets/images/2020.png') }}" alt="ContourGlobal" class="img-fluid">
                                 </div>
                                 <div class="achievement-text">
                                     <h4 class="achievement-year">2020</h4>
@@ -189,7 +189,7 @@
                         <div class="col-md-4">
                             <div class="achievement-card">
                                 <div class="achievement-image">
-                                    <img src="{{ asset('assets/images/inauguration.png') }}" alt="Inauguration" class="img-fluid">
+                                    <img src="{{ asset('assets/images/2021.png') }}" alt="Inauguration" class="img-fluid">
                                 </div>
                                 <div class="achievement-text">
                                     <h4 class="achievement-year">2021</h4>
@@ -212,7 +212,7 @@
                         <div class="col-md-4">
                             <div class="achievement-card">
                                 <div class="achievement-image">
-                                    <img src="{{ asset('assets/images/sales.png') }}" alt="Sales" class="img-fluid">
+                                    <img src="{{ asset('assets/images/2022.png') }}" alt="Sales" class="img-fluid">
                                 </div>
                                 <div class="achievement-text">
                                     <h4 class="achievement-year">2022</h4>
@@ -229,7 +229,7 @@
                         <div class="col-md-4">
                             <div class="achievement-card">
                                 <div class="achievement-image">
-                                    <img src="{{ asset('assets/images/start_of_operations.png') }}" alt="Start of Operations" class="img-fluid">
+                                    <img src="{{ asset('assets/images/2023.png') }}" alt="Start of Operations" class="img-fluid">
                                 </div>
                                 <div class="achievement-text">
                                     <h4 class="achievement-year">2023</h4>
@@ -245,7 +245,7 @@
                         <div class="col-md-4">
                             <div class="achievement-card">
                                 <div class="achievement-image">
-                                    <img src="{{ asset('assets/images/contourglobal.png') }}" alt="ContourGlobal" class="img-fluid">
+                                    <img src="{{ asset('assets/images/2024.png') }}" alt="ContourGlobal" class="img-fluid">
                                 </div>
                                 <div class="achievement-text">
                                     <h4 class="achievement-year">2024</h4>
@@ -264,7 +264,7 @@
                         <div class="col-md-4">
                             <div class="achievement-card">
                                 <div class="achievement-image">
-                                    <img src="{{ asset('assets/images/inauguration.png') }}" alt="Inauguration" class="img-fluid">
+                                    <img src="{{ asset('assets/images/2025.png') }}" alt="Inauguration" class="img-fluid">
                                 </div>
                                 <div class="achievement-text">
                                     <h4 class="achievement-year">2025</h4>

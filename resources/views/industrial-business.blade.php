@@ -111,7 +111,7 @@
             <div class="col-md-6">
                 <div class="key-metric-content-wrapper">
                     <div class="key-metric-content">
-                        <div class="key-metric-number">80</div>
+                        <div class="key-metric-number">40</div>
                         <div class="key-metric-label">Megawatts Installed</div>
                     </div>
                 </div>
